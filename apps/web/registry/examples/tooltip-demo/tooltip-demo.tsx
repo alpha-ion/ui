@@ -6,7 +6,7 @@ import {
   TooltipTrigger,
 } from "@/registry/ui/tooltip"
 
-export default function TooltipBottomDemo() {
+export default function TooltipDemo() {
   return (
     <TooltipProvider>
       <Tooltip>

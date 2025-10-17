@@ -2,25 +2,35 @@
 
 ## التثبيت
 
-<div className="not-prose px-4">
-  <Step>
-    <StepItem title="تثبيت الحزم المطلوبة">
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge @radix-ui/react-dropdown-menu class-variance-authority`}
-      </Pre>
-    </StepItem>
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="dropdown-menu" />
+    </CliCodeTabs>
+  </TabsContent>
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4">
+      <Step>
+        <StepItem title="تثبيت الحزم المطلوبة">
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge @radix-ui/react-dropdown-menu class-variance-authority`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكون القائمة المنسدلة">
-      <ComponentSource name="dropdown-menu-demo" />
-    </StepItem>
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكون القائمة المنسدلة">
+          <ComponentSource name="dropdown-menu-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

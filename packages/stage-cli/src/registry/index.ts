@@ -9,6 +9,13 @@ export async function getRegistryPath() {
   const bundledPath = path.join(__dirname, "registry")
   try {
     await fs.access(bundledPath)
+    // Guard: ensure bundled registry is not empty
+    try {
+      const entries = await (await import("fs")).promises.readdir(bundledPath)
+      if (entries.length === 0) {
+        console.warn("Warning: bundled registry directory is empty (dist/registry). Reinstall or rebuild CLI.")
+      }
+    } catch {}
     return bundledPath
   } catch {}
 

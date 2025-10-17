@@ -708,6 +708,14 @@ export const add = new Command()
   .option("-a, --all", "Add all available components and blocks", false)
   .option("-p, --path <path>", "The path to add the component to.")
   .option("-s, --silent", "Mute output.", false)
+  // Non-interactive scaffold options (optional)
+  .option("--non-interactive", "Run scaffold non-interactively if needed.", false)
+  .option("--project-name <name>", "Project name for auto-scaffold.")
+  .option("--pm <pm>", "Package manager (pnpm|npm|yarn|bun|deno)")
+  .option("--src-dir", "Use src/ directory when scaffolding.", false)
+  .option("--no-eslint", "Disable ESLint in scaffold.")
+  .option("--no-tailwind", "Disable Tailwind CSS in scaffold.")
+  .option("--import-alias <alias>", "Import alias for scaffold (e.g., @/*)")
   .action(async (componentsArg: string[] | undefined, options) => {
     const cwd = options.cwd || process.cwd()
     const overwrite: boolean = !!options.overwrite
@@ -721,7 +729,17 @@ export const add = new Command()
       if (!silent) {
         logger.info("No Next.js app detected. Scaffolding a new Next.js (App Router) project...")
       }
-      await scaffoldNextApp(cwd)
+      const interactive = options.nonInteractive ? false : true
+      await scaffoldNextApp(cwd, {
+        interactive,
+        projectName: options.projectName,
+        packageManager: options.pm,
+        srcDir: !!options.srcDir,
+        eslint: options.eslint !== false,
+        tailwind: options.tailwind !== false,
+        importAlias: options.importAlias,
+        typescript: true,
+      } as any)
     }
 
     // Ensure config exists (auto-initialize minimal if missing)

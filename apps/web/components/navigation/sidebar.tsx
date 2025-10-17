@@ -8,7 +8,7 @@ const Sidebar = async () => {
   return (
     <aside
       aria-label="Documentation Sidebar"
-      className="md:flex hidden flex-[1] lg:min-w-[230px] min-w-[200px] flex-col transition-all border-grid fixed top-14 z-30 h-[calc(100vh-3.5rem)] w-full shrink-0 ltr:border-r rtl:border-l md:sticky"
+      className="md:flex hidden flex-[1] lg:min-w-[230px] min-w-[200px] flex-col transition-all fixed top-14 z-30 h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky"
     >
       <ScrollArea className="h-full">
         <div className={`h-full overflow-auto py-6 pr-4 rtl:pr-0 lg:pt-8`}>

@@ -171,5 +171,23 @@
     },
     "docs-navigation-on-mobile": {
         "menu": "Menu"
+    },
+    "component-preview": {
+        "preview": "Preview",
+        "code": "Code",
+        "loading-component": "Loading component...",
+        "loading-code": "Loading code...",
+        "not-found-component": "Component not found",
+        "not-found-code": "Code not found"
+    },
+    "docs-copy-button": {
+        "copy": "Copy Page",
+        "copied": "Copied",
+        "dropdown-menu": {
+            "view-markdown": "View Markdown",
+            "open-in-chatgpt": "Open in ChatGPT",
+            "open-in-v0": "Open in V0",
+            "open-in-claude": "Open in Claude"
+        }
     }
 }

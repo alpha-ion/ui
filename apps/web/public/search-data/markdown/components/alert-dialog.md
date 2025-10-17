@@ -2,27 +2,37 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الاعتمادات">
-      أولاً، تحتاج إلى تثبيت الاعتمادات:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="alert-dialog" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge @radix-ui/react-alert-dialog class-variance-authority`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الاعتمادات">
+          أولاً، تحتاج إلى تثبيت الاعتمادات:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge @radix-ui/react-alert-dialog class-variance-authority`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن Alert dialog">
-      <ComponentSource name="alert-dialog-demo" />
-    </StepItem>
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكوّن Alert dialog">
+          <ComponentSource name="alert-dialog-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 
@@ -70,6 +80,6 @@
 
 ## الأمثلة
 
-### الإجراء المدمر
+### الإجراء الحظر
 
 <ComponentPreview name="alert-dialog" variant="destructive" />

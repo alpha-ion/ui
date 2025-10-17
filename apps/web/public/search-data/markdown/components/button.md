@@ -2,29 +2,39 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الاعتمادات (Dependencies)">
-      أولاً، تحتاج إلى تثبيت الاعتمادات:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="button" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الاعتمادات (Dependencies)">
+          أولاً، تحتاج إلى تثبيت الاعتمادات:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن الزر (Button Component)">
-      <ComponentSource name="button" />
-    </StepItem>
+          <ComponentUtils />
+        </StepItem>
 
-    <StepItem title="الآن أصبح المكوّن جاهزًا، ويمكنك تعديله وتخصيصه ليتناسب مع احتياجاتك." />
-  </Step>
-</div>
+        <StepItem title="إنشاء مكوّن الزر (Button Component)">
+          <ComponentSource name="button" />
+        </StepItem>
+
+        <StepItem title="الآن أصبح المكوّن جاهزًا، ويمكنك تعديله وتخصيصه ليتناسب مع احتياجاتك." />
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 
@@ -50,7 +60,7 @@
 
 <ComponentPreview name="button" variant="secondary" />
 
-### مدمر (Destructive)
+### حظر (Destructive)
 
 <ComponentPreview name="button" variant="destructive" />
 

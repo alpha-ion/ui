@@ -9,21 +9,31 @@
 راجع تعليمات التثبيت الخاصة بـ [Popover](https://alphabyte-labs.vercel.app/docs/components/popover)\
 و [Calendar](https://alphabyte-labs.vercel.app/docs/components/calendar/) لعملية التثبيت السريعة.
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الاعتمادات (Dependencies)">
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge @radix-ui/react-popover react-day-picker@8.10.1 date-fns `}
-      </Pre>
-    </StepItem>
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="data-picker" />
+    </CliCodeTabs>
+  </TabsContent>
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الاعتمادات (Dependencies)">
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge @radix-ui/react-popover react-day-picker@8.10.1 date-fns `}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
-  </Step>
-</div>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
+
+          <ComponentUtils />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

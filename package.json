@@ -21,14 +21,16 @@
     "turbo": "^2.5.8",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.3",
   "engines": {
     "node": ">=18"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxi",
+      "@tailwindcss/oxide",
       "core-js-pure",
+      "es5-ext",
       "esbuild",
       "msgpackr-extract",
       "puppeteer",

@@ -2,27 +2,37 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت التبعيات">
-      أولاً، تحتاج إلى تثبيت التبعيات التالية:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="separator" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre>
-        {`npm install clsx tailwind-merge @radix-ui/react-separator`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت التبعيات">
+          أولاً، تحتاج إلى تثبيت التبعيات التالية:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre>
+            {`npm install clsx tailwind-merge @radix-ui/react-separator`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن Separator">
-      <ComponentSource name="separator-demo" />
-    </StepItem>
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكوّن Separator">
+          <ComponentSource name="separator-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

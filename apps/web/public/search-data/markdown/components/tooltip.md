@@ -2,27 +2,37 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الاعتماديات">
-      أولاً، تحتاج إلى تثبيت الاعتماديات (Dependencies):
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="tooltip" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge @radix-ui/react-tooltip`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الاعتماديات">
+          أولاً، تحتاج إلى تثبيت الاعتماديات (Dependencies):
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge @radix-ui/react-tooltip`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكون التلميح">
-      <ComponentSource name="tooltip-demo" />
-    </StepItem>
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكون التلميح">
+          <ComponentSource name="tooltip-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

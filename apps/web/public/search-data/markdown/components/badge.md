@@ -2,27 +2,37 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الاعتمادات">
-      أولاً، تحتاج إلى تثبيت الاعتمادات:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="badge" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge `}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الاعتمادات">
+          أولاً، تحتاج إلى تثبيت الاعتمادات:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge `}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن Badge">
-      <ComponentSource name="badge-demo" />
-    </StepItem>
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكوّن Badge">
+          <ComponentSource name="badge-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 
@@ -38,7 +48,7 @@
 
 ## نصائح
 
-💡 يمكنك استخدام <MdxBadge>badgeVariants</MdxBadge> لإنشاء مكوّن شارة خاص بك بأنماط مختلفة.
+يمكنك استخدام <MdxBadge>badgeVariants</MdxBadge> لإنشاء مكوّن شارة خاص بك بأنماط مختلفة.
 
 <div className="not-prose space-y-6">
   <Pre>
@@ -60,7 +70,7 @@
 
 <ComponentPreview name="badge-demo" variant="outline" />
 
-### مدمر (Destructive)
+### حظر (Destructive)
 
 <ComponentPreview name="badge-demo" variant="destructive" />
 

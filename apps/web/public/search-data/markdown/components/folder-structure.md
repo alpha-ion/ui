@@ -6,197 +6,207 @@
 
 ## التثبيت
 
-<div className="not-prose md:px-0 px-4">
-  <Step>
-    <StepItem title="تثبيت الحزم">
-      أولاً، تحتاج إلى تثبيت الحزم التالية:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="folder-structure" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge`}
-      </Pre>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose md:px-0 px-4">
+      <Step>
+        <StepItem title="تثبيت الحزم">
+          أولاً، تحتاج إلى تثبيت الحزم التالية:
 
-      <Pre className="language-bash">
-        {`npx shadcn@latest add sidebar`}
-      </Pre>
-    </StepItem>
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge`}
+          </Pre>
 
-    <StepItem title="إنشاء utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npx shadcn@latest add sidebar`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء Hook">
-      قم بإنشاء مجلد جديد باسم <MdxBadge>hooks</MdxBadge> داخل مشروعك، ثم أنشئ ملف باسم <MdxBadge>use-submenu-state.ts</MdxBadge> وأضف الكود التالي:
+          <ComponentUtils />
+        </StepItem>
 
-      <Pre className="language-typescript" folderPath="hooks/use-submenu-state.ts">
-        {`import { useState, useCallback } from "react"
+        <StepItem title="إنشاء Hook">
+          قم بإنشاء مجلد جديد باسم <MdxBadge>hooks</MdxBadge> داخل مشروعك، ثم أنشئ ملف باسم <MdxBadge>use-submenu-state.ts</MdxBadge> وأضف الكود التالي:
 
-          export function useSubmenuState(initialState: Record<string, boolean> = {}) {
-           const [openStates, setOpenStates] = useState(initialState)
+          <Pre className="language-typescript" folderPath="hooks/use-submenu-state.ts">
+            {`import { useState, useCallback } from "react"
 
-           const toggleSubmenu = useCallback((id: string) => {
-              setOpenStates((prev) => ({ ...prev, [id]: !prev[id] }))
-           }, [])
+              export function useSubmenuState(initialState: Record<string, boolean> = {}) {
+               const [openStates, setOpenStates] = useState(initialState)
 
-           return { openStates, toggleSubmenu }
-          }
-          `}
-      </Pre>
-    </StepItem>
+               const toggleSubmenu = useCallback((id: string) => {
+                  setOpenStates((prev) => ({ ...prev, [id]: !prev[id] }))
+               }, [])
 
-    <StepItem title="إنشاء مكون Folder-Tree">
-      <ComponentSource name="folder-tree-demo" />
-    </StepItem>
+               return { openStates, toggleSubmenu }
+              }
+              `}
+          </Pre>
+        </StepItem>
 
-    <StepItem title="إنشاء قائمة المجلدات">
-      أنشئ ملف جديد داخل مجلد <MdxBadge>components</MdxBadge> باسم <MdxBadge>FolderTreeMenu.tsx</MdxBadge> وأضف الكود التالي:
+        <StepItem title="إنشاء مكون Folder-Tree">
+          <ComponentSource name="folder-tree-demo" />
+        </StepItem>
 
-      <CodeBlockWrapper>
-        <Pre className="language-typescript" folderPath="components/FolderTreeMenu.tsx">
-          {`"use client"
+        <StepItem title="إنشاء قائمة المجلدات">
+          أنشئ ملف جديد داخل مجلد <MdxBadge>components</MdxBadge> باسم <MdxBadge>FolderTreeMenu.tsx</MdxBadge> وأضف الكود التالي:
 
-            import { ChevronDown, ChevronRight } from "lucide-react"
-            import { cn } from "@/lib/utils"
-            import { useSubmenuState } from "@/hooks/use-submenu-state"
-            import {
-            Sidebar,
-            SidebarContent,
-            SidebarHeader,
-            SidebarMenu,
-            SidebarMenuButton,
-            SidebarMenuItem,
-            SidebarMenuSub,
-            SidebarMenuSubButton,
-            SidebarMenuSubItem,
-            } from "@/components/ui/sidebar"
+          <CodeBlockWrapper>
+            <Pre className="language-typescript" folderPath="components/FolderTreeMenu.tsx">
+              {`"use client"
 
-            interface MenuItem {
-            id: string
-            title: string
-            items?: MenuItem[]
-            }
+                import { ChevronDown, ChevronRight } from "lucide-react"
+                import { cn } from "@/lib/utils"
+                import { useSubmenuState } from "@/hooks/use-submenu-state"
+                import {
+                Sidebar,
+                SidebarContent,
+                SidebarHeader,
+                SidebarMenu,
+                SidebarMenuButton,
+                SidebarMenuItem,
+                SidebarMenuSub,
+                SidebarMenuSubButton,
+                SidebarMenuSubItem,
+                } from "@/components/ui/sidebar"
 
-            interface FolderTreeMenuProps {
-            items: MenuItem[]
-            }
+                interface MenuItem {
+                id: string
+                title: string
+                items?: MenuItem[]
+                }
 
-            export function FolderTreeMenu({ items }: FolderTreeMenuProps) {
-            const { openStates, toggleSubmenu } = useSubmenuState()
+                interface FolderTreeMenuProps {
+                items: MenuItem[]
+                }
 
-            const renderMenuItem = (item: MenuItem) => {
-              const hasSubItems = item.items && item.items.length > 0
-              const isOpen = openStates[item.id]
+                export function FolderTreeMenu({ items }: FolderTreeMenuProps) {
+                const { openStates, toggleSubmenu } = useSubmenuState()
 
-              return (
-                <SidebarMenuItem key={item.id}>
-                  <SidebarMenuButton
-                    onClick={() => hasSubItems && toggleSubmenu(item.id)}
-                    className={cn("w-full justify-between", hasSubItems && "font-semibold")}
-                  >
-                    {item.title}
-                    {hasSubItems && (
-                      <span className="ml-auto">
-                        {isOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
-                      </span>
-                    )}
-                  </SidebarMenuButton>
-                  {hasSubItems && (
-                    <SidebarMenuSub>
-                      {isOpen &&
-                        item.items!.map((subItem) => (
-                          <SidebarMenuSubItem key={subItem.id}>
-                            <SidebarMenuSubButton>{subItem.title}</SidebarMenuSubButton>
-                          </SidebarMenuSubItem>
-                        ))}
-                    </SidebarMenuSub>
-                  )}
-                </SidebarMenuItem>
-              )
-            }
+                const renderMenuItem = (item: MenuItem) => {
+                  const hasSubItems = item.items && item.items.length > 0
+                  const isOpen = openStates[item.id]
 
-            return (
-              <Sidebar className="w-64 rounded-lg border bg-card text-card-foreground shadow-sm">
-                <SidebarHeader className="px-4 py-2">
-                  <h2 className="text-lg font-semibold">القائمة</h2>
-                </SidebarHeader>
-                <SidebarContent>
-                  <SidebarMenu>{items.map(renderMenuItem)}</SidebarMenu>
-                </SidebarContent>
-              </Sidebar>
-            )
-            }`}
-        </Pre>
-      </CodeBlockWrapper>
-    </StepItem>
+                  return (
+                    <SidebarMenuItem key={item.id}>
+                      <SidebarMenuButton
+                        onClick={() => hasSubItems && toggleSubmenu(item.id)}
+                        className={cn("w-full justify-between", hasSubItems && "font-semibold")}
+                      >
+                        {item.title}
+                        {hasSubItems && (
+                          <span className="ml-auto">
+                            {isOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                          </span>
+                        )}
+                      </SidebarMenuButton>
+                      {hasSubItems && (
+                        <SidebarMenuSub>
+                          {isOpen &&
+                            item.items!.map((subItem) => (
+                              <SidebarMenuSubItem key={subItem.id}>
+                                <SidebarMenuSubButton>{subItem.title}</SidebarMenuSubButton>
+                              </SidebarMenuSubItem>
+                            ))}
+                        </SidebarMenuSub>
+                      )}
+                    </SidebarMenuItem>
+                  )
+                }
 
-    <StepItem title="إنشاء مثال">
-      أنشئ ملف جديد باسم <MdxBadge>FolderExample.tsx</MdxBadge> داخل مجلد <MdxBadge>components</MdxBadge> وأضف الكود التالي:
+                return (
+                  <Sidebar className="w-64 rounded-lg border bg-card text-card-foreground shadow-sm">
+                    <SidebarHeader className="px-4 py-2">
+                      <h2 className="text-lg font-semibold">القائمة</h2>
+                    </SidebarHeader>
+                    <SidebarContent>
+                      <SidebarMenu>{items.map(renderMenuItem)}</SidebarMenu>
+                    </SidebarContent>
+                  </Sidebar>
+                )
+                }`}
+            </Pre>
+          </CodeBlockWrapper>
+        </StepItem>
 
-      <CodeBlockWrapper>
-        <Pre className="language-typescript" folderPath="components/FolderExample.tsx">
-          {`"use client"
+        <StepItem title="إنشاء مثال">
+          أنشئ ملف جديد باسم <MdxBadge>FolderExample.tsx</MdxBadge> داخل مجلد <MdxBadge>components</MdxBadge> وأضف الكود التالي:
 
-            import { FolderTree } from "./FolderTree"
+          <CodeBlockWrapper>
+            <Pre className="language-typescript" folderPath="components/FolderExample.tsx">
+              {`"use client"
 
-            type FileItem = {
-            id: string
-            name: string
-            type: "file" | "folder"
-            path?: string
-            items?: FileItem[]
-            }
+                import { FolderTree } from "./FolderTree"
 
-            const fileStructure: FileItem[] = [
-            {
-              id: "app",
-              name: "app",
-              type: "folder",
-              items: [
+                type FileItem = {
+                id: string
+                name: string
+                type: "file" | "folder"
+                path?: string
+                items?: FileItem[]
+                }
+
+                const fileStructure: FileItem[] = [
                 {
-                  id: "layout",
-                  name: "layout.js",
-                  type: "file",
-                },
-                {
-                  id: "marketing",
-                  name: "(marketing)",
+                  id: "app",
+                  name: "app",
                   type: "folder",
                   items: [
                     {
-                      id: "about",
-                      name: "about",
+                      id: "layout",
+                      name: "layout.js",
+                      type: "file",
+                    },
+                    {
+                      id: "marketing",
+                      name: "(marketing)",
                       type: "folder",
-                      path: "/about",
                       items: [
                         {
-                          id: "about-page",
-                          name: "page.js",
-                          type: "file",
+                          id: "about",
+                          name: "about",
+                          type: "folder",
+                          path: "/about",
+                          items: [
+                            {
+                              id: "about-page",
+                              name: "page.js",
+                              type: "file",
+                            },
+                          ],
                         },
                       ],
                     },
                   ],
                 },
-              ],
-            },
-            ]
+                ]
 
-            export default function FolderTreeExample() {
-            return (
-              <div className="flex items-center justify-center">
-                <FolderTree items={fileStructure} />
-              </div>
-            )
-            }
-            `}
-        </Pre>
-      </CodeBlockWrapper>
-    </StepItem>
+                export default function FolderTreeExample() {
+                return (
+                  <div className="flex items-center justify-center">
+                    <FolderTree items={fileStructure} />
+                  </div>
+                )
+                }
+                `}
+            </Pre>
+          </CodeBlockWrapper>
+        </StepItem>
 
-    <StepItem title="استخدمه وخصصه كما تشاء" />
-  </Step>
-</div>
+        <StepItem title="استخدمه وخصصه كما تشاء" />
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

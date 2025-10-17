@@ -62,3 +62,27 @@ Would you like to use Turbopack for \`next dev\`? » No / Yes`}
 ## Next Steps
 
 Once your project is created, you’re ready to explore and integrate Alpha’s modern components and utilities to bring your vision to life. Start building your next-generation application today with Alpha! 🚀
+
+## Using the CLI
+
+You can install and manage components/blocks using the Alphabyte Labs CLI.
+
+### Install the CLI
+
+<Pre>{`# Install globally\nnpm install -g @alphabyte-labs/cli\n\n# Or run once with npx\nnpx @alphabyte-labs/cli`}</Pre>
+
+### Initialize your project
+
+This creates a `components.json`, sets up folders, and installs required deps.
+
+<Pre>{`alphabyte init`}</Pre>
+
+### Add components or blocks
+
+<Pre>{`# Add a specific component\nalphabyte add button\n\n# Add a specific block\nalphabyte add hero-section\n\n# Add multiple items\nalphabyte add button card hero-section\n\n# Add all available components and blocks\nalphabyte add --all\n\n# Add to a custom path\nalphabyte add button --path src/components`}</Pre>
+
+### Running outside a Next.js project (auto-scaffold)
+
+If you run `alphabyte add` outside a Next.js app (for example in `C:\\Users\\username`), the CLI will first scaffold a Next.js project (App Router) and then install the requested component or block.
+
+<Pre>{`cd C:\\Users\\username\n# This will scaffold a Next.js project first, then add the block\nalphabyte add hero-section`}</Pre>

@@ -5,6 +5,7 @@ import Pre from "@/components/pre"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/custom-tabs"
 import { cn } from "@/lib/utils"
 import { REGISTRY } from "@/registry"
+import { useLocale, useTranslations } from "next-intl"
 import React, { useEffect, useState } from "react"
 
 export interface ComponentPreviewProps {
@@ -28,7 +29,7 @@ export default function ComponentPreview({
 }: ComponentPreviewProps) {
   const [componentCode, setComponentCode] = useState<string | null>(providedCode || null)
   const [isLoadingCode, setIsLoadingCode] = useState<boolean>(false)
-
+  const locale = useLocale()
   const baseComponentName = name.replace("-demo", "")
   const componentVariant = variant || ""
   const fullComponentName = componentVariant
@@ -74,18 +75,17 @@ export default function ComponentPreview({
       </div>
     )
   }
-
+  const t = useTranslations("component-preview")
   return (
     <Tabs defaultValue="preview" className="mt-4">
-      <TabsList className="inline-flex h-9 items-center text-muted-foreground w-full justify-start rounded-none border-b bg-transparent p-0 mb-2">
+      <TabsList dir={locale === "ar" ? "rtl" : "ltr"} className="inline-flex h-9 items-center text-muted-foreground w-full justify-start rounded-none border-b bg-transparent p-0 mb-2">
         <TabsTrigger value="preview" className="active:shadow-none text-sm">
-          Preview
+          {t("preview")}
         </TabsTrigger>
         <TabsTrigger value="code" className="active:shadow-none text-sm">
-          Code
+          {t("code")}
         </TabsTrigger>
       </TabsList>
-
       <div className="not-prose">
         <TabsContent value="preview" className={cn("border rounded-xl relative", className)}>
           <div className="overflow-visible">
@@ -93,7 +93,7 @@ export default function ComponentPreview({
               fallback={
                 <div className="flex w-full min-h-[350px] items-center justify-center text-sm text-muted-foreground gap-2">
                   <LoadingIcon size={14} />
-                  Loading component...
+                  {t("loading-component")}
                 </div>
               }
             >
@@ -104,7 +104,7 @@ export default function ComponentPreview({
               ) : (
                 <div className="flex w-full min-h-[350px] items-center justify-center text-sm text-muted-foreground">
                   <div className="text-center">
-                    <p>Component not found</p>
+                    <p>{t("not-found-component")}</p>
                     <p className="text-xs mt-1 opacity-70">{fullComponentName}</p>
                   </div>
                 </div>
@@ -112,7 +112,6 @@ export default function ComponentPreview({
             </React.Suspense>
           </div>
         </TabsContent>
-
         <TabsContent value="code" className="mt-0">
           {componentCode ? (
             <Pre
@@ -131,12 +130,12 @@ export default function ComponentPreview({
           ) : isLoadingCode ? (
             <div className="flex w-full items-center justify-center text-sm text-muted-foreground p-12 gap-2 border rounded-lg bg-muted/10 dark:bg-muted/5">
               <LoadingIcon size={16} />
-              Loading source code...
+              {t("loading-code")}
             </div>
           ) : (
             <div className="flex w-full items-center justify-center text-sm text-muted-foreground p-12 border rounded-lg bg-muted/10 dark:bg-muted/5">
               <div className="text-center">
-                <p>No source code available</p>
+                <p>{t("not-found-code")}</p>
                 <p className="text-xs mt-1 opacity-70">for {fullComponentName}</p>
               </div>
             </div>

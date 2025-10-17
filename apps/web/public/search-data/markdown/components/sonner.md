@@ -8,47 +8,57 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت التبعيات">
-      أولاً، قم بتثبيت التبعيات:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="sonner" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre>
-        {`npm install clsx tailwind-merge sonner`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت التبعيات">
+          أولاً، قم بتثبيت التبعيات:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre>
+            {`npm install clsx tailwind-merge sonner`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن Sonner">
-      <ComponentSource name="sonner-demo" />
-    </StepItem>
+          <ComponentUtils />
+        </StepItem>
 
-    <StepItem title="تعديل layout.tsx لإضافة مكوّن Toaster">
-      في ملف <MdxBadge>layout.tsx</MdxBadge> الرئيسي لديك، أضف{" "}
-      <MdxBadge>\<Toaster /></MdxBadge>{" "} لعرض التنبيهات (toasts):
+        <StepItem title="إنشاء مكوّن Sonner">
+          <ComponentSource name="sonner-demo" />
+        </StepItem>
 
-      <Pre highlightLines={[8]}>
-        {`import { Toaster } from "@/components/ui/sonner"
+        <StepItem title="تعديل layout.tsx لإضافة مكوّن Toaster">
+          في ملف <MdxBadge>layout.tsx</MdxBadge> الرئيسي لديك، أضف{" "}
+          <MdxBadge>\<Toaster /></MdxBadge>{" "} لعرض التنبيهات (toasts):
 
-          export default function RootLayout({ children }) {
-          return (
-            <html lang="ar">
-              <body>
-                <main>{children}</main>
-                <Toaster />
-              </body>
-            </html>
-           )
-          }`}
-      </Pre>
-    </StepItem>
-  </Step>
-</div>
+          <Pre highlightLines={[8]}>
+            {`import { Toaster } from "@/components/ui/sonner"
+
+              export default function RootLayout({ children }) {
+              return (
+                <html lang="ar">
+                  <body>
+                    <main>{children}</main>
+                    <Toaster />
+                  </body>
+                </html>
+               )
+              }`}
+          </Pre>
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

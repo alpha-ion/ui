@@ -170,5 +170,23 @@
     },
     "docs-navigation-on-mobile": {
         "menu": "القائمة"
+    },
+    "component-preview": {
+        "preview": "المعاينة",
+        "code": "الكود",
+        "loading-component": "جاري تحميل المكون...",
+        "loading-code": "جاري تحميل الكود...",
+        "not-found-component": "المكون غير موجود",
+        "not-found-code": "الكود غير موجود"
+    },
+    "docs-copy-button": {
+        "copy": "نسخ الصفحة",
+        "copied": "تم النسخ",
+        "dropdown-menu": {
+            "view-markdown": "عرض الصفحة الاصلية",
+            "open-in-chatgpt": "افتح في ChatGPT",
+            "open-in-v0": "افتح في V0",
+            "open-in-claude": "افتح في Claude"
+        }
     }
 }

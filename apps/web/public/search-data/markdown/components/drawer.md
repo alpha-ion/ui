@@ -8,45 +8,55 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الحزم المطلوبة">
-      أولاً، تحتاج إلى تثبيت الحزم التالية:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="drawer" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre>
-        {`npm install clsx tailwind-merge vaul`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الحزم المطلوبة">
+          أولاً، تحتاج إلى تثبيت الحزم التالية:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre>
+            {`npm install clsx tailwind-merge vaul`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكون الدرج">
-      <ComponentSource name="drawer-demo" />
-    </StepItem>
+          <ComponentUtils />
+        </StepItem>
 
-    <StepItem title="تعديل ملف layout.tsx لدعم خاصية الخلفية المتحركة">
-      في ملف <MdxBadge>layout.tsx</MdxBadge> الرئيسي، أضف\
-      <MdxBadge>vaul-drawer-wrapper</MdxBadge> لدعم خاصية تحريك/تكبير الخلفية:
+        <StepItem title="إنشاء مكون الدرج">
+          <ComponentSource name="drawer-demo" />
+        </StepItem>
 
-      <Pre highlightLines={[4]}>
-        {`<html lang="ar" suppressHydrationWarning>
-          <body className="bg-background font-medium antialiased min-h-svh" suppressHydrationWarning>
-              {/* أنشئ div وأضف له خاصية vaul-drawer-wrapper بهذه الطريقة */}
-              <div vaul-drawer-wrapper="">
-                 <div className="relative flex min-h-svh flex-col bg-background">
-                    {children}
-                 </div>
-              </div>
-           </body>
-          </html>`}
-      </Pre>
-    </StepItem>
-  </Step>
-</div>
+        <StepItem title="تعديل ملف layout.tsx لدعم خاصية الخلفية المتحركة">
+          في ملف <MdxBadge>layout.tsx</MdxBadge> الرئيسي، أضف\
+          <MdxBadge>vaul-drawer-wrapper</MdxBadge> لدعم خاصية تحريك/تكبير الخلفية:
+
+          <Pre highlightLines={[4]}>
+            {`<html lang="ar" suppressHydrationWarning>
+              <body className="bg-background font-medium antialiased min-h-svh" suppressHydrationWarning>
+                  {/* أنشئ div وأضف له خاصية vaul-drawer-wrapper بهذه الطريقة */}
+                  <div vaul-drawer-wrapper="">
+                     <div className="relative flex min-h-svh flex-col bg-background">
+                        {children}
+                     </div>
+                  </div>
+               </body>
+              </html>`}
+          </Pre>
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

@@ -248,7 +248,7 @@ export default function SearchClient({ docsConfig = { sidebarItems: [], mainNav:
   const renderSearchResults = useCallback(() => {
     return filteredResults.map((item, index) => {
       const absoluteHref = getAbsoluteDocPath(item.href)
-      const uniqueKey = item.id || absoluteHref
+      const uniqueKey = `${absoluteHref}#${index}`
       const isComponentItem = item.id === "components" || ComponentIcon
       return (
         <DialogClose key={uniqueKey} asChild>

@@ -1,26 +1,38 @@
 <ComponentPreview name="sheet-demo" />
 
-<div className="not-prose mdx:px-0 px-4">
-  <Step>
-    <StepItem title="تثبيت التبعيات">
-      أولاً، تحتاج إلى تثبيت التبعيات التالية:
+## التثبيت
 
-      <Pre>
-        {`npm install clsx tailwind-merge @radix-ui/react-dialog`}
-      </Pre>
-    </StepItem>
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="sheet" />
+    </CliCodeTabs>
+  </TabsContent>
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose mdx:px-0 px-4">
+      <Step>
+        <StepItem title="تثبيت التبعيات">
+          أولاً، تحتاج إلى تثبيت التبعيات التالية:
 
-      <ComponentUtils />
-    </StepItem>
+          <Pre>
+            {`npm install clsx tailwind-merge @radix-ui/react-dialog`}
+          </Pre>
+        </StepItem>
 
-    <StepItem title="إنشاء مكوّن Sheet">
-      <ComponentSource name="sheet-demo" />
-    </StepItem>
-  </Step>
-</div>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
+
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكوّن Sheet">
+          <ComponentSource name="sheet-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

@@ -2,27 +2,37 @@
 
 ## التثبيت
 
-<div className="not-prose md:px-0 px-4">
-  <Step>
-    <StepItem title="تثبيت التبعيات">
-      أولاً، ستحتاج إلى تثبيت التبعيات اللازمة للتنسيق ووظائف الأدوات. تتضمن هذه الحزم <MdxBadge>clsx</MdxBadge> لإدارة أسماء الأصناف الشرطية و<MdxBadge>tailwind-merge</MdxBadge> لمعالجة تعارضات أصناف Tailwind CSS بكفاءة.
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="scroll-area" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge @radix-ui/react-scroll-area`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose md:px-0 px-4">
+      <Step>
+        <StepItem title="تثبيت التبعيات">
+          أولاً، ستحتاج إلى تثبيت التبعيات اللازمة للتنسيق ووظائف الأدوات. تتضمن هذه الحزم <MdxBadge>clsx</MdxBadge> لإدارة أسماء الأصناف الشرطية و<MdxBadge>tailwind-merge</MdxBadge> لمعالجة تعارضات أصناف Tailwind CSS بكفاءة.
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge @radix-ui/react-scroll-area`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن Scroll-Area">
-      <ComponentSource name="scroll-area" />
-    </StepItem>
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="إنشاء مكوّن Scroll-Area">
+          <ComponentSource name="scroll-area" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

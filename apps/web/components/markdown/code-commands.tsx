@@ -7,6 +7,7 @@ import { useConfig } from "@/hooks/use-config"
 import { cn } from "@/lib/utils"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs"
 import { CheckIcon, ClipboardIcon } from "lucide-react"
+import { useLocale } from "next-intl"
 import * as React from "react"
 
 interface CodeCommandsProps extends React.ComponentProps<"div"> {
@@ -71,7 +72,7 @@ export function CodeCommands({
             console.error('Failed to copy command:', error)
         }
     }, [activeCommand])
-
+    const locale = useLocale()
     return (
         <TooltipProvider>
             <div
@@ -82,6 +83,7 @@ export function CodeCommands({
                 {...props}
             >
                 <Tabs
+                    dir={locale === "ar" ? "rtl" : "ltr"}
                     value={packageManager}
                     className="w-full"
                     onValueChange={(value) => {

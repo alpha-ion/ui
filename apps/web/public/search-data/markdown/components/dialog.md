@@ -2,31 +2,41 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت الحزم المطلوبة">
-      أولاً، تحتاج إلى تثبيت الحزم التالية:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="dialog" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install @radix-ui/react-dialog clsx tailwind-merge`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت الحزم المطلوبة">
+          أولاً، تحتاج إلى تثبيت الحزم التالية:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install @radix-ui/react-dialog clsx tailwind-merge`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-      <p className="text-gray-600 mt-2">
-        إذا كان لديك ملف <code>utils.ts</code> بالفعل في مشروعك، يمكنك تجاوز هذه الخطوة.
-      </p>
-    </StepItem>
+          <ComponentUtils />
 
-    <StepItem title="إنشاء مكون الحوار">
-      <ComponentSource name="dialog-demo" />
-    </StepItem>
-  </Step>
-</div>
+          <p className="text-gray-600 mt-2">
+            إذا كان لديك ملف <code>utils.ts</code> بالفعل في مشروعك، يمكنك تجاوز هذه الخطوة.
+          </p>
+        </StepItem>
+
+        <StepItem title="إنشاء مكون الحوار">
+          <ComponentSource name="dialog-demo" />
+        </StepItem>
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 
@@ -60,7 +70,7 @@
 
 ## أمثلة
 
-### حوار مدمر (Destructive)
+### حوار حظر (Destructive)
 
 <ComponentPreview name="dialog-demo" variant="destructive" />
 

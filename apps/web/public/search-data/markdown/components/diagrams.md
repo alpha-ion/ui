@@ -2,25 +2,35 @@
 
 ## التثبيت
 
-<div className="not-prose md:px-0 px-4">
-  <Step>
-    <StepItem title="تثبيت الاعتمادات (Dependencies)">
-      أولًا، لبدء إنشاء المخططات في تطبيقك المبني بـ Next.js تحتاج إلى تثبيت مكتبة تُسمى <span className="underline text-gray-950">[Mermaid](https://mermaid.js.org/)</span>:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="diagrams" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge mermaid`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose md:px-0 px-4">
+      <Step>
+        <StepItem title="تثبيت الاعتمادات (Dependencies)">
+          أولًا، لبدء إنشاء المخططات في تطبيقك المبني بـ Next.js تحتاج إلى تثبيت مكتبة تُسمى <span className="underline text-gray-950">[Mermaid](https://mermaid.js.org/)</span>:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge mermaid`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="ها أنت جاهز الآن! يمكنك البدء في إنشاء المخططات بسهولة كما يفعل المصمّم." />
-  </Step>
-</div>
+          <ComponentUtils />
+        </StepItem>
+
+        <StepItem title="ها أنت جاهز الآن! يمكنك البدء في إنشاء المخططات بسهولة كما يفعل المصمّم." />
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

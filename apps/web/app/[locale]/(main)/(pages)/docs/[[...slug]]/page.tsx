@@ -113,7 +113,7 @@ const ComponentsPage = async (props: DocsPageProps) => {
           </div>
         </div>
         {Settings.rightbar && (
-          <div className="hidden xl:flex xl:flex-col flex-shrink-0 sticky top-16 gap-3 py-8 lg:min-w-[230px] min-w-[200px] h-[94.5vh] toc transition-all">
+          <div className="hidden xl:flex xl:flex-col flex-shrink-0 sticky top-16 gap-3 py-8 lg:min-w-[230px] min-w-[200px] h-[calc(100vh-3.5rem)] toc transition-all">
             {Settings.toc && <Toc tocs={tocs} />}
             {Settings.feedback && <Feedback slug={pathName} title={docs.title} />}
             {Settings.toTop && (

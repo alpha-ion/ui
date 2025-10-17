@@ -339,6 +339,9 @@
       "react"
     ],
     "internalImports": [
+      "@/components/ui/button",
+      "@/components/ui/tooltip",
+      "@/hooks/use-copy-to-clipboard",
       "@/lib/utils",
       "@/settings/LanguageIcon"
     ],

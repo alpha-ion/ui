@@ -2,29 +2,39 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت التبعيات">
-      أولاً، تحتاج إلى تثبيت التبعيات:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="step" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm i clsx tailwind-merge`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت التبعيات">
+          أولاً، تحتاج إلى تثبيت التبعيات:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm i clsx tailwind-merge`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكوّن Step">
-      <ComponentSource name="step-demo" />
-    </StepItem>
+          <ComponentUtils />
+        </StepItem>
 
-    <StepItem title="الآن يمكنك استخدامه بحرية وتخصيصه كما تشاء" />
-  </Step>
-</div>
+        <StepItem title="إنشاء مكوّن Step">
+          <ComponentSource name="step-demo" />
+        </StepItem>
+
+        <StepItem title="الآن يمكنك استخدامه بحرية وتخصيصه كما تشاء" />
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 

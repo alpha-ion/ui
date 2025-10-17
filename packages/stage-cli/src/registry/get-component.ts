@@ -9,22 +9,16 @@ export async function getComponents(): Promise<RegistryItem[]> {
     const components: RegistryItem[] = []
 
     try {
-        // Read component files from registry/ui directory
         const componentFiles = await fastGlob("**/*.tsx", { cwd: COMPONENTS_PATH })
 
         for (const file of componentFiles) {
             const filePath = path.join(COMPONENTS_PATH, file)
             const content = fsExtra.readFileSync(filePath, "utf8")
             const name = path.basename(file, ".tsx")
-
-            // Extract dependencies from imports
             const dependencies = extractDependencies(content)
             const internalImports = extractInternalImports(content)
-
-            // Resolve internal imports to file paths within registry (if exist)
-            const relatedFiles: { type: string; path: string; content: string }[] = []
+            const relatedFiles: { type: "registry:component"; path: string; content: string }[] = []
             for (const imp of internalImports) {
-                // Convert '@/components/icons/x' → 'icons/x.tsx' relative to COMPONENTS_PATH
                 const rel = imp.replace(/^@\//, "").replace(/^components\//, "")
                 const candidateTsx = path.join(COMPONENTS_PATH, `${rel}.tsx`)
                 const candidateTs = path.join(COMPONENTS_PATH, `${rel}.ts`)

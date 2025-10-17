@@ -2,29 +2,39 @@
 
 ## التثبيت
 
-<div className="not-prose px-4 md:px-0">
-  <Step>
-    <StepItem title="تثبيت المكتبات المطلوبة">
-      أولاً، قم بتثبيت المكتبات التالية:
+<CliCodeTabs>
+  <TabsContent value="أمر الـ CLI">
+    <CliCodeTabs>
+      <CodeCommands componentName="tabs" />
+    </CliCodeTabs>
+  </TabsContent>
 
-      <Pre className="language-bash">
-        {`npm install clsx tailwind-merge @radix-ui/react-tabs framer-motion`}
-      </Pre>
-    </StepItem>
+  <TabsContent value="تثبيت يدويا">
+    <div className="not-prose px-4 md:px-0">
+      <Step>
+        <StepItem title="تثبيت المكتبات المطلوبة">
+          أولاً، قم بتثبيت المكتبات التالية:
 
-    <StepItem title="إنشاء ملف utils.ts">
-      <ComponentUtilsText />
+          <Pre className="language-bash">
+            {`npm install clsx tailwind-merge @radix-ui/react-tabs framer-motion`}
+          </Pre>
+        </StepItem>
 
-      <ComponentUtils />
-    </StepItem>
+        <StepItem title="إنشاء ملف utils.ts">
+          <ComponentUtilsText />
 
-    <StepItem title="إنشاء مكون Tabs">
-      <ComponentSource name="tabs-demo" />
-    </StepItem>
+          <ComponentUtils />
+        </StepItem>
 
-    <StepItem title="الآن يمكنك تعديله ليناسب مشروعك" />
-  </Step>
-</div>
+        <StepItem title="إنشاء مكون Tabs">
+          <ComponentSource name="tabs-demo" />
+        </StepItem>
+
+        <StepItem title="الآن يمكنك تعديله ليناسب مشروعك" />
+      </Step>
+    </div>
+  </TabsContent>
+</CliCodeTabs>
 
 ## الاستخدام
 
