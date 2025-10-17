@@ -5,7 +5,17 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-
+node_modules
+dist
+.next
+.turbo
+.vercel
+out
+.env
+.env.local
+pnpm-lock.yaml
+.pnp
+.pnp.js
 # testing
 /coverage
 
