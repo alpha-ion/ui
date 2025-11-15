@@ -1,0 +1,56 @@
+---
+title: Checkbox
+slug: /docs/components/checkbox
+description: A fully engineered form control for boolean selections, guaranteeing seamless accessibility and precise visual feedback. It handles all required states for reliable user input and data submission.
+keywords: [checkbox, form control, boolean selection, A11y, input]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/checkbox
+  api: https://www.radix-ui.com/docs/primitives/components/checkbox#api-reference
+---
+
+<ComponentPreview name="checkbox-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="checkbox"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-checkbox`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Checkbox Component">
+      <ComponentSource name="checkbox-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Checkbox } from "@/components/ui/checkbox"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Checkbox />`}
+  </Pre>
+</div>

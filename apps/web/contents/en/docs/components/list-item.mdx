@@ -1,0 +1,85 @@
+---
+title: List Item
+description: Highly composed, interactive module for content display. Features hidden actions on hover and smart vertical alignment for media.
+keywords: [interactive list component, hover actions UI, smart media alignment]
+---
+
+<ComponentPreview name="list-item-demo" />
+
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="list-item"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose md:px-0 px-4">
+<Step>
+<StepItem title="Install Dependencies">
+First, install the required dependencies:
+<Pre className="language-bash">
+{`npm install clsx tailwind-merge`}
+</Pre>
+</StepItem>
+  <StepItem title="Create utils.ts"> 
+    <ComponentUtilsText/>
+    <ComponentUtils/>
+  </StepItem>
+  <StepItem title="Create List Item Component">
+    <ComponentSource name="list-item-demo"/>
+  </StepItem>
+</Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+<Pre>{`
+import {
+  ListItem,
+  ItemActions,
+  ListItemContent,
+  ListItemDescription,
+  ListItemFooter,
+  ListItemHeader,
+  ListItemMedia,
+  ListItemActions,
+  ListItemTitle,
+} from "@/components/ui/list-item"
+`}</Pre>
+<Pre>{`
+<ListItem>
+    <ListItemContent>
+        <ListItemTitle>AI Code Assistant</ListItemTitle>
+        <ListItemDescription>
+            Get intelligent code suggestions and auto-completion powered by advanced AI.
+        </ListItemDescription>
+    </ListItemContent>
+    <ListItemFooter>
+        <ListItemActions>
+            <Button>Activate</Button>
+        </ListItemActions>
+    </ListItemFooter>
+</ListItem>
+`}</Pre>
+</div>
+
+
+## Examples
+### Group 
+<ComponentPreview name="list-item-group-demo" />
+### Sizes 
+<ComponentPreview name="list-item-sizes-demo" />
+### Variants
+<ComponentPreview name="list-item-variants-demo" />
+### With Avatar
+<ComponentPreview name="list-item-with-avatar-demo" />

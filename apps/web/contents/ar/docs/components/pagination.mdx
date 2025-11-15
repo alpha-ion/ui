@@ -1,0 +1,57 @@
+---
+title: الترقيم  (Pagination)
+slug: /docs/components/pagination
+description: مكوّن الترقيم هو عنصر تنقّل يتيح للمستخدمين استعراض المحتوى عبر عدّة صفحات بسهولة وسلاسة.
+keywords: [ترقيم الصفحات, مكوّن التصفح, pagination ui, navigation, واجهات الاستخدام]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/pagination
+  api: https://www.radix-ui.com/docs/primitives/components/pagination#api-reference
+---
+
+**استخدم مكوّن الترقيم لإدارة المحتوى الطويل بطريقة احترافية، مع توفير تجربة تنقّل مرنة ومحسّنة للمستخدم.**
+
+<ComponentPreview name="pagination-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدوي</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="pagination" />
+  </CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose md:px-0 px-4">
+<Step>
+  <StepItem title="تثبيت المتطلبات">
+    قم بتثبيت الحزم الضرورية:
+    <Pre className="language-bash">
+{`npm install clsx tailwind-merge @radix-ui/react-pagination`}
+    </Pre>
+  </StepItem>
+  <StepItem title="إنشاء ملف utils.ts">
+    <ComponentUtilsText />
+    <ComponentUtils />
+  </StepItem>
+  <StepItem title="إنشاء مكوّن pagination">
+    <ComponentSource name="pagination-demo" />
+  </StepItem>
+</Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Pagination } from "@/components/ui/pagination"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Pagination totalPages={5} currentPage={1} onPageChange={(page) => console.log(page)} />`}
+  </Pre>
+</div>

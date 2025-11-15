@@ -1,0 +1,79 @@
+---
+title: Button Group
+slug: /docs/components/button-group
+description: Achieve optimal visual cohesion by grouping related actions into a single, highly consistent component. It supports complex configurations.
+keywords: [button group, action grouping, split button, ui consistency, form input group]
+---
+
+<ComponentPreview name="button-group" />
+
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="button-group"/>
+</CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">{`npm install clsx tailwind-merge`}</Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Button Component">
+      <ComponentSource name="button-group" />
+    </StepItem>
+    <StepItem title="Here you go, Now you can edit and customize it for your needs and make it yours" />
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+## Usage
+<div className="not-prose space-y-6">
+  <Pre>{`import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+  ButtonGroupText,
+} from "@/components/ui/button-group"`}</Pre>
+  <Pre>
+{`
+<ButtonGroup>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</ButtonGroup>
+`}
+  </Pre>
+</div>
+## Examples 
+
+### Orientation
+<ComponentPreview name="button-group-orientation"/>
+### Size
+<ComponentPreview name="button-group-size"/>
+### Nested
+<ComponentPreview name="button-group-nested"/>
+### Separator
+<ComponentPreview name="button-group-separator"/>
+### Split
+<ComponentPreview name="button-group-split"/>
+### Input
+<ComponentPreview name="button-group-input"/>
+### Input Group
+<ComponentPreview name="button-group-input-group"/>
+### Dropdown Menu
+<ComponentPreview name="button-group-dropdown-menu"/>
+### Select
+<ComponentPreview name="button-group-select"/>
+### Popover
+<ComponentPreview name="button-group-popover"/>

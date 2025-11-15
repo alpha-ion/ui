@@ -1,0 +1,85 @@
+---
+title: عناصر قابلة للتحجيم (Resizable)
+slug: /docs/components/resizable
+description: مكوّن العناصر القابلة للتحجيم يتيح لك إنشاء لوحات وأقسام يمكن للمستخدم تغيير حجمها بحرية داخل الواجهة، مما يمنح مرونة أكبر في تصميم التخطيطات التفاعلية.
+keywords: [resizable, مكوّن, تخطيط, panels, ui]
+---
+
+<ComponentPreview name="resizable-demo" />
+
+**استخدم مكوّن Resizable لإنشاء مساحات عمل ديناميكية، لوحات جانبية قابلة للتوسّع، أو مناطق مرنة داخل التطبيقات المعقدة.**
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="resizable" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+
+    <StepItem title="تثبيت المتطلبات">
+      قم بتثبيت الحزم اللازمة قبل البدء:
+      <Pre className="language-bash">
+{`npm install clsx tailwind-merge react-resizable-panels`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن العناصر القابلة للتحجيم">
+      <ComponentSource name="resizable-demo" />
+    </StepItem>
+
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+
+<Pre className="language-typescript">
+{`
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable"
+`}
+</Pre>
+
+<Pre className="language-typescript">
+{`
+<ResizablePanelGroup direction="horizontal">
+  <ResizablePanel>القسم الأول</ResizablePanel>
+  <ResizableHandle />
+  <ResizablePanel>القسم الثاني</ResizablePanel>
+</ResizablePanelGroup>
+`}
+</Pre>
+
+</div>
+
+## الأمثلة
+
+### تخطيط عمودي
+<ComponentPreview name="resizable-vertical-demo" />
+
+### مقبض التحكم
+<ComponentPreview name="resizable-handle-demo" />

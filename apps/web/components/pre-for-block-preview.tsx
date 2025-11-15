@@ -65,11 +65,11 @@ export function Pre({
 
   if (!isClient) {
     return (
-      <div className="code-block-container relative group rounded-[6px] custom-scrollbar w-full">
+      <div className="code-block-container relative group rounded-[6px] hide-scrollbar w-full">
         <pre
-          className={`overflow-x-auto max-h-[650px] hide-scrollbar ${lineNumbersClass}`}
+          className={`overflow-x-auto max-h-[650px] ${lineNumbersClass}`}
         >
-          <code>{children}</code>
+          <code className="hide-scrollbar">{children}</code>
         </pre>
       </div>
     )
@@ -80,7 +80,7 @@ export function Pre({
       className={cn(
         `language-${language}`,
         className,
-        "overflow-x-auto",
+        "overflow-x-auto hide-scrollbar",
         lineNumbersClass
       )}
       data-line={

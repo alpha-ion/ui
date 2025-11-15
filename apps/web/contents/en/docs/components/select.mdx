@@ -1,0 +1,80 @@
+---
+title: Select
+slug: /docs/components/select
+description: The Select component allows users to create dropdown menus and selection controls.
+keywords: [select, component, dropdown, menu]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/select
+  api: https://www.radix-ui.com/docs/primitives/components/select#api-reference
+---
+
+<ComponentPreview name="select-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="select"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-select`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Select Component">
+      <ComponentSource name="select-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+    `}
+  </Pre>
+  <Pre className="language-typescript">
+    {`
+<Select>
+    <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Theme" />
+    </SelectTrigger>
+    <SelectContent>
+        <SelectItem value="light">Light</SelectItem>
+        <SelectItem value="dark">Dark</SelectItem>
+        <SelectItem value="system">System</SelectItem>
+    </SelectContent>
+</Select>
+    `}
+  </Pre>
+</div>
+
+## Examples
+
+###  Scrollable
+<ComponentPreview name="select-scrollable-demo" />

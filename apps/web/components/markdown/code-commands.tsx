@@ -17,7 +17,6 @@ interface CodeCommandsProps extends React.ComponentProps<"div"> {
     __pnpm__?: string
     __yarn__?: string
     __bun__?: string
-    __deno__?: string
 }
 
 export function CodeCommands({
@@ -27,7 +26,6 @@ export function CodeCommands({
     __pnpm__,
     __yarn__,
     __bun__,
-    __deno__,
     className,
     ...props
 }: CodeCommandsProps) {
@@ -41,25 +39,23 @@ export function CodeCommands({
         }
     }, [hasCopied])
 
-    const packageManager = config.packageManager || "pnpm"
-
+    const packageManager = config?.packageManager || "pnpm"
+    const cliName = "alpha-kit"
     const tabs = React.useMemo(() => {
         const availableTabs: Record<string, string> = {}
         if (componentName) {
-            availableTabs.npm = `npx alphabyte add ${componentName}`
-            availableTabs.pnpm = `pnpm dlx alphabyte add ${componentName}`
-            availableTabs.yarn = `yarn dlx alphabyte add ${componentName}`
-            availableTabs.bun = `bunx alphabyte add ${componentName}`
-            availableTabs.deno = `deno run -A npm:alphabyte-cli add ${componentName}`
+            availableTabs.npm = `npx ${cliName} add ${componentName}`
+            availableTabs.pnpm = `pnpm dlx ${cliName} add ${componentName}`
+            availableTabs.yarn = `yarn dlx ${cliName} add ${componentName}`
+            availableTabs.bun = `bunx ${cliName} add ${componentName}`
         } else {
             if (__npm__) availableTabs.npm = __npm__
             if (__pnpm__) availableTabs.pnpm = __pnpm__
             if (__yarn__) availableTabs.yarn = __yarn__
             if (__bun__) availableTabs.bun = __bun__
-            if (__deno__) availableTabs.deno = __deno__
         }
         return availableTabs
-    }, [componentName, __npm__, __pnpm__, __yarn__, __bun__, __deno__])
+    }, [componentName, __npm__, __pnpm__, __yarn__, __bun__])
 
     const activeCommand = tabs[packageManager]
 
@@ -85,11 +81,12 @@ export function CodeCommands({
                 <Tabs
                     dir={locale === "ar" ? "rtl" : "ltr"}
                     value={packageManager}
+                    defaultValue="pnpm"
                     className="w-full"
                     onValueChange={(value) => {
                         setConfig({
                             ...config,
-                            packageManager: value as "pnpm" | "npm" | "yarn" | "bun" | "deno",
+                            packageManager: value as "pnpm" | "npm" | "yarn" | "bun",
                         })
                     }}
                 >
@@ -117,25 +114,27 @@ export function CodeCommands({
                                 ))}
                             </TabsList>
                         </div>
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="h-8 w-8 text-gray-600 hover:text-gray-900 hover:bg-gray-100/80 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800/80"
-                                    onClick={copyCommand}
-                                >
-                                    {hasCopied ? (
-                                        <CheckIcon className="w-4 h-4 text-green-600" />
-                                    ) : (
-                                        <ClipboardIcon className="w-4 h-4" />
-                                    )}
-                                </Button>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                {hasCopied ? "Copied" : "Copy command"}
-                            </TooltipContent>
-                        </Tooltip>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button
+                                        variant="ghost"
+                                        size="icon"
+                                        className="h-8 w-8 text-gray-600 hover:text-gray-900 hover:bg-gray-100/80 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800/80"
+                                        onClick={copyCommand}
+                                    >
+                                        {hasCopied ? (
+                                            <CheckIcon className="w-4 h-4 text-green-600" />
+                                        ) : (
+                                            <ClipboardIcon className="w-4 h-4" />
+                                        )}
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    {hasCopied ? "Copied" : "Copy command"}
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                     </div>
                     <div className="px-4 h-8">
                         {Object.entries(tabs).map(([key, value]) => (
@@ -165,14 +164,17 @@ export function CliCodeTabs({
     ...props
 }: React.ComponentProps<typeof Tabs>) {
     const [config, setConfig] = useConfig()
+    const locale = useLocale()
 
     const installationType = React.useMemo(() => {
-        return config.installationType || "cli"
+        return config?.installationType || "cli"
     }, [config])
 
     return (
         <Tabs
             value={installationType}
+            defaultValue="cli"
+            dir={locale === "ar" ? "rtl" : "ltr"}
             onValueChange={(value) => {
                 setConfig({ ...config, installationType: value as "cli" | "manual" })
             }}

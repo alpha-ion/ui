@@ -1,10 +1,10 @@
 {
-  "name": "alphabyte-labs-turbo",
+  "name": "alpha",
   "private": true,
   "license": "MIT",
   "sideEffects": false,
   "author": {
-    "name": "Alphabytes"
+    "name": "Alpha"
   },
   "scripts": {
     "build": "turbo run build",
@@ -12,16 +12,16 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "cli": "pnpm --filter @alphabyte-labs/cli",
-    "cli:build": "pnpm --filter @alphabyte-labs/cli build",
-    "cli:dev": "pnpm --filter @alphabyte-labs/cli dev"
+    "cli": "pnpm --filter @alpha-ui/cli",
+    "cli:build": "pnpm --filter @alpha-ui/cli build",
+    "cli:dev": "pnpm --filter @alpha-ui/cli dev"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
-    "turbo": "^2.5.8",
-    "typescript": "5.9.2"
+    "turbo": "^2.6.1",
+    "typescript": "5.9.3"
   },
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.22.0",
   "engines": {
     "node": ">=18"
   },

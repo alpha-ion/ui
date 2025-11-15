@@ -1,0 +1,248 @@
+{
+  "about": {
+    "ancillary": []
+  },
+  "page": {
+    "ancillary": []
+  },
+  "banner": {
+    "ancillary": []
+  },
+  "bento-grid": {
+    "ancillary": []
+  },
+  "Carousel-Container": {
+    "ancillary": []
+  },
+  "carousel": {
+    "ancillary": []
+  },
+  "index": {
+    "ancillary": []
+  },
+  "carousel-container": {
+    "ancillary": []
+  },
+  "case-studies": {
+    "ancillary": []
+  },
+  "contact": {
+    "ancillary": []
+  },
+  "dashboard": {
+    "ancillary": []
+  },
+  "sidebar": {
+    "ancillary": []
+  },
+  "use-responsive-orientation": {
+    "ancillary": []
+  },
+  "layout": {
+    "ancillary": []
+  },
+  "dashboard-header": {
+    "ancillary": []
+  },
+  "dashboard-sidebar": {
+    "ancillary": []
+  },
+  "nav-main": {
+    "ancillary": []
+  },
+  "nav-user": {
+    "ancillary": []
+  },
+  "section-cards": {
+    "ancillary": []
+  },
+  "app-sidebar": {
+    "ancillary": []
+  },
+  "chart-area-interactive": {
+    "ancillary": []
+  },
+  "data-table": {
+    "ancillary": []
+  },
+  "nav-documents": {
+    "ancillary": []
+  },
+  "nav-secondary": {
+    "ancillary": []
+  },
+  "site-header": {
+    "ancillary": []
+  },
+  "expanded-gallery": {
+    "ancillary": []
+  },
+  "faqs": {
+    "ancillary": []
+  },
+  "feature-showcase": {
+    "ancillary": []
+  },
+  "features-showcase": {
+    "ancillary": []
+  },
+  "login-form": {
+    "ancillary": []
+  },
+  "account-switcher": {
+    "ancillary": []
+  },
+  "mail-display": {
+    "ancillary": []
+  },
+  "mail-list": {
+    "ancillary": []
+  },
+  "mail": {
+    "ancillary": []
+  },
+  "nav": {
+    "ancillary": []
+  },
+  "data": {
+    "ancillary": []
+  },
+  "navbar": {
+    "ancillary": []
+  },
+  "new-collection.jsx": {
+    "ancillary": []
+  },
+  "orders-page": {
+    "ancillary": []
+  },
+  "orders-header": {
+    "ancillary": []
+  },
+  "header": {
+    "ancillary": []
+  },
+  "orders-cards": {
+    "ancillary": []
+  },
+  "orders-chart": {
+    "ancillary": []
+  },
+  "orders-stats": {
+    "ancillary": []
+  },
+  "orders-table": {
+    "ancillary": []
+  },
+  "personal-card": {
+    "ancillary": []
+  },
+  "code-viewer": {
+    "ancillary": []
+  },
+  "maxlength-selector": {
+    "ancillary": []
+  },
+  "model-selector": {
+    "ancillary": []
+  },
+  "preset-actions": {
+    "ancillary": []
+  },
+  "preset-save": {
+    "ancillary": []
+  },
+  "preset-selector": {
+    "ancillary": []
+  },
+  "preset-share": {
+    "ancillary": []
+  },
+  "temperature-selector": {
+    "ancillary": []
+  },
+  "top-p-selector": {
+    "ancillary": []
+  },
+  "pricing-section": {
+    "ancillary": []
+  },
+  "billing-toggle": {
+    "ancillary": []
+  },
+  "discounted-price": {
+    "ancillary": []
+  },
+  "normal-price": {
+    "ancillary": []
+  },
+  "product-color-temp-button": {
+    "ancillary": []
+  },
+  "product-image-carousel": {
+    "ancillary": []
+  },
+  "product-info": {
+    "ancillary": []
+  },
+  "product-ip-buttons": {
+    "ancillary": []
+  },
+  "product-card": {
+    "ancillary": []
+  },
+  "product-carousel": {
+    "ancillary": []
+  },
+  "product-list": {
+    "ancillary": []
+  },
+  "service": {
+    "ancillary": []
+  },
+  "signup-form": {
+    "ancillary": []
+  },
+  "signup-1": {
+    "ancillary": []
+  },
+  "status-bar": {
+    "ancillary": []
+  },
+  "status-section": {
+    "ancillary": []
+  },
+  "subscription-email": {
+    "ancillary": []
+  },
+  "columns": {
+    "ancillary": []
+  },
+  "data-table-column-header": {
+    "ancillary": []
+  },
+  "data-table-faceted-filter": {
+    "ancillary": []
+  },
+  "data-table-pagination": {
+    "ancillary": []
+  },
+  "data-table-row-actions": {
+    "ancillary": []
+  },
+  "data-table-toolbar": {
+    "ancillary": []
+  },
+  "data-table-view-options": {
+    "ancillary": []
+  },
+  "user-nav": {
+    "ancillary": []
+  },
+  "timeline-container": {
+    "ancillary": []
+  },
+  "timeline": {
+    "ancillary": []
+  }
+}

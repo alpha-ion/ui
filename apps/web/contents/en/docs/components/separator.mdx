@@ -1,0 +1,58 @@
+---
+title: Separator
+description: Highly controlled visual divider for structured UI. Features precise orientation (H/V) and dynamic weight (opacity) control for sophisticated visual hierarchy.
+keywords: [visual divider, weight control separator, sophisticated UI element, accessibility compliant]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/separator
+  api: https://www.radix-ui.com/docs/primitives/components/separator#api-reference
+---
+
+<ComponentPreview name="separator-demo" />
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="separator"/>
+</CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First, you need to install dependencies:
+      <Pre>{`npm install clsx tailwind-merge @radix-ui/react-separator`}</Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Separator Component">
+      <ComponentSource name="separator-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+<div className="not-prose space-y-6">
+  <Pre>{`import { Separator } from "@/components/ui/separator"`}</Pre>
+  <Pre>{`<Separator />`}</Pre>
+</div>
+## Examples 
+### Vertical
+<ComponentPreview name="separator-demo" variant="vertical" />
+### Weight
+#### Ultralight
+<ComponentPreview name="separator-demo" variant="ultralight" />
+#### Light
+<ComponentPreview name="separator-demo" variant="light" />
+#### Regular
+<ComponentPreview name="separator-demo" variant="regular" />

@@ -1,9 +1,9 @@
 {
     "home": {
         "title": "Build Beautifully.",
-        "highlight": "Alphabyte Labs:",
+        "highlight": "Alpha UI:",
         "subtitle": "Your Open Source Component Library.",
-        "description": "Build stunning interfaces with our accessible, customizable components — crafted by developers, for developers.",
+        "description": "Build stunning interfaces with our accessible, customizable components -- crafted by developers, for developers.",
         "getStarted": "Get started",
         "browseBlocks": "Browse Blocks"
     },
@@ -53,13 +53,13 @@
         "this-page": "On This page"
     },
     "tocCtaCard": {
-        "companyName": "Alphabyte",
+        "companyName": "Alpha",
         "title": "Build your next digital platform with confidence.",
         "descriptionStart": "Built by the team behind",
-        "siteName": "alphabyte-labs",
+        "siteName": "alpha-ui",
         "descriptionMiddle": "—specialists in high-performance",
         "descriptionEnd": "solutions.",
-        "teamName": "alphabyte-labs",
+        "teamName": "alpha-ui",
         "technology": "Next.js",
         "ctaButton": "Schedule a free consultation."
     },
@@ -115,37 +115,67 @@
                 "introduction": "Introduction",
                 "installation": "Installation",
                 "rtlDirection": "RTL Direction",
-                "themes": "Themes"
+                "themes": "Themes",
+                "changelog": "Changelog"
             },
             "components": {
                 "title": "Components",
                 "accordion": "Accordion",
                 "alertDialog": "Alert Dialog",
+                "aspectRatio": "Aspect Ratio",
+                "avatar": "Avatar",
                 "badge": "Badge",
                 "breadcrumb": "Breadcrumb",
+                "buttonGroup": "Button Group",
                 "button": "Button",
                 "calendar": "Calendar",
+                "card": "Card",
+                "carousel": "Carousel",
+                "checkbox": "Checkbox",
                 "collapsible": "Collapsible",
+                "contextMenu": "Context Menu",
                 "datePicker": "Date Picker",
                 "diagrams": "Diagrams",
                 "dialog": "Dialog",
                 "drawer": "Drawer",
                 "dropdownMenu": "Dropdown Menu",
+                "empty": "Empty State",
+                "field": "Field",
                 "folderStructure": "Folder Structure",
+                "hoverCard": "Hover Card",
+                "inputGroup": "Input Group",
+                "inputOtp": "Input OTP",
                 "input": "Input",
+                "listItem": "List Item",
+                "kdb": "Kbd",
                 "label": "Label",
+                "loading": "Loading",
+                "menubar": "Menubar",
+                "navigationMenu": "Navigation Menu",
                 "notes": "Notes",
+                "pagination": "Pagination",
                 "popover": "Popover",
                 "preCodeBlock": "Pre (Code Block)",
+                "progress": "Progress",
                 "productCard": "Product Card",
+                "radioGroup": "Radio Group",
+                "resizable": "Resizable",
                 "scrollArea": "Scroll Area",
+                "select": "Select",
                 "separator": "Separator",
                 "sheet": "Sheet",
+                "skeleton": "Skeleton",
+                "slider": "Slider",
                 "sonner": "Sonner",
                 "step": "Step",
                 "switch": "Switch",
+                "table": "Table",
                 "tabs": "Tabs",
-                "tooltip": "Tooltip"
+                "textarea": "Textarea",
+                "toggleGroup": "Toggle Group",
+                "toggle": "Toggle",
+                "tooltip": "Tooltip",
+                "smart-select": "Smart Select"
             }
         }
     },
@@ -156,11 +186,11 @@
     "footer": {
         "builtBy": "Built by the team behind",
         "sourceCode": "The source code is available on",
-        "alphabyte": "Alphabyte-labs",
+        "alpha": "Alpha-UI",
         "github": "Github"
     },
     "logo": {
-        "alphabyte": "Alphabyte-labs",
+        "alpha": "Alpha-UI",
         "beta": "beta"
     },
     "new": {

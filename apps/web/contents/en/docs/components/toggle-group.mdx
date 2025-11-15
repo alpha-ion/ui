@@ -1,0 +1,64 @@
+---
+title: Toggle Group
+description: A highly flexible button component using CVA with multiple visual variants (Default, Outline, Ghost, Glass) and sizes, ensuring state-of-the-art UI control.
+keywords: [CVA toggle button, multi-variant toggle, glassmorphism UI, accessible button control]
+---
+
+<ComponentPreview name="toggle-group-demo" />
+
+## Installation
+
+<CliCodeTabs>   
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="toggle"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-toggle`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Toggle Component">
+      <ComponentSource name="toggle-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Toggle } from "@/components/ui/toggle"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Toggle>Toggle</Toggle>`}
+  </Pre>
+</div>
+## Examples
+
+### Outline
+<ComponentPreview name="toggle-group-outline-demo" />
+### Single 
+<ComponentPreview name="toggle-group-single-demo" />
+### Small
+<ComponentPreview name="toggle-group-small-demo" />
+### Large
+<ComponentPreview name="toggle-group-large-demo" />
+### Disabled
+<ComponentPreview name="toggle-group-disabled-demo" />

@@ -1,0 +1,56 @@
+---
+title: Pagination
+slug: /docs/components/pagination
+description: The Pagination component is a navigation element that allows users to browse through pages of content.
+keywords: [pagination, component, navigation, ui]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/pagination
+  api: https://www.radix-ui.com/docs/primitives/components/pagination#api-reference
+---
+
+<ComponentPreview name="pagination-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="pagination"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-pagination`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Pagination Component">
+      <ComponentSource name="pagination-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Pagination } from "@/components/ui/pagination"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Pagination totalPages={5} currentPage={1} onPageChange={(page) => console.log(page)} />`}
+  </Pre>
+</div>

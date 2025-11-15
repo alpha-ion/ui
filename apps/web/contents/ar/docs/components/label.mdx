@@ -1,0 +1,69 @@
+---
+title: التسمية (Label)
+description: مكون وصولية أساسي لحقول النماذج. يتميز بربط بصري تلقائي مع العناصر القرينة، يستجيب لحالات التعطيل (`disabled`).
+keywords: [تسمية نموذج A11y, تنميط peer-disabled, ربط تسمية تلقائي]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/label
+  api: https://www.radix-ui.com/docs/primitives/components/label#api-reference
+---
+
+<ComponentPreview name="label-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="أمر الـ CLI">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="تثبيت يدويا">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="أمر الـ CLI">
+<CliCodeTabs>
+  <CodeCommands componentName="label"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="تثبيت يدويا">
+<div className="not-prose md:px-0 px-4">
+<Step>
+<StepItem title="تثبيت المتطلبات">
+قم أولاً بتثبيت الحزم المطلوبة:
+<Pre className="language-bash">
+{`npm install clsx tailwind-merge`}
+</Pre>
+</StepItem>
+  <StepItem title="إنشاء ملف utils.ts"> 
+    <ComponentUtilsText/>
+    <ComponentUtils/>
+  </StepItem>
+  <StepItem title="إنشاء مكوّن label">
+    <ComponentSource name="label-demo"/>
+  </StepItem>
+</Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+<div className="not-prose space-y-6">
+<Pre>
+{`import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"`}
+</Pre>
+
+<Pre>{`
+const LabelDemo = () => {
+  return (
+    <div className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <Label
+        htmlFor="terms"
+        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        أوافق على الشروط والأحكام
+      </Label>
+    </div>
+  )
+}
+
+export default LabelDemo
+`}</Pre>
+</div>

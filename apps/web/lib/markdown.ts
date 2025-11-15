@@ -2,7 +2,7 @@ import { Settings } from "@/config/meta"
 import { components } from "@/lib/components"
 import { getPageRoutes } from "@/lib/pageRoutes"
 import { GitHubLink } from "@/settings/settings"
-import { promises as fs } from "fs"
+import { promises as fs, existsSync } from "fs" 
 import matter from "gray-matter"
 import { Element, Text } from "hast"
 import { compileMDX } from "next-mdx-remote/rsc"
@@ -29,6 +29,39 @@ type BaseMdxFrontmatter = {
   keywords: string
   [key: string]: any
 }
+let cachedAppRoot: string | null = null
+
+function getAppRoot(): string {
+  if (cachedAppRoot) return cachedAppRoot
+  
+  const directContents = path.join(process.cwd(), 'contents')
+  if (existsSync(directContents)) {
+    cachedAppRoot = process.cwd()
+    console.log(`[getAppRoot] Using direct path: ${cachedAppRoot}`)
+    return cachedAppRoot
+  }
+
+  // 2. Check monorepo structure (apps/web)
+  const monorepoPath = path.join(process.cwd(), 'apps', 'web')
+  const monorepoContents = path.join(monorepoPath, 'contents')
+  if (existsSync(monorepoContents)) {
+    cachedAppRoot = monorepoPath
+    console.log(`[getAppRoot] Using monorepo path: ${cachedAppRoot}`)
+    return cachedAppRoot
+  }
+
+  // 3. Environment variable override
+  if (process.env.NEXT_PUBLIC_APP_ROOT) {
+    cachedAppRoot = path.join(process.cwd(), process.env.NEXT_PUBLIC_APP_ROOT)
+    console.log(`[getAppRoot] Using env variable path: ${cachedAppRoot}`)
+    return cachedAppRoot
+  }
+
+  // 4. Fallback
+  console.warn('[getAppRoot] Failed to detect app root, using process.cwd()')
+  cachedAppRoot = process.cwd()
+  return cachedAppRoot
+}
 
 async function parseMdx<Frontmatter>(rawMdx: string) {
   return await compileMDX<Frontmatter>({
@@ -53,31 +86,27 @@ async function parseMdx<Frontmatter>(rawMdx: string) {
 }
 
 function computeDocumentPath(slug: string, locale?: string) {
-  // Handle empty slug case
   if (!slug || slug === '' || slug === '/') {
     slug = 'introduction'
   }
 
-  // Clean the slug
-  slug = slug.replace(/^\/+|\/+$/g, '') // Remove leading and trailing slashes
+  slug = slug.replace(/^\/+|\/+$/g, '')
 
-  const segments = slug.split("/").filter(Boolean)
-  const lastSegment = segments[segments.length - 1] || 'introduction'
-
-  // Build base path parts: prefer localized folder if provided
-  const localDocsBase = locale ? path.join("contents", locale, "docs") : path.join("contents", "docs")
+  const appRoot = getAppRoot()
+  const localDocsBase = locale
+    ? path.join(appRoot, "contents", locale, "docs")
+    : path.join(appRoot, "contents", "docs")
 
   return Settings.gitload
     ? (locale
-        ? `${GitHubLink.href}/raw/main/contents/${locale}/docs/${slug}/${lastSegment}.mdx`
-        : `${GitHubLink.href}/raw/main/contents/docs/${slug}/${lastSegment}.mdx`)
-    : path.join(process.cwd(), localDocsBase, slug, `${lastSegment}.mdx`)
+      ? `${GitHubLink.href}/raw/main/contents/${locale}/docs/${slug}.mdx`
+      : `${GitHubLink.href}/raw/main/contents/docs/${slug}.mdx`)
+    : path.join(localDocsBase, `${slug}.mdx`)
 }
 
 const getDocumentPath = (() => {
   const cache = new Map<string, string>()
   return (slug: string, locale?: string) => {
-    // Normalize slug for caching; include locale tag to prevent collisions
     const normalizedSlug = slug || 'introduction'
     const cacheKey = locale ? `${locale}__${normalizedSlug}` : normalizedSlug
 
@@ -90,12 +119,10 @@ const getDocumentPath = (() => {
 
 export async function getDocument(slug: string, locale?: string) {
   try {
-    // Handle empty or undefined slug
     if (!slug || slug.trim() === '' || slug === '/') {
       slug = 'introduction'
     }
 
-    // Clean the slug
     slug = slug.replace(/^\/+|\/+$/g, '')
 
     console.log(`[getDocument] Processing slug: "${slug}"`)
@@ -116,7 +143,6 @@ export async function getDocument(slug: string, locale?: string) {
       rawMdx = await response.text()
       lastUpdated = response.headers.get("Last-Modified") ?? null
     } else {
-      // Check if file exists first
       try {
         await fs.access(contentPath, fs.constants.F_OK)
         rawMdx = await fs.readFile(contentPath, "utf-8")
@@ -125,17 +151,14 @@ export async function getDocument(slug: string, locale?: string) {
       } catch (accessError) {
         console.error(`Document file not found: ${contentPath}`)
 
-        // Try alternative paths for different routing structures
-        const localizedBase = locale ? path.join(process.cwd(), "contents", locale, "docs") : null
-        const defaultBase = path.join(process.cwd(), "contents", "docs")
+        const appRoot = getAppRoot() // ✅ استخدم getAppRoot
+        const localizedBase = locale ? path.join(appRoot, "contents", locale, "docs") : null
+        const defaultBase = path.join(appRoot, "contents", "docs")
         const altBases = [localizedBase, defaultBase].filter(Boolean) as string[]
 
         const alternativePaths = altBases.flatMap((base) => [
-          // For components routes that might be structured differently
           path.join(base, slug.replace('components/', ''), `${slug.split('/').pop()}.mdx`),
-          // For root level files
           path.join(base, `${slug}.mdx`),
-          // For nested structures
           path.join(base, slug, `index.mdx`),
         ])
 
@@ -151,7 +174,6 @@ export async function getDocument(slug: string, locale?: string) {
             console.log(`[getDocument] Found alternative path: ${altPath}`)
             break
           } catch (altError) {
-            // Continue to next alternative
             continue
           }
         }
@@ -170,7 +192,6 @@ export async function getDocument(slug: string, locale?: string) {
 
     console.log(`[getDocument] Successfully loaded content for slug: ${slug}`)
     const parsedMdx = await parseMdx<BaseMdxFrontmatter>(rawMdx)
-    // Attach raw MDX to docs so clients (e.g., copy page) can access original source
     const docsWithRaw = { ...(parsedMdx.frontmatter as any), raw: rawMdx }
     const tocs = await getTableOfContents(slug, locale)
 
@@ -198,12 +219,10 @@ export async function getTableOfContents(
     href: string
   }> = []
 
-  // Handle empty slug
   if (!slug || slug.trim() === '' || slug === '/') {
     slug = 'introduction'
   }
 
-  // Clean the slug
   slug = slug.replace(/^\/+|\/+$/g, '')
 
   let rawMdx = ""
@@ -229,25 +248,21 @@ export async function getTableOfContents(
       return []
     }
   } else {
+    const appRoot = getAppRoot() // ✅ استخدم getAppRoot
     const baseDir = locale
-      ? path.join(process.cwd(), "contents", locale, "docs")
-      : path.join(process.cwd(), "contents", "docs")
-    const contentPath = path.join(
-      baseDir,
-      slug,
-      `${lastSegment}.mdx`
-    )
+      ? path.join(appRoot, "contents", locale, "docs")
+      : path.join(appRoot, "contents", "docs")
+    const contentPath = path.join(baseDir, slug, `${lastSegment}.mdx`)
 
     try {
       try {
         await fs.access(contentPath, fs.constants.F_OK)
         rawMdx = await fs.readFile(contentPath, "utf-8")
       } catch (fileError) {
-        console.error(`[getTableOfContents] File does not exist: ${contentPath}`)
+        console.warn(`[getTableOfContents] Primary path missing, trying alternatives: ${contentPath}`)
 
-        // Try alternative paths
-        const localizedBase = locale ? path.join(process.cwd(), "contents", locale, "docs") : null
-        const defaultBase = path.join(process.cwd(), "contents", "docs")
+        const localizedBase = locale ? path.join(appRoot, "contents", locale, "docs") : null
+        const defaultBase = path.join(appRoot, "contents", "docs")
         const altBases = [localizedBase, defaultBase].filter(Boolean) as string[]
         const alternativePaths = altBases.flatMap((base) => [
           path.join(base, slug.replace('components/', ''), `${slug.split('/').pop()}.mdx`),
@@ -309,7 +324,6 @@ function sluggify(text: string) {
 
 type SimplePage = { title: string; href: string }
 
-// Cache routes per-locale to avoid mixing languages across requests
 let cachedRoutesByLocale: Map<string | undefined, SimplePage[]> | null = null
 let cachedIndexMapByLocale: Map<string | undefined, Map<string, number>> | null = null
 
@@ -398,14 +412,15 @@ const postCopy = () => (tree: Node) => {
   })
 }
 
-// Start Blocks
+// Blocks Functions
 function getBlocksContentPath(slug: string, locale?: string) {
   const segments = slug.split("/").filter(Boolean)
   const lastSegment = segments[segments.length - 1]
 
+  const appRoot = getAppRoot()
   const baseDir = locale
-    ? path.join(process.cwd(), "contents", locale, "blocks")
-    : path.join(process.cwd(), "contents", "blocks")
+    ? path.join(appRoot, "contents", locale, "blocks")
+    : path.join(appRoot, "contents", "blocks")
   return path.join(baseDir, `${lastSegment}.mdx`)
 }
 
@@ -417,7 +432,6 @@ export async function getBlocksForSlug(slug: string, locale?: string) {
     try {
       await fs.access(contentPath, fs.constants.F_OK)
     } catch (error) {
-      // fallback to default blocks dir if locale file not found
       const fallbackPath = getBlocksContentPath(slug)
       try {
         await fs.access(fallbackPath, fs.constants.F_OK)
@@ -438,10 +452,12 @@ export async function getBlocksForSlug(slug: string, locale?: string) {
 }
 
 export async function getAllBlocks(locale?: string) {
+  const appRoot = getAppRoot()
   const localizedFolder = locale
-    ? path.join(process.cwd(), "contents", locale, "blocks")
-    : path.join(process.cwd(), "contents", "blocks")
-  const defaultFolder = path.join(process.cwd(), "contents", "blocks")
+    ? path.join(appRoot, "contents", locale, "blocks")
+    : path.join(appRoot, "contents", "blocks")
+  const defaultFolder = path.join(appRoot, "contents", "blocks")
+
   console.log(`[getAllBlocks] Checking blocks folder: ${localizedFolder}`)
 
   try {
@@ -470,7 +486,6 @@ export async function getAllBlocks(locale?: string) {
         const stats = await fs.stat(filePath)
 
         if (!stats.isDirectory()) {
-          // Handle direct .mdx files
           if (file.endsWith('.mdx')) {
             try {
               const rawMdx = await fs.readFile(filePath, "utf-8")
@@ -487,7 +502,6 @@ export async function getAllBlocks(locale?: string) {
           return undefined
         }
 
-        // Handle directory structure
         const mdxPath = path.join(filePath, `${file}.mdx`)
         try {
           await fs.access(mdxPath, fs.constants.F_OK)

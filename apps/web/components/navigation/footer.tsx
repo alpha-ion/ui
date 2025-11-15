@@ -22,9 +22,9 @@ export function Footer() {
           <Link
             className="font-semibold underline"
             target="_blank"
-            href={"https://alphabyte-labs.vercel.app"}
+            href={"https://alpha-ui.vercel.app"}
           >
-            {t("alphabyte")}
+            {t("alpha")}
           </Link>{" "}
           {t("sourceCode")}{" "}
           <Link href={GitHubLink.href} target="_blank" className="underline">

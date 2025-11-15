@@ -2,7 +2,6 @@ import fs from "fs/promises";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import { fixImport } from "./fixImport.mjs";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const projectRoot = path.resolve(__dirname, "../");
@@ -275,16 +274,51 @@ async function generateFiles() {
 
   for (const file of demoComponentFile) {
     const fileName = path.basename(file, ".tsx")
-    const match = fileName.match(/^(.+?)(?:-(.+?))?-demo$/)
+    const match = fileName.match(/^(.+?)-demo$/)
     if (!match) continue
 
-    const baseName = match[1]
-    const variant = match[2] || null
+    // Remove "-demo" suffix to get the potential base name
+    const nameWithoutDemo = match[1]
 
-    const componentFile = ComponentFile.find(f => {
+    // Try to find the component file by matching the full name first
+    let componentFile = ComponentFile.find(f => {
       const componentBaseName = path.basename(f, path.extname(f))
-      return componentBaseName === baseName || componentBaseName.startsWith(baseName + "-")
+      return componentBaseName === nameWithoutDemo
     })
+
+    let baseName = nameWithoutDemo
+    let variant = null
+
+    // If no exact match found, try to split into baseName-variant pattern
+    if (!componentFile) {
+      // Try to find the longest matching baseName by splitting from the end
+      // For example: "alert-dialog-destructive" should split into "alert-dialog" and "destructive"
+      const parts = nameWithoutDemo.split('-')
+
+      for (let i = parts.length - 1; i >= 1; i--) {
+        const potentialBaseName = parts.slice(0, i).join('-')
+        const potentialVariant = parts.slice(i).join('-')
+
+        componentFile = ComponentFile.find(f => {
+          const componentBaseName = path.basename(f, path.extname(f))
+          return componentBaseName === potentialBaseName || componentBaseName.startsWith(potentialBaseName + "-")
+        })
+
+        if (componentFile) {
+          baseName = potentialBaseName
+          variant = potentialVariant
+          break
+        }
+      }
+
+      // If still no match found, use the full name as baseName
+      if (!componentFile) {
+        componentFile = ComponentFile.find(f => {
+          const componentBaseName = path.basename(f, path.extname(f))
+          return componentBaseName === baseName || componentBaseName.startsWith(baseName + "-")
+        })
+      }
+    }
 
     const componentImportPath = componentFile ? toImportPath(componentFile) : `@/components/ui/${baseName}`
     const demoImportPath = toImportPath(file)
@@ -293,7 +327,7 @@ async function generateFiles() {
     registryItems.push({
       name: fileName,
       baseComponent: baseName,
-      variant,
+      variant: variant || null,
       componentPath: componentImportPath,
       componentDemoPath: demoImportPath,
       component: `React.lazy(() => import("${demoImportPath}"))`,
@@ -331,7 +365,7 @@ export const blockExamples = { items: ${JSON.stringify(blocks, null, 2)} }`
 import { componentExamples } from "./component-examples"
 import { blockExamples } from "./blocks-examples"
 export const REGISTRY = {
-  name: "alphabyte-labs",
+  name: "alpha-ui",
   items: [...componentExamples.items, ...blockExamples.items]
 }`
 

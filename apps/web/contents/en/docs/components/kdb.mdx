@@ -1,0 +1,64 @@
+---
+title: Kbd
+slug: /docs/components/kbd
+description: Visually distinct component for documenting keyboard shortcuts. Features deep contextual styling for seamless integration within tooltips and buttons.
+keywords: [keyboard shortcut UI, contextual styling component, accessibility keys display]
+---
+
+<ComponentPreview name="kdb-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="kdb"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Kbd Component">
+      <ComponentSource name="kbd-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Kbd } from "@/components/ui/kbd"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd>`}
+  </Pre>
+</div>
+
+## Examples
+
+### Button with Kbd
+<ComponentPreview name="kdb-button-demo" />
+### Tooltip with Kbd
+<ComponentPreview name="kdb-tooltip-demo" />
+### Kbd Input Group
+<ComponentPreview name="kdb-input-group-demo" />
+### Kbd Group
+<ComponentPreview name="kdb-group-demo" />

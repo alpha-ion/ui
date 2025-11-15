@@ -1,0 +1,54 @@
+---
+title: Skeleton
+description: Advanced loading state component with a smooth shimmering effect built using Framer Motion. Enhances perceived performance and UI fluidity.
+keywords: [shimmer loading effect, framer motion skeleton, perceived performance UI, loading state component]
+---
+
+<ComponentPreview name="skeleton-demo" />
+
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="skeleton"/>
+</CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose mdx:px-0 px-4">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First, you need to install dependencies:
+      <Pre>{`npm install clsx tailwind-merge`}</Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Skeleton Component">
+      <ComponentSource name="skeleton-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre>{`import {
+    Skeleton
+} from '@/components/ui/skeleton';`}</Pre>
+  <Pre>{`<Skeleton className="h-[20px] w-[100px] rounded-full" />`}</Pre>
+</div>
+
+## Examples
+
+### Card
+<ComponentPreview name="skeleton-card-demo" />

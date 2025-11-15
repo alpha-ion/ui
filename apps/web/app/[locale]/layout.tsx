@@ -59,6 +59,7 @@ export default async function RootLayout({
   return (
     <Fragment>
       <html lang={locale}
+        data-scroll-behavior="smooth"
         suppressHydrationWarning
         dir={locale === "ar" ? "rtl" : "ltr"}>
         <head>

@@ -40,7 +40,8 @@ function getAllLinks(node: Paths | SidebarItem): Page[] {
     node.items.forEach((subNode) => {
       if (isRoute(subNode) && subNode.href) {
         // Handle components section specially
-        if (node.id === "components") {
+        const nodeId = ('id' in node && typeof node.id === 'string') ? node.id : undefined
+        if (nodeId === "components") {
           pages.push({
             title: subNode.title,
             href: `/components${subNode.href}`,

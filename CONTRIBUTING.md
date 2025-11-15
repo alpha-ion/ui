@@ -16,4 +16,4 @@ Thank you for your interest in contributing! ❤️
 - Ensure code is formatted using Prettier
 - Write a clear and descriptive PR title and description
 
-Want to contribute? Check out the [Contributing Guidelines](https://github.com/ALiAbdelhadi/alphabyte-labs/blob/main/CONTRIBUTING.md) for more details.
+Want to contribute? Check out the [Contributing Guidelines](https://github.com/alpha-ion/ui/blob/main/CONTRIBUTING.md) for more details.

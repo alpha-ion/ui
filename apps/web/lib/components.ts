@@ -51,20 +51,18 @@ export const components: MDXComponents = {
 
 export function buildAddCommands(slug: string) {
   return {
-    pnpm: `pnpm dlx alphabyte-cli@latest add ${slug}`,
-    npm: `npx alphabyte-cli@latest add ${slug}`,
-    yarn: `yarn dlx alphabyte-cli@latest add ${slug}`,
-    bun: `bunx alphabyte-cli@latest add ${slug}`,
-    deno: `deno run -A npm:alphabyte-cli add ${slug}`,
+    pnpm: `pnpm dlx alpha-cli@latest add ${slug}`,
+    npm: `npx alpha-cli@latest add ${slug}`,
+    yarn: `yarn dlx alpha-cli@latest add ${slug}`,
+    bun: `bunx alpha-cli@latest add ${slug}`,
   }
 }
 
 export function buildInitCommands() {
   return {
-    pnpm: `pnpm dlx alphabyte-cli@latest init --yes`,
-    npm: `npx alphabyte-cli@latest init --yes`,
-    yarn: `yarn dlx alphabyte-cli@latest init --yes`,
-    bun: `bunx alphabyte-cli@latest init --yes`,
-    deno: `deno run -A npm:alphabyte-cli init --yes`,
+    pnpm: `pnpm dlx alpha-cli@latest init --yes`,
+    npm: `npx alpha-cli@latest init --yes`,
+    yarn: `yarn dlx alpha-cli@latest init --yes`,
+    bun: `bunx alpha-cli@latest init --yes`,
   }
 }

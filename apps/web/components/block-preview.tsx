@@ -24,6 +24,7 @@ interface BlockPreview {
   BlockName: string
   BlockId: string
   fileTree?: FileTree[] | string
+  showHeader?: boolean
 }
 
 export default function BlockPreview({
@@ -35,6 +36,7 @@ export default function BlockPreview({
   BlockName,
   BlockId,
   fileTree: initialFileTree,
+  showHeader = true,
 }: BlockPreview) {
   const [active, setActive] = useState("desktop")
   const [previewWidth, setPreviewWidth] = useState("100%")
@@ -327,13 +329,15 @@ export default function BlockPreview({
         }
       }}
     >
-      <BlockPreviewHeader
-        BlockName={BlockName}
-        setView={setView}
-        setActive={setActive}
-        iframeSource={iframeSource}
-        contentToCopy={contentToCopy}
-      />
+      {showHeader && (
+        <BlockPreviewHeader
+          BlockName={BlockName}
+          setView={setView}
+          setActive={setActive}
+          iframeSource={iframeSource}
+          contentToCopy={contentToCopy}
+        />
+      )}
       <div>
         <TabsContent
           value="preview"

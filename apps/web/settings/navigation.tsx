@@ -1,24 +1,24 @@
-import { PageRoutes } from "@/lib/pageRoutes"
+import { getPageRoutes } from "@/lib/pageRoutes"
 
-function getFirstDocsRoute() {
-  return PageRoutes.find(route =>
+export async function getNavigations() {
+  const routes = await getPageRoutes()
+  
+  const firstDocsRoute = routes.find(route =>
     !route.href.startsWith('/components') && route.href !== '/components'
   )?.href || '/introduction'
-}
-
-function getFirstComponentRoute() {
-  return PageRoutes.find(route =>
+  
+  const firstComponentRoute = routes.find(route =>
     route.href.startsWith('/components/')
   )?.href || '/components/accordion'
+  
+  return [
+    {
+      title: "Docs",
+      href: `/docs${firstDocsRoute}`,
+    },
+    {
+      title: "Components",
+      href: `/docs${firstComponentRoute}`,
+    },
+  ]
 }
-
-export const Navigations = [
-  {
-    title: "Docs",
-    href: `/docs${getFirstDocsRoute()}`,
-  },
-  {
-    title: "Components",
-    href: `/docs${getFirstComponentRoute()}`,
-  },
-]

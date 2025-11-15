@@ -1,11 +1,12 @@
 "use client"
 
-import * as React from "react"
+import { LoadingIcon } from "@/components/icons/loading-icon"
+import { cn } from "@/lib/utils"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import * as
 
-import {LoadingIcon} from "../icons/loading-icon"
+  React from "react"
 
 const buttonVariants = cva(
   "inline-flex items-center transition-all justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:opacity-50 disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
@@ -47,7 +48,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   isLoading?: boolean
   icon?: React.ReactNode
   iconPosition?: "left" | "right"
@@ -104,3 +105,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+

@@ -60,8 +60,10 @@ export default function ComponentSource({
   const ComponentUtilsText = () => {
     return (
       <p>
-        {t("text.description")}{" "}
-        <MdxBadge>{t("text.componentFolder")}</MdxBadge>{t("text.inRootDirectory")}<MdxBadge>{componentName}</MdxBadge>{" "}
+        {t("text.description")}{' '}
+        <MdxBadge>{t("text.componentFolder")}</MdxBadge>{' '}
+        {t("text.inRootDirectory")}{' '}
+        <MdxBadge>{componentName ?? ""}</MdxBadge>
       </p>
     )
   }

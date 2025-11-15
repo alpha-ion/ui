@@ -56,7 +56,7 @@ export const DocsRouting = [
          },
          {
             title: "Date Picker",
-            href: "/data-picker"
+            href: "/date-picker"
          },
          {
             title: "Diagrams",

@@ -1,0 +1,78 @@
+---
+title: حالة فارغة
+slug: /docs/components/empty
+description_ar: مكون هيكلي لتوجيه المستخدمين الجدد. يحول شاشات البيانات الصفرية إلى إجراءات تالية قابلة للتنفيذ.
+keywords_ar: [مكون حالة صفرية, واجهة توجيه مستخدم, إجراء بيانات فارغة]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/accordion
+  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+---
+
+<ComponentPreview name="empty-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="أمر الـ CLI">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="تثبيت يدويا">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="أمر الـ CLI">
+<CliCodeTabs>
+  <CodeCommands componentName="empty"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="تثبيت يدويا">
+<div className="not-prose px-4">
+  <Step>
+    <StepItem title="تثبيت الحزم المطلوبة">
+      أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge`}
+      </Pre>
+    </StepItem>
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكون empty">
+      <ComponentSource name="empty-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@/components/ui/empty"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Empty>
+  <EmptyHeader>
+    <EmptyMedia variant="icon">
+      <Icon />
+    </EmptyMedia>
+    <EmptyTitle>No data</EmptyTitle>
+    <EmptyDescription>No data found</EmptyDescription>
+  </EmptyHeader>
+  <EmptyContent>
+    <Button>Add data</Button>
+  </EmptyContent>
+</Empty>`}
+  </Pre>
+</div>
+
+## Examples
+### Avatar
+<ComponentPreview name="empty-avatar-demo" />

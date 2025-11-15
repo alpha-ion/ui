@@ -1,0 +1,77 @@
+---
+title: Table
+description: Accessible and responsive structure for tabular data display. Features consistent styling, hover effects, and horizontal scrolling for wide data sets.
+keywords: [responsive table, data display component, base UI table, accessible table]
+---
+<ComponentPreview name="table-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="table"/>
+</CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">{`npm i clsx tailwind-merge`}</Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Table component">
+      <ComponentSource name="table-demo" />
+    </StepItem>
+    <StepItem title="Be comfortable to use it and make it yours" />
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+<div className="not-prose space-y-4">
+  <Pre>{`
+  import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+  `}</Pre>
+  <Pre>
+    {`<Table>
+    <TableCaption>A list of your recent invoices.</TableCaption>
+    <TableHeader>
+      <TableRow>
+        <TableHead className="w-[100px]">Invoice</TableHead>
+        <TableHead>Status</TableHead>
+        <TableHead>Method</TableHead>
+        <TableHead className="text-right">Amount</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell className="font-medium">INV001</TableCell>
+        <TableCell>Paid</TableCell>
+        <TableCell>Credit Card</TableCell>
+        <TableCell className="text-right">$250.00</TableCell>
+      </TableRow>
+    </TableBody>
+</Table>`}
+  </Pre>
+</div>

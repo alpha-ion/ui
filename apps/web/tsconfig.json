@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -19,7 +23,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "include": [
@@ -30,7 +36,15 @@
     "contents/docs/components/navigation-menu/navigation-menu.mdx",
     "next.config.ts",
     "scripts/capture-screenshot.js",
-    "registry/view/expanded-gallery-1/lib/utils.js"
-, "scripts/fixImport.mjs"  ],
-  "exclude": ["node_modules"]
+    "registry/view/expanded-gallery-1/lib/utils.js",
+    "scripts/fixImport.mjs",
+    "components/hero.jsx",
+    ".next\\dev/types/**/*.ts",
+    ".next\\dev/types/**/*.ts",
+    "registry/examples/input-group-demo",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

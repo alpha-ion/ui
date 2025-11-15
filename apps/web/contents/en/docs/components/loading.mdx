@@ -1,0 +1,87 @@
+---
+title: Loading
+slug: /docs/components/loading
+description: The Loading component is used to indicate that content is being loaded or processed.
+keywords: [loading, component, spinner, progress]
+---
+
+<ComponentPreview name="loading-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="loading"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Loading Component">
+      <ComponentSource name="loading-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Loading } from "@/components/ui/loading"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Loading />`}
+  </Pre>
+</div>
+## Customization
+You can replace the default <MdxBadge>Loading</MdxBadge> icon with any other icon by editing the <MdxBadge>Loading</MdxBadge> component.
+<Pre>{`
+import { Loader2Icon } from "lucide-react"
+import { cn } from "@/lib/utils"
+
+export function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
+    return (
+        <Loader2Icon
+            role="status"
+            aria-label="Loading"
+            className={cn("size-4 animate-spin", className)}
+            {...props}
+        />
+    )
+}
+
+export function SpinnerCustom() {
+    return (
+        <div className="flex items-center gap-4">
+            <Spinner />
+        </div>
+    )
+}
+`}</Pre>
+## Examples
+### Sizes
+<ComponentPreview name="loading-size-demo" />
+### Badge
+<ComponentPreview name="loading-badge-demo" />
+### Button
+<ComponentPreview name="loading-button-demo" />
+### Colors
+<ComponentPreview name="loading-color-demo" />

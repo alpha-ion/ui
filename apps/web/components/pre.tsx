@@ -346,8 +346,8 @@ const Pre: React.FC<PreProps> = ({
           className,
           "overflow-x-auto",
           "border-none",
-          "font-mono",
           "font-medium",
+          "hide-scrollbar",
           lineNumbersClass,
           wordWrap && "whitespace-pre-wrap",
         )}

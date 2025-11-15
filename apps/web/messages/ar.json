@@ -106,7 +106,8 @@
             "blocks": "الكتل (Blocks)",
             "themes": "السمات",
             "colors": "الألوان",
-            "community": "المجتمع"
+            "community": "المجتمع",
+            "changelog": "التغيرات"
         },
         "sidebar": {
             "gettingStarted": {
@@ -114,37 +115,67 @@
                 "introduction": "مقدمة",
                 "installation": "التثبيت",
                 "rtlDirection": "اتجاه الصفحات",
-                "themes": "السمات"
+                "themes": "السمات",
+                "changelog": "التغيرات"
             },
             "components": {
                 "title": "المكونات",
                 "accordion": "أكورديون",
                 "alertDialog": "نافذة تنبيه",
+                "aspectRatio": "نسبة العرض إلى الارتفاع",
+                "avatar": "أفاتار",
                 "badge": "شارة",
                 "breadcrumb": "مسار التنقل",
+                "buttonGroup": "مجموعة أزرار",
                 "button": "زر",
                 "calendar": "تقويم",
+                "card": "بطاقة",
+                "carousel": "معرض صور دوار",
+                "checkbox": "مربع اختيار",
                 "collapsible": "قابل للطي",
+                "contextMenu": "قائمة سياقية",
                 "datePicker": "مُحدد التاريخ",
                 "diagrams": "رسوم بيانية",
                 "dialog": "نافذة حوار",
                 "drawer": "درج جانبي",
                 "dropdownMenu": "قائمة منسدلة",
+                "empty": "حالة فارغة",
+                "field": "حقل",
                 "folderStructure": "هيكلية المجلدات",
+                "hoverCard": "بطاقة عند التمرير",
+                "inputGroup": "مجموعة إدخال",
+                "inputOtp": "إدخال رمز التحقق",
                 "input": "حقل إدخال",
+                "listItem": "عنصر قائمة",
+                "kdb": "مفتاح لوحة المفاتيح",
                 "label": "تسمية",
+                "loading": "تحميل",
+                "menubar": "شريط القوائم",
+                "navigationMenu": "قائمة التنقل",
                 "notes": "ملاحظات",
+                "pagination": "ترقيم الصفحات",
                 "popover": "نافذة منبثقة",
                 "preCodeBlock": "كتلة كود",
+                "progress": "شريط التقدم",
                 "productCard": "بطاقة منتج",
+                "radioGroup": "مجموعة اختيار واحد",
+                "resizable": "قابل لتغيير الحجم",
                 "scrollArea": "منطقة تمرير",
+                "select": "قائمة اختيار",
                 "separator": "فاصل",
                 "sheet": "لوحة",
+                "skeleton": "هيكل تحميل",
+                "slider": "شريط تمرير",
                 "sonner": "إشعار",
                 "step": "خطوات",
                 "switch": "مفتاح تبديل",
+                "table": "جدول",
                 "tabs": "علامات التبويب",
-                "tooltip": "تلميح"
+                "textarea": "منطقة نص",
+                "toggleGroup": "مجموعة تبديل",
+                "toggle": "زر تبديل",
+                "tooltip": "تلميح",
+                "smart-select": "الاختيار الذكي"
             }
         }
     },
@@ -155,11 +186,11 @@
     "footer": {
         "builtBy": "تم البناء بواسطة الفريق خلف",
         "sourceCode": "الكود مفتوح المصدر على",
-        "alphabyte": "مختبرات الفابايت",
+        "alpha": "مختبرات الفابايت",
         "github": "Github"
     },
     "logo": {
-        "alphabyte": "مختبرات الفابايت",
+        "alpha": "مختبرات الفابايت",
         "beta": "بيتا"
     },
     "new": {

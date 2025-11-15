@@ -1,0 +1,87 @@
+---
+title: Textarea
+slug: /docs/components/textarea
+description: حقل نص متعدد الأسطر متين يتميز بحالات تركيز وأخطاء محسّنة مرتبطة بخصائص ARIA لتعزيز الوصولية والتحقق من صحة البيانات.
+keywords: [multi-line text input, accessible textarea, ARIA validation, refined focus state]
+---
+
+<ComponentPreview name="textarea-demo" />
+
+## التثبيت
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="textarea" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+
+    <StepItem title="تثبيت المتطلبات">
+      قم أولًا بتثبيت الحزم المطلوبة:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن Textarea">
+      <ComponentSource name="textarea-demo" />
+    </StepItem>
+
+    <StepItem title="الآن أصبح المكوّن جاهزًا للتعديل والتخصيص حسب احتياجات مشروعك" />
+
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-4">
+  <p className="text-base">
+    قم أولًا باستيراد مكوّن Textarea في ملفك:
+  </p>
+
+  <Pre>
+{`import { Textarea } from "@/components/ui/textarea"`}
+  </Pre>
+
+  <p className="text-base">
+    ثم يمكنك استخدامه بالشكل التالي:
+  </p>
+
+  <Pre>
+{`<Textarea />`}
+  </Pre>
+</div>
+
+## أمثلة
+
+### الافتراضي
+<ComponentPreview name="textarea-demo" />
+
+### معطل
+<ComponentPreview name="textarea-disabled-demo" />
+
+### مع label
+<ComponentPreview name="textarea-with-label-demo" />
+
+### مع نص
+<ComponentPreview name="textarea-with-text-demo" />
+
+### مع زر
+<ComponentPreview name="textarea-button-demo" />

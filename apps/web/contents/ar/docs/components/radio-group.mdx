@@ -1,0 +1,89 @@
+---
+title: مجموعة الاختيار (Radio Group)
+slug: /docs/components/radio-group
+description: مكوّن مجموعة الاختيار يوفّر طريقة مرنة ومنسّقة لاختيار عنصر واحد من عدة خيارات، مع دعم كامل للتخصيص وتعدد الأنماط.
+keywords: [radio, مجموعة اختيار, form ui, اختيار واحد, مكوّن فورم]
+---
+
+<ComponentPreview name="radio-group-demo" />
+
+**استخدم مجموعة الاختيار عندما تحتاج من المستخدم تحديد خيار واحد فقط من بين عدة خيارات متاحة داخل نموذج أو واجهة تفاعلية.**
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="radio-group" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+
+    <StepItem title="تثبيت المتطلبات">
+      قم بتثبيت الحزم المطلوبة:
+      <Pre className="language-bash">
+{`npm install clsx tailwind-merge @radix-ui/react-radio-group`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن radio-group">
+      <ComponentSource name="radio-group-demo" />
+    </StepItem>
+
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+
+<Pre className="language-typescript">
+{`import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"`}
+</Pre>
+
+<Pre className="language-typescript">
+{`
+<RadioGroup defaultValue="option-one">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-one" id="option-one" />
+    <Label htmlFor="option-one">الخيار الأول</Label>
+  </div>
+
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-two" id="option-two" />
+    <Label htmlFor="option-two">الخيار الثاني</Label>
+  </div>
+</RadioGroup>
+`}
+</Pre>
+
+</div>
+
+## أمثلة
+
+### مجموعة اختيار افتراضية
+<ComponentPreview name="radio-group-demo" />
+
+### مجموعة مع خيارات مخصصة
+<ComponentPreview name="radio-group-demo" variant="custom" />
+
+### استخدام داخل نموذج
+<ComponentPreview name="radio-group-demo" variant="form" />

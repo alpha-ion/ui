@@ -1,0 +1,130 @@
+---
+title: التثبيت
+description: بوابتك لإتقان تطوير البرمجيات الحديثة.
+keywords: ["التثبيت", "github", "node", "دليل", "nextjs", "المستندات"]
+---
+
+لاستخدام مكوّناتنا يجب أن تعمل مع [next.js](https://nextjs.org/)
+
+## متطلبات النظام
+
+- [Node.js 18.18](https://nodejs.org/) أو أحدث.  
+- macOS، وWindows (بما في ذلك WSL)، وLinux مدعومة.
+
+<div className="not-prose px-4">
+<Note>إذا كنت تستخدم Windows فمن الموصى أن تستخدم WSL للاستفادة من كل ميزات Linux <br/> ولكن إذا لم يكن لديك، لا تقلق، Windows أيضًا خيار رائع</Note>
+
+<Step className='mt-6'>
+<StepItem title="الخطوة 1: إنشاء مشروع Next.js جديد">
+ابدأ بتشغيل الأمر التالي في الطرفية لإنشاء مشروع Next.js جديد:  
+للتأكد من التثبيت، شغّل:
+
+<Pre>{`npx create-next-app@latest`}</Pre>
+
+</StepItem>
+<StepItem title="الخطوة 2: إعداد مشروعك">
+  أثناء التثبيت، سيتم سؤالك لتكوين إعدادات مشروعك. أدناه مثال على الإعدادات الافتراضية والخيارات التي ستواجهها:
+
+<Pre>
+  {`What is your project named? \`put your project name here\`  
+Would you like to use TypeScript? No / Yes  
+Would you like to use ESLint? No / Yes  
+Would you like to use Tailwind CSS? No / Yes  
+Would you like your code inside a \`src/\` directory? No / Yes  
+Would you like to use App Router? (recommended) No / Yes `}
+</Pre>
+
+      <Note type="note" title="ملاحظة مهمة">
+         التكوينات أعلاه قابلة للتخصيص بالكامل. إذا اخترت تفعيل **TypeScript**، أو **ESLint**، أو **Tailwind CSS**، أو مجلد **src**، أو **App Router**، سيتم إضافة الملفات والإعدادات اللازمة تلقائيًا لمشروعك.
+      </Note>
+
+</StepItem>
+<StepItem title="الخطوة 3: إعدادات React 19 و Next.js 15 (اختياري)">
+      إذا كنت تستخدم **React 19** و **Next.js 15**، قد تواجه خيار تكوين إضافي يخص Turbopack:
+
+<Pre>
+  {`What is your project named? \`put your project name here\`  
+Would you like to use TypeScript? No / Yes  
+Would you like to use ESLint? No / Yes  
+Would you like to use Tailwind CSS? No / Yes  
+Would you like your code inside a \`src/\` directory? No / Yes  
+Would you like to use App Router? (recommended) No / Yes  
+Would you like to use Turbopack for \`next dev\`? » No / Yes`}
+</Pre>
+
+      <Note variant="info">
+         **Turbopack** هو أداة ربط وتشغيل عالية الأداء مخصّصة لـ Next.js. تفعيل هذا الخيار يضمن سرعات بناء أعلى وتجربة تطوير أفضل.
+      </Note>
+
+</StepItem>
+</Step>
+</div>
+## الخطوات التالية
+
+بعد إنشاء مشروعك، أنت جاهز الآن لاستكشاف ودمج مكوّنات وأدوات Alpha الحديثة لتحويل رؤيتك إلى واقع. ابدأ في بناء تطبيقك الجيل القادم اليوم مع Alpha! 🚀
+
+## استخدام أداة سطر الأوامر (CLI) الخاصة بـ Alpha
+
+أداة سطر الأوامر الخاصة بـ Alpha هي أداة قوية تجعل من السهل إضافة وإدارة وتكوين المكوّنات والبلوكات في مشاريعك. تقوم تلقائيًا بإدارة الاعتمادات وتنظيم الملفات وإعداد المشروع.
+
+### تثبيت الأداة
+
+<Pre>{`# تثبيت عالميًا\nnpm install -g alpha-cli\n\n# أو التشغيل لمرة واحدة عبر npx\nnpx alpha-cli\n\n# أسماء أوامر بديلة\nalphion init  # نفس alpha init`}</Pre>
+
+### تهيئة مشروعك
+
+أمر `init` يجهّز مشروعك بالإعدادات والاعتمادات اللازمة:
+
+<Pre>{`# إعداد تفاعلي\nalphabyte init\n\n# تخطي المطالبات واستخدام الإعدادات الافتراضية\nalphabyte init --default\n\n# غير تفاعلي مع خيارات مخصصة\nalphabyte init --yes --base-color slate --css app/globals.css`}</Pre>
+
+**ما يفعله أمر init:**
+- ينشئ ملف تكوين `components.json`
+- يجهّز هيكل المشروع (مجلدات components، lib، hooks)
+- يثبّت الاعتمادات اللازمة (clsx، tailwind-merge، class-variance-authority)
+- يكوّن دعم Tailwind CSS و TypeScript
+- يجهّز أسماء الاستيراد لمشروعك
+
+### إضافة مكوّنات أو بلوكات
+
+<Pre>{`# إضافة مكوّن محدد\nalphabyte add button\n\n# إضافة بلوك محدد\nalphabyte add hero-section\n\n# إضافة عناصر متعددة\nalphabyte add button card hero-section\n\n# إضافة جميع المكوّنات والبلوكات المتاحة\nalphabyte add --all\n\n# الإضافة إلى مسار مخصص\nalphabyte add button --path src/components\n\n# استبدال الملفات الموجودة\nalphabyte add button --overwrite`}</Pre>
+
+### عرض المكوّنات والبلوكات المتاحة
+
+<Pre>{`# عرض جميع العناصر المتاحة\nalphabyte list\n\n# عرض المكوّنات فقط\nalphabyte list --type components\n\n# عرض البلوكات فقط\nalphabyte list --type blocks\n\n# البحث عن عناصر محددة\nalphabyte list --search button`}</Pre>
+
+### عرض تفاصيل المكوّن
+
+<Pre>{`# عرض معلومات المكوّن\nalphabyte view button\n\n# عرض معلومات البلوك\nalphabyte view hero-section\n\n# تحديد النوع\nalphabyte view button --type components`}</Pre>
+
+### البحث في المكوّنات والبلوكات
+
+<Pre>{`# البحث عن العناصر\nalphabyte search button\n\n# البحث مع فلتر النوع\nalphabyte search form --type components`}</Pre>
+
+### التشغيل خارج مشروع Next.js (إنشاء تلقائي)
+
+إذا قمت بتشغيل `alpha add` خارج مشروع Next.js، فستقوم الأداة تلقائيًا بإنشاء مشروع Next.js أولاً:
+
+<Pre>{`cd C:\\Users\\username\n# سيقوم بإنشاء مشروع Next.js أولًا ثم يضيف المكوّن\nalphabyte add hero-section\n\n# إنشاء غير تفاعلي\nalphabyte add hero-section --non-interactive --project-name my-app`}</Pre>
+
+### خيارات سطر الأوامر
+
+<Pre>{`# الخيارات العامة\nalphabyte [command] --help          # عرض المساعدة\nalphabyte [command] --version       # عرض الإصدار\nalphabyte [command] --cwd <path>     # تحديد مجلد العمل\nalphabyte [command] --silent        # كتم الإخراج\n\n# خيارات أمر add\nalphabyte add --overwrite           # استبدال الملفات الموجودة\nalphabyte add --all                 # إضافة جميع العناصر المتاحة\nalphabyte add --path <path>         # مسار تثبيت مخصص\n\n# خيارات أمر init\nalphabyte init --default           # استخدام الإعدادات الافتراضية\nalphabyte init --base-color <color>  # تحديد اللون الأساسي (slate، gray، zinc، إلخ)\nalphabyte init --css <path>         # تحديد مسار ملف CSS\nalphabyte init --package-manager <pm> # تحديد مدير الحزم (npm، yarn، pnpm، bun)`}</Pre>
+
+### التكوين
+
+تستخدم الأداة ملف `components.json` لتكوين مشروعك:
+
+<Pre>{`{\n  "style": "default",\n  "rsc": true,\n  "tsx": true,\n  "tailwind": {\n    "config": "tailwind.config.js",\n    "css": "app/globals.css",\n    "baseColor": "slate",\n    "cssVariables": true,\n    "prefix": ""\n  },\n  "aliases": {\n    "components": "@/components",\n    "utils": "@/lib/utils",\n    "ui": "@/components/ui",\n    "lib": "@/lib",\n    "hooks": "@/hooks"\n  },\n  "iconLibrary": "lucide"\n}`}</Pre>
+
+### دعم مديري الحزم
+
+تدعم الأداة عدة مديري حزم وستكتشف تلقائيًا المفضل لديك:
+
+- **npm** - مدير الحزم الافتراضي لـ Node.js
+- **yarn** - إدارة سريعة وموثوقة وآمنة للاعتمادات
+- **pnpm** - مدير حزم سريع وفعال في استخدام مساحة القرص
+- **bun** - وقت تشغيل JavaScript شامل وسريع ومدير حزم
+
+### الاستخدام المتقدم
+
+<Pre>{`# تثبيت اعتمادات مكوّن\nalphabyte deps button\n\n# إنشاء مع خيارات محددة\nalphabyte add hero-section --non-interactive --project-name my-app --pm pnpm --src-dir --no-eslint\n\n# استخدام أسماء استيراد مخصصة\nalphabyte init --components @/ui --utils @/lib/utils`}</Pre>

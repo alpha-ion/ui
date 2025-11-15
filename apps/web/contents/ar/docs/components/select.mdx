@@ -1,0 +1,93 @@
+---
+title: القائمة المنسدلة (Select)
+slug: /docs/components/select
+description: مكوّن القائمة المنسدلة يتيح للمستخدمين اختيار عنصر واحد من قائمة منسدلة تفاعلية وقابلة للتخصيص بالكامل.
+keywords: [select, قائمة, dropdown, menu, ui]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/select
+  api: https://www.radix-ui.com/docs/primitives/components/select#api-reference
+---
+
+<ComponentPreview name="select-demo" />
+
+**اعتمد على مكوّن Select لتقديم تجربة اختيار سريعة، واضحة، وأنيقة داخل واجهة المستخدم—مع دعم كامل للتخصيص، التمرير، والحالات المختلفة.**
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="select" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+
+    <StepItem title="تثبيت المتطلبات">
+      قبل البدء، قم بتثبيت الحزم الأساسية:
+      <Pre className="language-bash">
+{`npm install clsx tailwind-merge @radix-ui/react-select`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن Select">
+      <ComponentSource name="select-demo" />
+    </StepItem>
+
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+
+<Pre className="language-typescript">
+{`
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+`}
+</Pre>
+
+<Pre className="language-typescript">
+{`
+<Select>
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="اختر النسق" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">فاتح</SelectItem>
+    <SelectItem value="dark">داكن</SelectItem>
+    <SelectItem value="system">النظام</SelectItem>
+  </SelectContent>
+</Select>
+`}
+</Pre>
+
+</div>
+
+## الأمثلة
+
+### قائمة قابلة للتمرير
+<ComponentPreview name="select-scrollable-demo" />
+

@@ -1,0 +1,69 @@
+---
+title: الهيكل العظمي (Skeleton)
+description: مكوّن متقدّم لعرض حالة التحميل مع تأثير وميض انسيابي مبني باستخدام Framer Motion، مما يعزّز الأداء المرئي وسلاسة تجربة المستخدم.
+keywords: [skeleton, تأثير التحميل, framer motion, واجهة مستخدم, loading state, shimmer effect]
+---
+
+<ComponentPreview name="skeleton-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="skeleton" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose mdx:px-0 px-4">
+  <Step>
+
+    <StepItem title="تثبيت المتطلبات">
+      قبل البدء، قم بتثبيت الحزم الأساسية:
+      <Pre>
+{`npm install clsx tailwind-merge`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن Skeleton">
+      <ComponentSource name="skeleton-demo" />
+    </StepItem>
+
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+
+<Pre>
+{`import {
+  Skeleton
+} from "@/components/ui/skeleton";`}
+</Pre>
+
+<Pre>
+{`<Skeleton className="h-[20px] w-[100px] rounded-full" />`}
+</Pre>
+
+</div>
+
+## الأمثلة
+
+### بطاقة (Card)
+<ComponentPreview name="skeleton-card-demo" />

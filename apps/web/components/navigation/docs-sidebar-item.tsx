@@ -1,11 +1,11 @@
 "use client"
 
 import { SheetClose } from "@/components/ui/sheet"
+import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 import { SidebarItem } from "@/types"
-import { Link } from "@/i18n/navigation"
-import { usePathname } from "next/navigation"
 import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
 
 interface DocsSidebarItemProps extends SidebarItem {
   level: number

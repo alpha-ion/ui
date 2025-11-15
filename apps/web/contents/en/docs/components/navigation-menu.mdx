@@ -1,0 +1,84 @@
+---
+title: Navigation Menu
+slug: /docs/components/navigation-menu
+description: Highly complex component for multi-level navigation. Features dynamic motion transitions, smart content viewport handling, and advanced link styling.
+keywords: [multi-level navigation, dynamic motion menu, viewport-aware menu, complex link system]
+---
+
+<ComponentPreview name="navigation-menu-demo" containerClassName="items-start" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="navigation-menu"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-navigation-menu`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Navigation Menu Component">
+      <ComponentSource name="navigation-menu-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+        <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+        <NavigationMenuContent>
+            <NavigationMenuLink>Link</NavigationMenuLink>
+        </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>`}
+</Pre>
+</div>
+## Link 
+<Pre>
+{`import Link from "next/link"
+
+export function NavigationMenuDemo() {
+  return (
+    <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+            <Link href="/docs">Documentation</Link>
+        </NavigationMenuLink>
+    </NavigationMenuItem>
+  )}`}
+</Pre>

@@ -1,0 +1,67 @@
+---
+title: Slider
+slug: /docs/components/slider
+description: عنصر إدخال متقدّم للتحكّم في القيم عبر مقبض واحد أو مقبضين (Range Slider). يتميّز بوصولية عالية، ودعم الاتجاهين (أفقي/عمودي)، واستجابة دقيقة لحالات التركيز.
+keywords: [range slider, dual handle input, accessible range, responsive slider]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/slider
+  api: https://www.radix-ui.com/docs/primitives/components/slider#api-reference
+---
+
+<ComponentPreview name="slider-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="slider" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت المتطلبات">
+      قم أولًا بتثبيت الحزم المطلوبة:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-slider`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن Slider">
+      <ComponentSource name="slider-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+{`import { Slider } from "@/components/ui/slider"`}
+  </Pre>
+
+  <Pre className="language-typescript">
+{`<Slider defaultValue={[33]} max={100} step={1} />`}
+  </Pre>
+</div>
+
+## أمثلة
+
+### Range Slider
+<ComponentPreview name="slider-range-demo" />

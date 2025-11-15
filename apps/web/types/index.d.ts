@@ -180,17 +180,3 @@ export interface StepItemProps {
   className?: string
 }
 
-export interface MainNavItem {
-  title: string
-  href: string
-  disabled?: boolean
-}
-
-export interface SidebarItem {
-  title: string
-  id?: string
-  href?: string
-  disabled?: boolean
-  external?: boolean
-  items?: SidebarItem[]
-}

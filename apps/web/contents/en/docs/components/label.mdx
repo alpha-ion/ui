@@ -1,0 +1,71 @@
+---
+title: Label
+description: Essential accessible component for form fields. Features automatic visual bonding with peer elements, responding to `disabled` states.
+keywords: [form label accessible, peer-disabled styling, automatic label bonding]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/label
+  api: https://www.radix-ui.com/docs/primitives/components/label#api-reference
+---
+
+<ComponentPreview name="label-demo" />
+
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="label"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose md:px-0 px-4">
+<Step>
+<StepItem title="Install Dependencies">
+First, install the required dependencies:
+<Pre className="language-bash">
+{`npm install clsx tailwind-merge`}
+</Pre>
+</StepItem>
+  <StepItem title="Create utils.ts"> 
+    <ComponentUtilsText/>
+    <ComponentUtils/>
+  </StepItem>
+  <StepItem title="Create Label Component">
+    <ComponentSource name="label-demo"/>
+  </StepItem>
+</Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+<Pre>
+{`import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"`}
+</Pre>
+
+<Pre>{`
+const LabelDemo = () => {
+  return (
+    <div className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <Label
+        htmlFor="terms"
+        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        Accept terms and conditions
+      </Label>
+    </div>
+  )
+}
+
+export default LabelDemo
+`}</Pre>
+</div>

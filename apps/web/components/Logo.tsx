@@ -23,7 +23,7 @@ const Logo = ({
         {showLogoText && (
           <div className="flex items-center justify-center space-x-1 rtl:space-x-reverse">
             <span className={cn("font-bold tracking-tight", className)}>
-              {t("alphabyte")}
+              {t("alpha")}
             </span>
             <span className="mt-[3.5px] rtl:ml-2">
               {showBeta && (

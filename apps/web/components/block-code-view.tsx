@@ -5,7 +5,6 @@ import { Pre } from "./pre-for-block-preview"
 import { languageIcons } from "@/settings/LanguageIcon"
 import { BlockFileTree } from "./block-file-tree"
 import type { FileTree } from "@/registry/block"
-
 interface BlockCodeViewProps {
     fileTree: FileTree[]
     activeFile: string | null
@@ -79,7 +78,7 @@ export function BlockCodeView({
                     </div>
                 </div>
                 <div
-                    className="block-code-view relative flex-1 overflow-auto"
+                    className="block-code-view relative flex-1 overflow-auto hide-scrollbar"
                     style={{ backgroundColor: "var(--code-background)" }}
                 >
                     {activeFile ? (

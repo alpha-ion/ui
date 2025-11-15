@@ -16,6 +16,7 @@ export interface ComponentPreviewProps {
   showLineNumbers?: boolean
   maxHeight?: number
   highlightLines?: number[]
+  containerClassName?: string
 }
 
 export default function ComponentPreview({
@@ -25,8 +26,10 @@ export default function ComponentPreview({
   variant,
   showLineNumbers = true,
   maxHeight = 500,
-  highlightLines = []
+  highlightLines = [],
+  containerClassName, // NEW
 }: ComponentPreviewProps) {
+  const t = useTranslations("component-preview")
   const [componentCode, setComponentCode] = useState<string | null>(providedCode || null)
   const [isLoadingCode, setIsLoadingCode] = useState<boolean>(false)
   const locale = useLocale()
@@ -38,8 +41,10 @@ export default function ComponentPreview({
 
   const registryComponent = REGISTRY.items.find((item) => item.name === fullComponentName)
 
-  const DynamicComponent = (registryComponent && 'component' in registryComponent) ? registryComponent.component : undefined
-  const componentDemoPath = (registryComponent && 'componentDemoPath' in registryComponent) ? registryComponent.componentDemoPath : undefined
+  const DynamicComponent =
+    registryComponent && "component" in registryComponent ? registryComponent.component : undefined
+  const componentDemoPath =
+    registryComponent && "componentDemoPath" in registryComponent ? registryComponent.componentDemoPath : undefined
 
   useEffect(() => {
     if (providedCode || !componentDemoPath) return
@@ -75,10 +80,12 @@ export default function ComponentPreview({
       </div>
     )
   }
-  const t = useTranslations("component-preview")
   return (
-    <Tabs defaultValue="preview" className="mt-4">
-      <TabsList dir={locale === "ar" ? "rtl" : "ltr"} className="inline-flex h-9 items-center text-muted-foreground w-full justify-start rounded-none border-b bg-transparent p-0 mb-2">
+    <Tabs defaultValue="preview" className="mt-4 z-10">
+      <TabsList
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        className="inline-flex h-9 items-center text-muted-foreground w-full justify-start rounded-none border-b bg-transparent p-0 mb-2"
+      >
         <TabsTrigger value="preview" className="active:shadow-none text-sm">
           {t("preview")}
         </TabsTrigger>
@@ -87,8 +94,8 @@ export default function ComponentPreview({
         </TabsTrigger>
       </TabsList>
       <div className="not-prose">
-        <TabsContent value="preview" className={cn("border rounded-xl relative", className)}>
-          <div className="overflow-visible">
+        <TabsContent value="preview" className={cn("min-h-[350px] h-auto border rounded-xl relative", className)}>
+          <div className="overflow-visible hide-scrollbar">
             <React.Suspense
               fallback={
                 <div className="flex w-full min-h-[350px] items-center justify-center text-sm text-muted-foreground gap-2">
@@ -98,8 +105,11 @@ export default function ComponentPreview({
               }
             >
               {DynamicComponent ? (
-                <div className="preview flex min-h-[350px] w-full justify-center px-5 md:px-10 py-5 items-center">
-                  <DynamicComponent className="" />
+                <div className={cn(
+                  "preview flex min-h-[350px] w-full justify-center px-5 md:px-10 py-5 items-center",
+                  containerClassName 
+                )}>
+                  <DynamicComponent />
                 </div>
               ) : (
                 <div className="flex w-full min-h-[350px] items-center justify-center text-sm text-muted-foreground">

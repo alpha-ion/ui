@@ -1,8 +1,8 @@
 import { promises as fs } from "fs"
 import path from "path"
 
-const UI_DIR = path.join(process.cwd(), "apps", "web", "registry", "ui")
-const OUTPUT = path.join(process.cwd(), "apps", "web", "registry", "registry-components.json")
+const UI_DIR = path.join(process.cwd(), "registry", "ui")
+const OUTPUT = path.join(process.cwd(), "registry", "registry-components.json")
 
 function extractDeps(src) {
     const deps = new Set()

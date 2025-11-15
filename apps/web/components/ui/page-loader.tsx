@@ -27,4 +27,3 @@ export default function PageLoader({ className, fullscreen = false, label }: Pag
     )
 }
 
-

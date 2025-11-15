@@ -52,7 +52,7 @@ const alertDialogContentVariants = cva(
 
 export interface AlertDialogContentProps
   extends React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Content>,
-    VariantProps<typeof alertDialogContentVariants> {
+  VariantProps<typeof alertDialogContentVariants> {
   closeOnClickOutside?: boolean
 }
 
@@ -191,4 +191,3 @@ export {
   AlertDialogTitle,
   AlertDialogTrigger
 }
-

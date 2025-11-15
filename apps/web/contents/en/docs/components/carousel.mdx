@@ -1,0 +1,78 @@
+---
+title: Carousel
+description: A lightning-fast, fully accessible content rotator engineered for high-impact visual delivery. It provides fluid, zero-latency scrolling and robust keyboard control across both horizontal and vertical layouts.
+keywords: [carousel, slider, A11y, high performance, visual engagement]
+links:
+    doc: https://www.embla-carousel.com/
+    api: https://www.embla-carousel.com/api/options/
+---
+
+<ComponentPreview name="carousel-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="carousel"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge embla-carousel-react`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Carousel Component">
+      <ComponentSource name="carousel-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Carousel>
+  <CarouselContent>
+    <CarouselItem>...</CarouselItem>
+    <CarouselItem>...</CarouselItem>
+    <CarouselItem>...</CarouselItem>
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>`}
+  </Pre>
+</div>
+
+## Examples
+
+### Sizes
+<ComponentPreview name="carousel-sizes-demo"/>
+### Spacing
+<ComponentPreview name="carousel-spacing-demo"/>
+### Orientation
+<ComponentPreview name="carousel-orientation-demo"/>

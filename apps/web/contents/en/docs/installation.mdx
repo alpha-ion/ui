@@ -1,0 +1,130 @@
+---
+title: Installation
+description: Your gateway to mastering modern software development.
+keywords: ["installation", "github", "node", "guide", "nextjs", "documents"]
+---
+
+to use our component you should using [next.js](https://nextjs.org/)
+
+## System Requirements
+
+- [Node.js 18.18](https://nodejs.org/) or later.
+- macOS, Windows (including WSL), and Linux are supported.
+
+<div className="not-prose px-4">
+<Note>If Your using windows recommended to use WSL with windows to have all the features in linux <br/> but if you don't have don't worry windows s also great choice</Note>
+
+<Step className='mt-6'>
+<StepItem title="Step 1: Create Your Next.js Project">
+Start by running the following command in your terminal to set up a new Next.js project:  
+To verify installation, run:
+
+<Pre>{`npx create-next-app@latest`}</Pre>
+
+</StepItem>
+<StepItem title="Step 2: Configure Your Project">
+  During the setup, you'll be prompted to configure your project. Below is an example of the default prompts and options you'll encounter:
+
+<Pre>
+  {`What is your project named? \`put your project name here\`  
+Would you like to use TypeScript? No / Yes  
+Would you like to use ESLint? No / Yes  
+Would you like to use Tailwind CSS? No / Yes  
+Would you like your code inside a \`src/\` directory? No / Yes  
+Would you like to use App Router? (recommended) No / Yes `}
+</Pre>
+
+      <Note type="note" title="Important Note">
+         The above configurations are entirely customizable. If you choose to enable **TypeScript**, **ESLint**, **Tailwind CSS**, the **src** directory, or the **App Router**, the necessary setup files and configurations will be automatically added to your project.
+      </Note>
+
+</StepItem>
+<StepItem title="Step 3: React 19 & Next.js 15 Configurations (Optional)">
+      If you're using **React 19** and **Next.js 15**, you may encounter an additional configuration option for Turbopack:
+
+<Pre>
+  {`What is your project named? \`put your project name here\`  
+Would you like to use TypeScript? No / Yes  
+Would you like to use ESLint? No / Yes  
+Would you like to use Tailwind CSS? No / Yes  
+Would you like your code inside a \`src/\` directory? No / Yes  
+Would you like to use App Router? (recommended) No / Yes  
+Would you like to use Turbopack for \`next dev\`? » No / Yes`}
+</Pre>
+
+      <Note variant="info">
+         **Turbopack** is a high-performance bundler and dev server for Next.js. Enabling this option ensures faster builds and an improved development experience.
+      </Note>
+
+</StepItem>
+</Step>
+</div>
+## Next Steps
+
+Once your project is created, you’re ready to explore and integrate Alpha’s modern components and utilities to bring your vision to life. Start building your next-generation application today with Alpha! 🚀
+
+## Using the Alpha CLI
+
+The Alpha CLI is a powerful command-line tool that makes it easy to add, manage, and configure components and blocks in your projects. It automatically handles dependencies, file organization, and project setup.
+
+### Install the CLI
+
+<Pre>{`# Install globally\nnpm install -g alpha-cli\n\n# Or run once with npx\nnpx alpha-cli\n\n# Alternative command names\nalphion init  # Same as alpha init`}</Pre>
+
+### Initialize your project
+
+The `init` command sets up your project with the necessary configuration and dependencies:
+
+<Pre>{`# Interactive setup\nalphabyte init\n\n# Skip prompts and use defaults\nalphabyte init --default\n\n# Non-interactive with custom options\nalphabyte init --yes --base-color slate --css app/globals.css`}</Pre>
+
+**What the init command does:**
+- Creates a `components.json` configuration file
+- Sets up project structure (components, lib, hooks directories)
+- Installs required dependencies (clsx, tailwind-merge, class-variance-authority)
+- Configures Tailwind CSS and TypeScript support
+- Sets up import aliases for your project
+
+### Add components or blocks
+
+<Pre>{`# Add a specific component\nalphabyte add button\n\n# Add a specific block\nalphabyte add hero-section\n\n# Add multiple items\nalphabyte add button card hero-section\n\n# Add all available components and blocks\nalphabyte add --all\n\n# Add to a custom path\nalphabyte add button --path src/components\n\n# Overwrite existing files\nalphabyte add button --overwrite`}</Pre>
+
+### List available components and blocks
+
+<Pre>{`# List all available items\nalphabyte list\n\n# List only components\nalphabyte list --type components\n\n# List only blocks\nalphabyte list --type blocks\n\n# Search for specific items\nalphabyte list --search button`}</Pre>
+
+### View component details
+
+<Pre>{`# View component information\nalphabyte view button\n\n# View block information\nalphabyte view hero-section\n\n# Specify type\nalphabyte view button --type components`}</Pre>
+
+### Search components and blocks
+
+<Pre>{`# Search for items\nalphabyte search button\n\n# Search with type filter\nalphabyte search form --type components`}</Pre>
+
+### Running outside a Next.js project (auto-scaffold)
+
+If you run `alpha add` outside a Next.js app, the CLI will automatically scaffold a Next.js project first:
+
+<Pre>{`cd C:\\Users\\username\n# This will scaffold a Next.js project first, then add the component\nalphabyte add hero-section\n\n# Non-interactive scaffolding\nalphabyte add hero-section --non-interactive --project-name my-app`}</Pre>
+
+### CLI Options
+
+<Pre>{`# Global options\nalphabyte [command] --help          # Show help\nalphabyte [command] --version       # Show version\nalphabyte [command] --cwd <path>     # Set working directory\nalphabyte [command] --silent        # Mute output\n\n# Add command options\nalphabyte add --overwrite           # Overwrite existing files\nalphabyte add --all                 # Add all available items\nalphabyte add --path <path>         # Custom installation path\n\n# Init command options\nalphabyte init --default           # Use default settings\nalphabyte init --base-color <color>  # Set base color (slate, gray, zinc, etc.)\nalphabyte init --css <path>         # Set CSS file path\nalphabyte init --package-manager <pm> # Set package manager (npm, yarn, pnpm, bun)`}</Pre>
+
+### Configuration
+
+The CLI uses a `components.json` file to configure your project:
+
+<Pre>{`{\n  "style": "default",\n  "rsc": true,\n  "tsx": true,\n  "tailwind": {\n    "config": "tailwind.config.js",\n    "css": "app/globals.css",\n    "baseColor": "slate",\n    "cssVariables": true,\n    "prefix": ""\n  },\n  "aliases": {\n    "components": "@/components",\n    "utils": "@/lib/utils",\n    "ui": "@/components/ui",\n    "lib": "@/lib",\n    "hooks": "@/hooks"\n  },\n  "iconLibrary": "lucide"\n}`}</Pre>
+
+### Package Manager Support
+
+The CLI supports multiple package managers and will auto-detect your preferred one:
+
+- **npm** - Default Node.js package manager
+- **yarn** - Fast, reliable, and secure dependency management
+- **pnpm** - Fast, disk space efficient package manager
+- **bun** - Fast all-in-one JavaScript runtime and package manager
+
+### Advanced Usage
+
+<Pre>{`# Install dependencies for a component\nalphabyte deps button\n\n# Scaffold with specific options\nalphabyte add hero-section --non-interactive --project-name my-app --pm pnpm --src-dir --no-eslint\n\n# Use custom import aliases\nalphabyte init --components @/ui --utils @/lib/utils`}</Pre>

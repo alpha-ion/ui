@@ -1,0 +1,66 @@
+---
+title: التقويم (Calendar)
+description_ar: مكون رائد لإدارة دقيقة للتواريخ والأوقات في التطبيقات المؤسسية. مصمم بأقصى درجات المرونة، يدعم اختيار الأيام المفردة أو نطاقات التواريخ مع امتثال كامل لمعايير **A11y**، وهو الحل النهائي للجدولة وتصفية البيانات المعقدة.
+keywords_ar: [تقويم, محدد تاريخ, جدولة, نطاق تاريخ, نموذج A11y]
+links:
+  doc: https://react-day-picker.js.org
+---
+
+<ComponentPreview name="calendar-demo" />
+
+## حول المكوّن
+
+مكوّن <MdxBadge>Calendar</MdxBadge> مبني بالاعتماد على  
+[ReactDayPicker](https://daypicker.dev/).
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="أمر الـ CLI">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="تثبيت يدويا">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="أمر الـ CLI">
+<CliCodeTabs>
+  <CodeCommands componentName="calendar"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="تثبيت يدويا">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت الاعتمادات (Dependencies)">
+      أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge react-day-picker@8.10.1 date-fns`}
+      </Pre>
+    </StepItem>
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="إنشاء مكوّن التقويم (Calendar Component)">
+      <ComponentSource name="calendar-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre>{`import { Calendar } from "@/components/ui/calendar"`}</Pre>
+  <Pre>{`const [date, setDate] = React.useState<Date | undefined>(new Date())
+ 
+return (
+  <Calendar
+    mode="single"
+    selected={date}
+    onSelect={setDate}
+    className="rounded-md border"
+  />
+)`}</Pre>
+</div>
+
+## أمثلة
+<ComponentPreview name="date-picker-demo" />

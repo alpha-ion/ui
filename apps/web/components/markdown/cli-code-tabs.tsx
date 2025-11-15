@@ -10,11 +10,13 @@ export function CliCodeTabs({ children }: React.ComponentProps<typeof Tabs>) {
     const [config, setConfig] = useConfig()
     const locale = useLocale()
     const installationType = React.useMemo(() => {
-        return config.installationType || "cli"
+        return config?.installationType || "cli"
     }, [config])
 
     return (
-        <Tabs value={installationType}
+        <Tabs 
+            value={installationType}
+            defaultValue="cli"
             dir={locale === "ar" ? "rtl" : "ltr"}
             onValueChange={(value) => {
                 setConfig({ ...config, installationType: value as "cli" | "manual" })

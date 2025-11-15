@@ -1,0 +1,58 @@
+---
+title: Smart Select
+description: عنصر كومبو بوكس متقدّم يجمع بين Popover و Command لتوفير وصولية عالية، بحث لحظي، وقدرة على اختيار العناصر ديناميكيًا من قوائم كبيرة.
+keywords: [combobox, searchable select, popover command, accessible form input]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/accordion
+  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+---
+
+<ComponentPreview name="smart-select-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="smart-select" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت المتطلبات">
+      قم أولًا بتثبيت الحزم المطلوبة:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-select`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن Smart Select">
+      <ComponentSource name="smart-select-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<ComponentSource name="smart-select-demo" />
+
+## أمثلة
+
+### Popover  
+<ComponentSource name="smart-select-popover-demo" />

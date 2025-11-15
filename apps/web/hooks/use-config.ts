@@ -4,7 +4,7 @@ import { useAtom } from "jotai"
 import { atomWithStorage } from "jotai/utils"
 
 type Config = {
-    packageManager: "npm" | "yarn" | "pnpm" | "bun" | "deno"
+    packageManager: "npm" | "yarn" | "pnpm" | "bun"
     installationType: "cli" | "manual"
 }
 

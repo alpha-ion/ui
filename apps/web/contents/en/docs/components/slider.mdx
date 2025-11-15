@@ -1,0 +1,60 @@
+---
+title: Slider
+slug: /docs/components/slider
+description: Accessible range input component supporting single or dual handles (Range Slider). Features responsive design for vertical/horizontal orientation and fine-tuned focus states.
+keywords: [range slider, dual handle input, accessible range, responsive slider]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/slider
+  api: https://www.radix-ui.com/docs/primitives/components/slider#api-reference
+---
+
+<ComponentPreview name="slider-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="slider"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-slider`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Slider Component">
+      <ComponentSource name="slider-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Slider } from "@/components/ui/slider"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Slider defaultValue={[33]} max={100} step={1} />`}
+  </Pre>
+</div>
+
+## Examples
+### Range Slider
+<ComponentPreview name="slider-range-demo" />

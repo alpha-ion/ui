@@ -1,0 +1,81 @@
+---
+title: Note
+description: Animated, dismissible message component with Framer Motion integration. Features backdrop blur for a premium visual aesthetic across multiple context variants.
+keywords: [animated note component, framer motion UI, closable alert, premium backdrop blur]
+---
+
+**Use the versatile Note component to effectively communicate important information within your interface.**
+
+<ComponentPreview name="note-demo" />
+
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="note"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose md:px-0 px-4"> 
+<Step>
+<StepItem title="Install Dependencies">
+Install the required dependencies:
+<Pre className="language-bash">
+{`npm install clsx tailwind-merge`}
+</Pre>
+</StepItem>
+  <StepItem title="Create utils.ts"> 
+    <ComponentUtilsText/>
+    <ComponentUtils/>
+  </StepItem>
+  <StepItem title="Create the Note Component">
+    <ComponentSource name="note-demo"/>
+  </StepItem>
+  <StepItem title="Customize">
+    Now you can edit and style it to fit your needs.
+  </StepItem>
+</Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+<Pre className="language-typescript">
+{`import { Note } from "@/components/ui/note"`}
+</Pre>
+<Pre className="language-tsx">
+{`const NoteDemo = () => {
+  return <Note variant="info">This is an informational note.</Note>
+}
+
+export default NoteDemo`}
+</Pre>
+</div>
+
+## Examples
+
+### Standard Note
+<ComponentPreview name="note-demo" />
+
+### Success Note
+<ComponentPreview name="note-demo" variant="success" />
+
+### Warning Note
+<ComponentPreview name="note-demo" variant="warning" />
+
+### Error Note
+<ComponentPreview name="note-demo" variant="error" />
+
+## Closable Notes
+
+To make a note dismissible, set the <MdxBadge>closable</MdxBadge> prop to <MdxBadge>true</MdxBadge>.
+
+<ComponentPreview name="note-demo" variant="closable" />

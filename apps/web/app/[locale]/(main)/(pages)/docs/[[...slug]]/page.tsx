@@ -51,8 +51,8 @@ const ComponentsPage = async (props: DocsPageProps) => {
     const t = await getTranslations("component-page")
 
     return (
-      <div className="flex items-start gap-14 max-w-7xl w-full transition-all">
-        <div className="w-full max-w-none flex-1 mt-5 md:mt-7 min-w-0">
+      <div className="flex items-start justify-between gap-14 max-w-6xl w-full transition-all">
+        <div className="max-w-[50rem] flex-1 mt-5 md:mt-7 min-w-0">
           <PageBreadcrumb paths={slug} />
           <div className="space-y-2 flex flex-col">
             <div className="flex justify-between space-y-2">

@@ -1,0 +1,76 @@
+---
+title: شريط التقدم (Progress)
+slug: /docs/components/progress
+description: مكوّن شريط التقدّم هو مؤشر بصري يوضّح مقدار التقدّم في مهمة أو عملية جارية داخل الواجهة.
+keywords: [progress, مكوّن التقدم, مؤشر تحميل, شريط تقدم, ui progress]
+---
+
+<ComponentPreview name="progress-demo" />
+
+**استخدم مكوّن شريط التقدّم لتوفير تجربة تفاعلية واضحة أثناء عمليات التحميل أو تنفيذ المهام داخل التطبيق.**
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدوي</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <CliCodeTabs>
+    <CodeCommands componentName="progress" />
+  </CliCodeTabs>
+</TabsContent>
+
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+
+    <StepItem title="تثبيت المتطلبات">
+      قم أولاً بتثبيت الحزم الضرورية:
+      <Pre className="language-bash">
+{`npm install clsx tailwind-merge @radix-ui/react-progress`}
+      </Pre>
+    </StepItem>
+
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+
+    <StepItem title="إنشاء مكوّن progress">
+      <ComponentSource name="progress-demo" />
+    </StepItem>
+
+  </Step>
+</div>
+</TabsContent>
+
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+
+<Pre className="language-typescript">
+{`import { Progress } from "@/components/ui/progress"`}
+</Pre>
+
+<Pre className="language-typescript">
+{`<Progress value={33} />`}
+</Pre>
+
+</div>
+
+## أمثلة
+
+### مثال افتراضي
+<ComponentPreview name="progress-demo" />
+
+### مثال بقيمة مخصّصة
+<ComponentPreview name="progress-demo" variant="custom" />
+
+### مثال داخل بطاقة أو نموذج
+<ComponentPreview name="progress-demo" variant="card" />

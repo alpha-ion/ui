@@ -1,0 +1,73 @@
+---
+title: Resizable
+slug: /docs/components/resizable
+description: The Resizable component allows users to create resizable panels and containers with adjustable sizes.
+keywords: [resizable, component, layout]
+---
+
+<ComponentPreview name="resizable-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="resizable"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge react-resizable-panels`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Resizable Component">
+      <ComponentSource name="resizable-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`
+    import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable"
+    `}
+  </Pre>
+  <Pre className="language-typescript">
+    {`
+<ResizablePanelGroup direction="horizontal">
+    <ResizablePanel>One</ResizablePanel>
+    <ResizableHandle />
+    <ResizablePanel>Two</ResizablePanel>
+</ResizablePanelGroup>
+    `}
+  </Pre>
+</div>
+
+## Examples
+
+### Vertical
+<ComponentPreview name="resizable-vertical-demo" />
+
+### Handle
+<ComponentPreview name="resizable-handle-demo" />

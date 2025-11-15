@@ -41,7 +41,7 @@ const TabsList = React.forwardRef<
       <motion.div
         className="absolute bottom-0 h-[2px] bg-primary"
         animate={activeStyle}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
       />
       {React.Children.map(props.children, (child, index) =>
         React.isValidElement(child)
@@ -90,3 +90,4 @@ const TabsContent = React.forwardRef<
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
 export { Tabs, TabsContent, TabsList, TabsTrigger }
+

@@ -6,8 +6,8 @@
 <MdxBadge>\<Popover /></MdxBadge> و\
 <MdxBadge>\<Calendar /></MdxBadge>.
 
-راجع تعليمات التثبيت الخاصة بـ [Popover](https://alphabyte-labs.vercel.app/docs/components/popover)\
-و [Calendar](https://alphabyte-labs.vercel.app/docs/components/calendar/) لعملية التثبيت السريعة.
+راجع تعليمات التثبيت الخاصة بـ [Popover](https://alpha-ui.vercel.app/docs/components/popover)\
+و [Calendar](https://alpha-ui.vercel.app/docs/components/calendar/) لعملية التثبيت السريعة.
 
 <CliCodeTabs>
   <TabsContent value="أمر الـ CLI">

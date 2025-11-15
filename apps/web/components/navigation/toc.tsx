@@ -1,14 +1,11 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { Link } from "@/i18n/navigation"
 import clsx from "clsx"
-
-import { ScrollArea } from "@/components/ui/scroll-area"
-import TocCtaCard from "../toc-cta-card"
-import { ContributorsComponents } from "@/constant"
-import UserAvatar from "../user-avatar"
 import { useTranslations } from "next-intl"
+import { useEffect, useRef, useState } from "react"
+import TocCtaCard from "../toc-cta-card"
 
 type TocProps = {
   tocs: { href: string; level: number; text: string }[]
@@ -65,7 +62,7 @@ export default function Toc({ tocs }: TocProps) {
   }
 
   const getLinkClassName = (level: number, isActive: boolean) =>
-    clsx("transition-colors duration-200 hover:text-primary", {
+    clsx("transition duration-200 hover:text-primary", {
       "pl-0": level === 2,
       "pl-4 rtl:pr-4": level === 3,
       "pl-8 rtl:pr-8": level === 4,
@@ -79,7 +76,7 @@ export default function Toc({ tocs }: TocProps) {
         <ScrollArea className="max-h-[12rem]">
           <ul className="space-y-[6px]">
             {tocs.map(({ href, level, text }, index) => (
-              <li className="text-sm" key={index}>
+              <li className="text-[0.8rem] leading-[1.4] tracking-[0.01]" key={index}>
                 <Link
                   href={href}
                   scroll={false}
