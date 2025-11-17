@@ -18,7 +18,7 @@ export default function TocCtaCard() {
                     {t("title")}
                 </h3>
                 <p className="text-[13px] text-muted-foreground mt-2 leading-snug">
-                    {t("descriptionStart")} <span className="font-medium">{t("siteName")}</span>{t("descriptionMiddle")} <span className="font-semibold text-foreground">Next.js</span> {t("descriptionEnd")}.
+                    {t("descriptionStart")} <span className="font-medium">{t("siteName")}</span>{t("descriptionMiddle")} <span className="font-semibold text-foreground">{t("technology")}</span> {t("descriptionEnd")}.
                 </p>
                 <span className="underline font-medium text-[13px] mt-2 inline-block text-primary cursor-pointer hover:opacity-80">
                     {t("ctaButton")}

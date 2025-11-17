@@ -1262,6 +1262,15 @@ export const componentExamples = { items: [
     language: "tsx"
   },
   {
+    name: "separator-vertical-demo",
+    baseComponent: "separator",
+    variant: "vertical",
+    componentPath: "@/registry/ui/separator",
+    componentDemoPath: "@/registry/examples/separator-demo/separator-vertical-demo",
+    component: React.lazy(() => import("@/registry/examples/separator-demo/separator-vertical-demo")),
+    language: "tsx"
+  },
+  {
     name: "sheet-bottom-demo",
     baseComponent: "sheet",
     variant: "bottom",

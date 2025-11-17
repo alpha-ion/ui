@@ -2,9 +2,10 @@
 export const blockExamples = { items: [
   {
     "name": "about-1",
-    "target": "@/../../registry/view/about-1/page",
-    "dependencies": [],
-    "components": [],
+    "target": "@/registry/view/about-1/page",
+    "components": [
+      "@/registry/view/about-1/components/about"
+    ],
     "constant": [],
     "lib": [],
     "context": [],
@@ -14,14 +15,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "banner-1",
-    "target": "@/../../registry/view/banner-1/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/banner-1/page",
     "components": [
-      "@/../../registry/view/banner-1/components/banner"
+      "@/registry/view/banner-1/components/banner"
     ],
     "constant": [],
     "lib": [],
@@ -32,13 +28,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "banner-2",
-    "target": "@/../../registry/view/banner-2/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/banner-2/page",
     "components": [
-      "@/../../registry/view/banner-2/components/banner"
+      "@/registry/view/banner-2/components/banner"
     ],
     "constant": [],
     "lib": [],
@@ -49,12 +41,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "bento-grid-1",
-    "target": "@/../../registry/view/bento-grid-1/page",
-    "dependencies": [
-      "next"
-    ],
+    "target": "@/registry/view/bento-grid-1/page",
     "components": [
-      "@/../../registry/view/bento-grid-1/components/bento-grid"
+      "@/registry/view/bento-grid-1/components/bento-grid"
     ],
     "constant": [],
     "lib": [],
@@ -65,18 +54,13 @@ export const blockExamples = { items: [
   },
   {
     "name": "carousel-1",
-    "target": "@/../../registry/view/carousel-1/page",
-    "dependencies": [
-      "@tabler/icons-react",
-      "framer-motion",
-      "next"
-    ],
+    "target": "@/registry/view/carousel-1/page",
     "components": [
-      "@/../../registry/view/carousel-1/components/Carousel-Container",
-      "@/../../registry/view/carousel-1/components/carousel"
+      "@/registry/view/carousel-1/components/Carousel-Container",
+      "@/registry/view/carousel-1/components/carousel"
     ],
     "constant": [
-      "@/../../registry/view/carousel-1/constant/index"
+      "@/registry/view/carousel-1/constant/index"
     ],
     "lib": [],
     "context": [],
@@ -86,18 +70,13 @@ export const blockExamples = { items: [
   },
   {
     "name": "carousel-2",
-    "target": "@/../../registry/view/carousel-2/page",
-    "dependencies": [
-      "@tabler/icons-react",
-      "framer-motion",
-      "next"
-    ],
+    "target": "@/registry/view/carousel-2/page",
     "components": [
-      "@/../../registry/view/carousel-2/components/carousel",
-      "@/../../registry/view/carousel-2/components/carousel-container"
+      "@/registry/view/carousel-2/components/carousel-container",
+      "@/registry/view/carousel-2/components/carousel"
     ],
     "constant": [
-      "@/../../registry/view/carousel-2/constant/index"
+      "@/registry/view/carousel-2/constant/index"
     ],
     "lib": [],
     "context": [],
@@ -107,15 +86,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "case-studies-1",
-    "target": "@/../../registry/view/case-studies-1/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/case-studies-1/page",
     "components": [
-      "@/../../registry/view/case-studies-1/components/case-studies"
+      "@/registry/view/case-studies-1/components/case-studies"
     ],
     "constant": [],
     "lib": [],
@@ -126,15 +99,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "case-studies-2",
-    "target": "@/../../registry/view/case-studies-2/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/case-studies-2/page",
     "components": [
-      "@/../../registry/view/case-studies-2/components/case-studies"
+      "@/registry/view/case-studies-2/components/case-studies"
     ],
     "constant": [],
     "lib": [],
@@ -145,19 +112,13 @@ export const blockExamples = { items: [
   },
   {
     "name": "contact-1",
-    "target": "@/../../registry/view/contact-1/page",
-    "dependencies": [
-      "next",
-      "react",
-      "react-icons",
-      "zod"
-    ],
+    "target": "@/registry/view/contact-1/page",
     "components": [
-      "@/../../registry/view/contact-1/components/contact"
+      "@/registry/view/contact-1/components/contact"
     ],
     "constant": [],
     "lib": [
-      "@/../../registry/view/contact-1/lib/utils"
+      "@/registry/view/contact-1/lib/utils.ts"
     ],
     "context": [],
     "hooks": [],
@@ -166,13 +127,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "contact-2",
-    "target": "@/../../registry/view/contact-2/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/contact-2/page",
     "components": [
-      "@/../../registry/view/contact-2/components/contact"
+      "@/registry/view/contact-2/components/contact"
     ],
     "constant": [],
     "lib": [],
@@ -183,49 +140,38 @@ export const blockExamples = { items: [
   },
   {
     "name": "dashboard-1",
-    "target": "@/../../registry/view/dashboard-1/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/dashboard-1/page",
     "components": [
-      "@/../../registry/view/dashboard-1/components/dashboard",
-      "@/../../registry/view/dashboard-1/components/sidebar"
+      "@/registry/view/dashboard-1/components/dashboard",
+      "@/registry/view/dashboard-1/components/sidebar"
     ],
     "constant": [
-      "@/../../registry/view/dashboard-1/constant/index"
+      "@/registry/view/dashboard-1/constant/index"
     ],
     "lib": [
-      "@/../../registry/view/dashboard-1/lib/utils"
+      "@/registry/view/dashboard-1/lib/utils.ts"
     ],
     "context": [],
     "hooks": [
-      "@/../../registry/view/dashboard-1/hooks/use-responsive-orientation"
+      "@/registry/view/dashboard-1/hooks/use-responsive-orientation"
     ],
     "types": [],
     "styles": [],
-    "layout": "@/../../registry/view/dashboard-1/layout"
+    "layout": "@/registry/view/dashboard-1/layout"
   },
   {
     "name": "dashboard-2",
-    "target": "@/../../registry/view/dashboard-2/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/dashboard-2/page",
     "components": [
-      "@/../../registry/view/dashboard-2/components/dashboard-header",
-      "@/../../registry/view/dashboard-2/components/dashboard-sidebar",
-      "@/../../registry/view/dashboard-2/components/nav-main",
-      "@/../../registry/view/dashboard-2/components/nav-user",
-      "@/../../registry/view/dashboard-2/components/section-cards"
+      "@/registry/view/dashboard-2/components/dashboard-header",
+      "@/registry/view/dashboard-2/components/dashboard-sidebar",
+      "@/registry/view/dashboard-2/components/nav-main",
+      "@/registry/view/dashboard-2/components/nav-user",
+      "@/registry/view/dashboard-2/components/section-cards"
     ],
     "constant": [],
     "lib": [
-      "@/../../registry/view/dashboard-2/lib/utils"
+      "@/registry/view/dashboard-2/lib/utils.ts"
     ],
     "context": [],
     "hooks": [],
@@ -234,31 +180,23 @@ export const blockExamples = { items: [
   },
   {
     "name": "dashboard-3",
-    "target": "@/../../registry/view/dashboard-3/page",
-    "dependencies": [
-      "@dnd-kit/modifiers",
-      "@dnd-kit/utilities",
-      "lucide-react",
-      "next",
-      "react",
-      "recharts",
-      "sonner",
-      "zod"
-    ],
+    "target": "@/registry/view/dashboard-3/page",
     "components": [
-      "@/../../registry/view/dashboard-3/components/app-sidebar",
-      "@/../../registry/view/dashboard-3/components/chart-area-interactive",
-      "@/../../registry/view/dashboard-3/components/data-table",
-      "@/../../registry/view/dashboard-3/components/nav-documents",
-      "@/../../registry/view/dashboard-3/components/nav-main",
-      "@/../../registry/view/dashboard-3/components/nav-secondary",
-      "@/../../registry/view/dashboard-3/components/nav-user",
-      "@/../../registry/view/dashboard-3/components/section-cards",
-      "@/../../registry/view/dashboard-3/components/site-header"
+      "@/registry/view/dashboard-3/components/app-sidebar",
+      "@/registry/view/dashboard-3/components/chart-area-interactive",
+      "@/registry/view/dashboard-3/components/data-table",
+      "@/registry/view/dashboard-3/components/nav-documents",
+      "@/registry/view/dashboard-3/components/nav-main",
+      "@/registry/view/dashboard-3/components/nav-secondary",
+      "@/registry/view/dashboard-3/components/nav-user",
+      "@/registry/view/dashboard-3/components/section-cards",
+      "@/registry/view/dashboard-3/components/site-header"
     ],
-    "constant": [],
+    "constant": [
+      "@/registry/view/dashboard-3/constant/data.json"
+    ],
     "lib": [
-      "@/../../registry/view/dashboard-3/lib/utils"
+      "@/registry/view/dashboard-3/lib/utils.ts"
     ],
     "context": [],
     "hooks": [],
@@ -267,21 +205,15 @@ export const blockExamples = { items: [
   },
   {
     "name": "expanded-gallery-1",
-    "target": "@/../../registry/view/expanded-gallery-1/page",
-    "dependencies": [
-      "framer-motion",
-      "next",
-      "next-themes",
-      "react"
-    ],
+    "target": "@/registry/view/expanded-gallery-1/page",
     "components": [
-      "@/../../registry/view/expanded-gallery-1/components/expanded-gallery"
+      "@/registry/view/expanded-gallery-1/components/expanded-gallery"
     ],
     "constant": [
-      "@/../../registry/view/expanded-gallery-1/constant/index"
+      "@/registry/view/expanded-gallery-1/constant/index.ts"
     ],
     "lib": [
-      "@/../../registry/view/expanded-gallery-1/lib/motion"
+      "@/registry/view/expanded-gallery-1/lib/motion.ts"
     ],
     "context": [],
     "hooks": [],
@@ -290,13 +222,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "faq-1",
-    "target": "@/../../registry/view/faq-1/page",
-    "dependencies": [
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/faq-1/page",
     "components": [
-      "@/../../registry/view/faq-1/components/faqs"
+      "@/registry/view/faq-1/components/faqs"
     ],
     "constant": [],
     "lib": [],
@@ -307,12 +235,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "features-showcase-1",
-    "target": "@/../../registry/view/features-showcase-1/page",
-    "dependencies": [
-      "lucide-react"
-    ],
+    "target": "@/registry/view/features-showcase-1/page",
     "components": [
-      "@/../../registry/view/features-showcase-1/components/feature-showcase"
+      "@/registry/view/features-showcase-1/components/feature-showcase"
     ],
     "constant": [],
     "lib": [],
@@ -323,13 +248,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "features-showcase-2",
-    "target": "@/../../registry/view/features-showcase-2/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/features-showcase-2/page",
     "components": [
-      "@/../../registry/view/features-showcase-2/components/features-showcase"
+      "@/registry/view/features-showcase-2/components/features-showcase"
     ],
     "constant": [],
     "lib": [],
@@ -340,12 +261,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "features-showcase-3",
-    "target": "@/../../registry/view/features-showcase-3/page",
-    "dependencies": [
-      "lucide-react"
-    ],
+    "target": "@/registry/view/features-showcase-3/page",
     "components": [
-      "@/../../registry/view/features-showcase-3/components/features-showcase"
+      "@/registry/view/features-showcase-3/components/features-showcase"
     ],
     "constant": [],
     "lib": [],
@@ -356,14 +274,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "features-showcase-4",
-    "target": "@/../../registry/view/features-showcase-4/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/features-showcase-4/page",
     "components": [
-      "@/../../registry/view/features-showcase-4/components/features-showcase"
+      "@/registry/view/features-showcase-4/components/features-showcase"
     ],
     "constant": [],
     "lib": [],
@@ -374,14 +287,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "login-1",
-    "target": "@/../../registry/view/login-1/page",
-    "dependencies": [
-      "next",
-      "react",
-      "react-icons"
-    ],
+    "target": "@/registry/view/login-1/page",
     "components": [
-      "@/../../registry/view/login-1/components/login-form"
+      "@/registry/view/login-1/components/login-form"
     ],
     "constant": [],
     "lib": [],
@@ -392,14 +300,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "login-2",
-    "target": "@/../../registry/view/login-2/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/login-2/page",
     "components": [
-      "@/../../registry/view/login-2/components/login-form"
+      "@/registry/view/login-2/components/login-form"
     ],
     "constant": [],
     "lib": [],
@@ -410,14 +313,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "login-3",
-    "target": "@/../../registry/view/login-3/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/login-3/page",
     "components": [
-      "@/../../registry/view/login-3/components/login-form"
+      "@/registry/view/login-3/components/login-form"
     ],
     "constant": [],
     "lib": [],
@@ -428,14 +326,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "login-4",
-    "target": "@/../../registry/view/login-4/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/login-4/page",
     "components": [
-      "@/../../registry/view/login-4/components/login-form"
+      "@/registry/view/login-4/components/login-form"
     ],
     "constant": [],
     "lib": [],
@@ -446,21 +339,13 @@ export const blockExamples = { items: [
   },
   {
     "name": "mail-1",
-    "target": "@/../../registry/view/mail-1/page",
-    "dependencies": [
-      "date-fns",
-      "dompurify",
-      "jotai",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/mail-1/page",
     "components": [
-      "@/../../registry/view/mail-1/components/account-switcher",
-      "@/../../registry/view/mail-1/components/mail",
-      "@/../../registry/view/mail-1/components/mail-display",
-      "@/../../registry/view/mail-1/components/mail-list",
-      "@/../../registry/view/mail-1/components/nav"
+      "@/registry/view/mail-1/components/account-switcher",
+      "@/registry/view/mail-1/components/mail-display",
+      "@/registry/view/mail-1/components/mail-list",
+      "@/registry/view/mail-1/components/mail",
+      "@/registry/view/mail-1/components/nav"
     ],
     "constant": [],
     "lib": [],
@@ -471,16 +356,12 @@ export const blockExamples = { items: [
   },
   {
     "name": "navbar-1",
-    "target": "@/../../registry/view/navbar-1/page",
-    "dependencies": [
-      "lucide-react",
-      "next"
-    ],
+    "target": "@/registry/view/navbar-1/page",
     "components": [
-      "@/../../registry/view/navbar-1/components/navbar"
+      "@/registry/view/navbar-1/components/navbar"
     ],
     "constant": [
-      "@/../../registry/view/navbar-1/constant/index"
+      "@/registry/view/navbar-1/constant/index"
     ],
     "lib": [],
     "context": [],
@@ -490,9 +371,10 @@ export const blockExamples = { items: [
   },
   {
     "name": "new-collection-1",
-    "target": "@/../../registry/view/new-collection-1/page",
-    "dependencies": [],
-    "components": [],
+    "target": "@/registry/view/new-collection-1/page",
+    "components": [
+      "@/registry/view/new-collection-1/components/new-collection"
+    ],
     "constant": [],
     "lib": [],
     "context": [],
@@ -502,44 +384,33 @@ export const blockExamples = { items: [
   },
   {
     "name": "orders-page-1",
-    "target": "@/../../registry/view/orders-page-1/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/orders-page-1/page",
     "components": [
-      "@/../../registry/view/orders-page-1/components/orders-page",
-      "@/../../registry/view/orders-page-1/components/sidebar"
+      "@/registry/view/orders-page-1/components/orders-page",
+      "@/registry/view/orders-page-1/components/sidebar"
     ],
     "constant": [
-      "@/../../registry/view/orders-page-1/constant/index"
+      "@/registry/view/orders-page-1/constant/index"
     ],
     "lib": [
-      "@/../../registry/view/orders-page-1/lib/utils"
+      "@/registry/view/orders-page-1/lib/utils.ts"
     ],
     "context": [],
     "hooks": [
-      "@/../../registry/view/orders-page-1/hooks/use-responsive-orientation"
+      "@/registry/view/orders-page-1/hooks/use-responsive-orientation"
     ],
     "types": [],
     "styles": []
   },
   {
     "name": "orders-page-2",
-    "target": "@/../../registry/view/orders-page-2/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/orders-page-2/page",
     "components": [
-      "@/../../registry/view/orders-page-2/components/orders-header"
+      "@/registry/view/orders-page-2/components/orders-header"
     ],
     "constant": [],
     "lib": [
-      "@/../../registry/view/orders-page-2/lib/utils"
+      "@/registry/view/orders-page-2/lib/utils.ts"
     ],
     "context": [],
     "hooks": [],
@@ -548,30 +419,21 @@ export const blockExamples = { items: [
   },
   {
     "name": "orders-page-3",
-    "target": "@/../../registry/view/orders-page-3/page",
-    "dependencies": [
-      "@dnd-kit/modifiers",
-      "@dnd-kit/sortable",
-      "@dnd-kit/utilities",
-      "lucide-react",
-      "next",
-      "react",
-      "recharts",
-      "sonner",
-      "zod"
-    ],
+    "target": "@/registry/view/orders-page-3/page",
     "components": [
-      "@/../../registry/view/orders-page-3/components/header",
-      "@/../../registry/view/orders-page-3/components/nav-documents",
-      "@/../../registry/view/orders-page-3/components/nav-secondary",
-      "@/../../registry/view/orders-page-3/components/nav-user",
-      "@/../../registry/view/orders-page-3/components/orders-cards",
-      "@/../../registry/view/orders-page-3/components/orders-chart",
-      "@/../../registry/view/orders-page-3/components/orders-stats",
-      "@/../../registry/view/orders-page-3/components/orders-table",
-      "@/../../registry/view/orders-page-3/components/sidebar"
+      "@/registry/view/orders-page-3/components/header",
+      "@/registry/view/orders-page-3/components/nav-documents",
+      "@/registry/view/orders-page-3/components/nav-secondary",
+      "@/registry/view/orders-page-3/components/nav-user",
+      "@/registry/view/orders-page-3/components/orders-cards",
+      "@/registry/view/orders-page-3/components/orders-chart",
+      "@/registry/view/orders-page-3/components/orders-stats",
+      "@/registry/view/orders-page-3/components/orders-table",
+      "@/registry/view/orders-page-3/components/sidebar"
     ],
-    "constant": [],
+    "constant": [
+      "@/registry/view/orders-page-3/constant/data.json"
+    ],
     "lib": [],
     "context": [],
     "hooks": [],
@@ -580,12 +442,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "personal-card-1",
-    "target": "@/../../registry/view/personal-card-1/page",
-    "dependencies": [
-      "lucide-react"
-    ],
+    "target": "@/registry/view/personal-card-1/page",
     "components": [
-      "@/../../registry/view/personal-card-1/components/personal-card"
+      "@/registry/view/personal-card-1/components/personal-card"
     ],
     "constant": [],
     "lib": [],
@@ -596,13 +455,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "personal-card-2",
-    "target": "@/../../registry/view/personal-card-2/page",
-    "dependencies": [
-      "lucide-react",
-      "next"
-    ],
+    "target": "@/registry/view/personal-card-2/page",
     "components": [
-      "@/../../registry/view/personal-card-2/components/personal-card"
+      "@/registry/view/personal-card-2/components/personal-card"
     ],
     "constant": [],
     "lib": [],
@@ -613,26 +468,17 @@ export const blockExamples = { items: [
   },
   {
     "name": "playground-1",
-    "target": "@/../../registry/view/playground-1/page",
-    "dependencies": [
-      "@radix-ui/react-dialog",
-      "@radix-ui/react-popover",
-      "@radix-ui/react-slider",
-      "lucide-react",
-      "next",
-      "react",
-      "sonner"
-    ],
+    "target": "@/registry/view/playground-1/page",
     "components": [
-      "@/../../registry/view/playground-1/components/code-viewer",
-      "@/../../registry/view/playground-1/components/maxlength-selector",
-      "@/../../registry/view/playground-1/components/model-selector",
-      "@/../../registry/view/playground-1/components/preset-actions",
-      "@/../../registry/view/playground-1/components/preset-save",
-      "@/../../registry/view/playground-1/components/preset-selector",
-      "@/../../registry/view/playground-1/components/preset-share",
-      "@/../../registry/view/playground-1/components/temperature-selector",
-      "@/../../registry/view/playground-1/components/top-p-selector"
+      "@/registry/view/playground-1/components/code-viewer",
+      "@/registry/view/playground-1/components/maxlength-selector",
+      "@/registry/view/playground-1/components/model-selector",
+      "@/registry/view/playground-1/components/preset-actions",
+      "@/registry/view/playground-1/components/preset-save",
+      "@/registry/view/playground-1/components/preset-selector",
+      "@/registry/view/playground-1/components/preset-share",
+      "@/registry/view/playground-1/components/temperature-selector",
+      "@/registry/view/playground-1/components/top-p-selector"
     ],
     "constant": [],
     "lib": [],
@@ -643,12 +489,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "pricing-1",
-    "target": "@/../../registry/view/pricing-1/page",
-    "dependencies": [
-      "lucide-react"
-    ],
+    "target": "@/registry/view/pricing-1/page",
     "components": [
-      "@/../../registry/view/pricing-1/components/pricing-section"
+      "@/registry/view/pricing-1/components/pricing-section"
     ],
     "constant": [],
     "lib": [],
@@ -659,14 +502,10 @@ export const blockExamples = { items: [
   },
   {
     "name": "pricing-2",
-    "target": "@/../../registry/view/pricing-2/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/pricing-2/page",
     "components": [
-      "@/../../registry/view/pricing-2/components/billing-toggle",
-      "@/../../registry/view/pricing-2/components/pricing-section"
+      "@/registry/view/pricing-2/components/billing-toggle",
+      "@/registry/view/pricing-2/components/pricing-section"
     ],
     "constant": [],
     "lib": [],
@@ -677,14 +516,10 @@ export const blockExamples = { items: [
   },
   {
     "name": "pricing-3",
-    "target": "@/../../registry/view/pricing-3/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/pricing-3/page",
     "components": [
-      "@/../../registry/view/pricing-3/components/billing-toggle",
-      "@/../../registry/view/pricing-3/components/pricing-section"
+      "@/registry/view/pricing-3/components/billing-toggle",
+      "@/registry/view/pricing-3/components/pricing-section"
     ],
     "constant": [],
     "lib": [],
@@ -695,14 +530,10 @@ export const blockExamples = { items: [
   },
   {
     "name": "pricing-4",
-    "target": "@/../../registry/view/pricing-4/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/pricing-4/page",
     "components": [
-      "@/../../registry/view/pricing-4/components/billing-toggle",
-      "@/../../registry/view/pricing-4/components/pricing-section"
+      "@/registry/view/pricing-4/components/billing-toggle",
+      "@/registry/view/pricing-4/components/pricing-section"
     ],
     "constant": [],
     "lib": [],
@@ -713,24 +544,18 @@ export const blockExamples = { items: [
   },
   {
     "name": "product-overview-1",
-    "target": "@/../../registry/view/product-overview-1/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react",
-      "react-responsive-carousel"
-    ],
+    "target": "@/registry/view/product-overview-1/page",
     "components": [
-      "@/../../registry/view/product-overview-1/components/discounted-price",
-      "@/../../registry/view/product-overview-1/components/normal-price",
-      "@/../../registry/view/product-overview-1/components/product-color-temp-button",
-      "@/../../registry/view/product-overview-1/components/product-image-carousel",
-      "@/../../registry/view/product-overview-1/components/product-info",
-      "@/../../registry/view/product-overview-1/components/product-ip-buttons"
+      "@/registry/view/product-overview-1/components/discounted-price",
+      "@/registry/view/product-overview-1/components/normal-price",
+      "@/registry/view/product-overview-1/components/product-color-temp-button",
+      "@/registry/view/product-overview-1/components/product-image-carousel",
+      "@/registry/view/product-overview-1/components/product-info",
+      "@/registry/view/product-overview-1/components/product-ip-buttons"
     ],
     "constant": [],
     "lib": [
-      "@/../../registry/view/product-overview-1/lib/utils"
+      "@/registry/view/product-overview-1/lib/utils.ts"
     ],
     "context": [],
     "hooks": [],
@@ -739,22 +564,16 @@ export const blockExamples = { items: [
   },
   {
     "name": "products-carousel-1",
-    "target": "@/../../registry/view/products-carousel-1/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react",
-      "react-responsive-carousel"
-    ],
+    "target": "@/registry/view/products-carousel-1/page",
     "components": [
-      "@/../../registry/view/products-carousel-1/components/product-card",
-      "@/../../registry/view/products-carousel-1/components/product-carousel"
+      "@/registry/view/products-carousel-1/components/product-card",
+      "@/registry/view/products-carousel-1/components/product-carousel"
     ],
     "constant": [
-      "@/../../registry/view/products-carousel-1/constant/index"
+      "@/registry/view/products-carousel-1/constant/index"
     ],
     "lib": [
-      "@/../../registry/view/products-carousel-1/lib/utils"
+      "@/registry/view/products-carousel-1/lib/utils.ts"
     ],
     "context": [],
     "hooks": [],
@@ -763,19 +582,13 @@ export const blockExamples = { items: [
   },
   {
     "name": "products-list-1",
-    "target": "@/../../registry/view/products-list-1/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/products-list-1/page",
     "components": [
-      "@/../../registry/view/products-list-1/components/product-list",
-      "@/../../registry/view/products-list-1/components/sidebar"
+      "@/registry/view/products-list-1/components/product-list",
+      "@/registry/view/products-list-1/components/sidebar"
     ],
     "constant": [
-      "@/../../registry/view/products-list-1/constant/index"
+      "@/registry/view/products-list-1/constant/index"
     ],
     "lib": [],
     "context": [],
@@ -785,18 +598,12 @@ export const blockExamples = { items: [
   },
   {
     "name": "service-1",
-    "target": "@/../../registry/view/service-1/page",
-    "dependencies": [
-      "gsap",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/service-1/page",
     "components": [
-      "@/../../registry/view/service-1/components/service"
+      "@/registry/view/service-1/components/service"
     ],
     "constant": [
-      "@/../../registry/view/service-1/constant/index"
+      "@/registry/view/service-1/constant/index"
     ],
     "lib": [],
     "context": [],
@@ -806,15 +613,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "signup-1",
-    "target": "@/../../registry/view/signup-1/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react",
-      "react-icons"
-    ],
+    "target": "@/registry/view/signup-1/page",
     "components": [
-      "@/../../registry/view/signup-1/components/signup-form"
+      "@/registry/view/signup-1/components/signup-form"
     ],
     "constant": [],
     "lib": [],
@@ -825,14 +626,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "signup-2",
-    "target": "@/../../registry/view/signup-2/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/signup-2/page",
     "components": [
-      "@/../../registry/view/signup-2/components/signup-1"
+      "@/registry/view/signup-2/components/signup-1"
     ],
     "constant": [],
     "lib": [],
@@ -843,14 +639,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "signup-3",
-    "target": "@/../../registry/view/signup-3/page",
-    "dependencies": [
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/signup-3/page",
     "components": [
-      "@/../../registry/view/signup-3/components/signup-form"
+      "@/registry/view/signup-3/components/signup-form"
     ],
     "constant": [],
     "lib": [],
@@ -861,13 +652,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "signup-4",
-    "target": "@/../../registry/view/signup-4/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/signup-4/page",
     "components": [
-      "@/../../registry/view/signup-4/components/signup-form"
+      "@/registry/view/signup-4/components/signup-form"
     ],
     "constant": [],
     "lib": [],
@@ -878,15 +665,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "status-bar-1",
-    "target": "@/../../registry/view/status-bar-1/page",
-    "dependencies": [
-      "framer-motion",
-      "lucide-react",
-      "next",
-      "react"
-    ],
+    "target": "@/registry/view/status-bar-1/page",
     "components": [
-      "@/../../registry/view/status-bar-1/components/status-bar"
+      "@/registry/view/status-bar-1/components/status-bar"
     ],
     "constant": [],
     "lib": [],
@@ -897,13 +678,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "status-section-1",
-    "target": "@/../../registry/view/status-section-1/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/status-section-1/page",
     "components": [
-      "@/../../registry/view/status-section-1/components/status-section"
+      "@/registry/view/status-section-1/components/status-section"
     ],
     "constant": [],
     "lib": [],
@@ -914,13 +691,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "subscription-email-1",
-    "target": "@/../../registry/view/subscription-email-1/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/subscription-email-1/page",
     "components": [
-      "@/../../registry/view/subscription-email-1/components/subscription-email"
+      "@/registry/view/subscription-email-1/components/subscription-email"
     ],
     "constant": [],
     "lib": [],
@@ -931,13 +704,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "subscription-email-2",
-    "target": "@/../../registry/view/subscription-email-2/page",
-    "dependencies": [
-      "lucide-react",
-      "react"
-    ],
+    "target": "@/registry/view/subscription-email-2/page",
     "components": [
-      "@/../../registry/view/subscription-email-2/components/subscription-email"
+      "@/registry/view/subscription-email-2/components/subscription-email"
     ],
     "constant": [],
     "lib": [],
@@ -948,13 +717,9 @@ export const blockExamples = { items: [
   },
   {
     "name": "subscription-email-3",
-    "target": "@/../../registry/view/subscription-email-3/page",
-    "dependencies": [
-      "framer-motion",
-      "react"
-    ],
+    "target": "@/registry/view/subscription-email-3/page",
     "components": [
-      "@/../../registry/view/subscription-email-3/components/subscription-email"
+      "@/registry/view/subscription-email-3/components/subscription-email"
     ],
     "constant": [],
     "lib": [],
@@ -965,28 +730,17 @@ export const blockExamples = { items: [
   },
   {
     "name": "tasks-1",
-    "target": "@/../../registry/view/tasks-1/page",
-    "dependencies": [
-      "@faker-js/faker",
-      "@radix-ui/react-dropdown-menu",
-      "@tanstack/react-table",
-      "fs",
-      "lucide-react",
-      "next",
-      "path",
-      "react",
-      "zod"
-    ],
+    "target": "@/registry/view/tasks-1/page",
     "components": [
-      "@/../../registry/view/tasks-1/components/columns",
-      "@/../../registry/view/tasks-1/components/data-table",
-      "@/../../registry/view/tasks-1/components/data-table-column-header",
-      "@/../../registry/view/tasks-1/components/data-table-faceted-filter",
-      "@/../../registry/view/tasks-1/components/data-table-pagination",
-      "@/../../registry/view/tasks-1/components/data-table-row-actions",
-      "@/../../registry/view/tasks-1/components/data-table-toolbar",
-      "@/../../registry/view/tasks-1/components/data-table-view-options",
-      "@/../../registry/view/tasks-1/components/user-nav"
+      "@/registry/view/tasks-1/components/columns",
+      "@/registry/view/tasks-1/components/data-table-column-header",
+      "@/registry/view/tasks-1/components/data-table-faceted-filter",
+      "@/registry/view/tasks-1/components/data-table-pagination",
+      "@/registry/view/tasks-1/components/data-table-row-actions",
+      "@/registry/view/tasks-1/components/data-table-toolbar",
+      "@/registry/view/tasks-1/components/data-table-view-options",
+      "@/registry/view/tasks-1/components/data-table",
+      "@/registry/view/tasks-1/components/user-nav"
     ],
     "constant": [],
     "lib": [],
@@ -997,17 +751,13 @@ export const blockExamples = { items: [
   },
   {
     "name": "timeline-1",
-    "target": "@/../../registry/view/timeline-1/page",
-    "dependencies": [
-      "framer-motion",
-      "react"
-    ],
+    "target": "@/registry/view/timeline-1/page",
     "components": [
-      "@/../../registry/view/timeline-1/components/timeline",
-      "@/../../registry/view/timeline-1/components/timeline-container"
+      "@/registry/view/timeline-1/components/timeline-container",
+      "@/registry/view/timeline-1/components/timeline"
     ],
     "constant": [
-      "@/../../registry/view/timeline-1/constant/index"
+      "@/registry/view/timeline-1/constant/index"
     ],
     "lib": [],
     "context": [],
