@@ -1,0 +1,79 @@
+---
+title: Button Group
+description: تحقيق التماسك البصري الأمثل عبر تجميع الإجراءات ذات الصلة في مكون موحد وعالي الاتساق. يدعم التكوينات المعقدة مثل **الأزرار المُقسمة (Split Buttons) ومجموعات الإدخال (Input Groups)**، مما يضمن تجربة مستخدم موحدة ومُنتظمة.
+/keywords: [مجموعة أزرار, تجميع الإجراءات, أزرار مقسمة, اتساق الواجهة, مجموعة إدخال]
+---
+
+<ComponentPreview name="button-group" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="button-group"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت الاعتمادات">
+      أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">{`npm install clsx tailwind-merge`}</Pre>
+    </StepItem>
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="انشاء ملف button-group">
+      <ComponentSource name="button-group" />
+    </StepItem>
+    <StepItem title="Here you go, Now you can edit and customize it for your needs and make it yours" />
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+## Usage
+<div className="not-prose space-y-6">
+  <Pre>{`import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+  ButtonGroupText,
+} from "@/components/ui/button-group"`}</Pre>
+  <Pre>
+{`
+<ButtonGroup>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</ButtonGroup>
+`}
+  </Pre>
+</div>
+
+## الأمثلة (Examples)
+
+### الاتجاه
+<ComponentPreview name="button-group-orientation"/>
+### الحجم
+<ComponentPreview name="button-group-size"/>
+### المجموعات المتداخلة
+<ComponentPreview name="button-group-nested"/>
+### الفاصل (Separator)
+<ComponentPreview name="button-group-separator"/>
+### الزر المقسم (Split Button)
+<ComponentPreview name="button-group-split"/>
+### مع عنصر إدخال فردي
+<ComponentPreview name="button-group-input"/>
+### مجموعة حقول الإدخال
+<ComponentPreview name="button-group-input-group"/>
+### قائمة منسدلة (Dropdown Menu)
+<ComponentPreview name="button-group-dropdown-menu"/>
+### حقل اختيار (Select)
+<ComponentPreview name="button-group-select"/>
+### النافذة المنبثقة (Popover)
+<ComponentPreview name="button-group-popover"/>

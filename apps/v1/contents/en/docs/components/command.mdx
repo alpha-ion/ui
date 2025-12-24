@@ -1,0 +1,89 @@
+---
+title: command
+description: Fast, composable, unstyled command menu for React.
+---
+
+<ComponentPreview name="command-demo" />
+
+## Installation
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="command"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge cmdk @radix-ui/react-dialog `}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Command Component">
+      <ComponentSource name="command-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+## Usage
+
+<div className="not-prose space-y-6">
+<Pre>
+{`
+import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
+`}
+</Pre>
+
+<Pre>{`
+<Command>
+  <CommandInput placeholder="Type a command or search..." />
+  <CommandList>
+    <CommandEmpty>No results found.</CommandEmpty>
+    <CommandGroup heading="Suggestions">
+      <CommandItem>Calendar</CommandItem>
+      <CommandItem>Search Emoji</CommandItem>
+      <CommandItem>Calculator</CommandItem>
+    </CommandGroup>
+    <CommandSeparator />
+    <CommandGroup heading="Settings">
+      <CommandItem>Profile</CommandItem>
+      <CommandItem>Billing</CommandItem>
+      <CommandItem>Settings</CommandItem>
+    </CommandGroup>
+  </CommandList>
+</Command>
+`}</Pre>
+
+</div>
+
+
+
+
+## Examples
+
+### Command Dialog
+<ComponentPreview name="command-dialog-demo" />
+### Command Combobox
+<ComponentPreview name="command-combobox-demo" />

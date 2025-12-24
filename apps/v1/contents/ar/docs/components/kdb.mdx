@@ -1,0 +1,66 @@
+---
+title: Kbd
+slug: /docs/components/kbd
+description: مكون متميز بصرياً لتوثيق اختصارات لوحة المفاتيح. يتميز بتنميط سياقي عميق للتكامل السلس داخل التلميحات والأزرار.
+keywords: [واجهة اختصار لوحة المفاتيح, تنميط سياقي للمكونات, عرض مفاتيح الوصولية]
+---
+
+<ComponentPreview name="kdb-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="kdb"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت المتطلبات">
+      أولاً، قم بتثبيت الحزم اللازمة:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge`}
+      </Pre>
+    </StepItem>
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="إنشاء مكوّن input">
+      <ComponentSource name="kbd-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Kbd } from "@/components/ui/kbd"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd>`}
+  </Pre>
+</div>
+
+## الأمثلة
+
+### زر (Button)
+<ComponentPreview name="kdb-button-demo" />
+
+### تلميح (Tooltip)
+<ComponentPreview name="kdb-tooltip-demo" />
+
+### مجموعة الإدخال
+<ComponentPreview name="kdb-input-group-demo" />
+
+### التجميع (Group)
+<ComponentPreview name="kdb-group-demo" />

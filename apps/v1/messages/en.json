@@ -1,0 +1,1044 @@
+{
+    "home": {
+        "title": "Build Beautifully.",
+        "highlight": "Alpha UI:",
+        "subtitle": "Your Open Source Component Library.",
+        "description": "Build stunning interfaces with our accessible, customizable components crafted by developers, for developers.",
+        "getStarted": "Get started",
+        "browseBlocks": "Browse Blocks"
+    },
+    "errors": {
+        "title": "Oops!",
+        "description": "Something went wrong!",
+        "tryAgain": "Try again"
+    },
+    "notFound": {
+        "description": "Page not found",
+        "returnHome": "Return Home"
+    },
+    "nav": {
+        "docs": "Docs",
+        "components": "Components",
+        "blocks": "Blocks",
+        "themes": "Themes",
+        "colors": "Colors",
+        "community": "Community"
+    },
+    "contributors": {
+        "core": "Core",
+        "contributor": "Contributor",
+        "guest": "Guest"
+    },
+    "search": {
+        "placeholder": "Search documentation...",
+        "search": "Search",
+        "searching": "Searching...",
+        "noResults": "No search results",
+        "noResultsDescription": "Please make sure your search is spelled correctly",
+        "noResultsTryDifferentKeywords": "Try using different keywords",
+        "quickAccess": "Quick Access",
+        "navigate": "Navigate",
+        "select": "Select",
+        "close": "Close",
+        "typeAtLeast": "Please type at least {minLength} characters to search",
+        "noResultsFor": "No results found for \"{query}\"",
+        "tryUsingDifferentKeywords": "Try using different keywords",
+        "esc": "Close",
+        "components": "Components"
+    },
+    "scroll-to-top": {
+        "description": "Scroll To Top"
+    },
+    "toc": {
+        "this-page": "On This page"
+    },
+    "tocCtaCard": {
+        "companyName": "Alpha",
+        "title": "Build your next digital platform with confidence.",
+        "descriptionStart": "Built by the team behind",
+        "siteName": "alpha-ui",
+        "descriptionMiddle": " specialists in high-performance",
+        "descriptionEnd": "solutions.",
+        "teamName": "alpha-ui",
+        "technology": "web apps",
+        "ctaButton": "Schedule a free consultation."
+    },
+    "feedback": {
+        "title": "This Content",
+        "header-1": "Feedback",
+        "header-2": "Edit this page on Github"
+    },
+    "component-page": {
+        "docs-links": {
+            "docs": "Docs",
+            "api-reference": "API Reference"
+        }
+    },
+    "componentUtils": {
+        "text": {
+            "description": "Second, you need to create a new folder called",
+            "libFolder": "lib",
+            "inRootDirectory": "in you root directory and create a new file called",
+            "utilsFile": "utils.ts",
+            "pasteCode": "and paste the following code in it:",
+            "folderPath": "lib/utils.ts"
+        }
+    },
+    "componentSource": {
+        "text": {
+            "description": "Third, you need to create a new folder called",
+            "componentFolder": "component",
+            "inRootDirectory": "in you root directory and create a new file called",
+            "componentFile": "{componentName}"
+        },
+        "loading": {
+            "loadingCode": "Loading code...",
+            "noCodeAvailable": "No code available"
+        },
+        "errors": {
+            "sourceNotFound": "Source code not found for",
+            "loadingError": "Error loading source code map"
+        }
+    },
+    "docs-sidebar": {
+        "main": {
+            "docs": "Docs",
+            "components": "Components",
+            "blocks": "Blocks",
+            "themes": "Themes",
+            "colors": "Colors",
+            "community": "Community"
+        },
+        "sidebar": {
+            "gettingStarted": {
+                "title": "Getting Started",
+                "introduction": "Introduction",
+                "installation": "Installation",
+                "rtlDirection": "RTL Direction",
+                "themes": "Themes",
+                "changelog": "Changelog"
+            },
+            "components": {
+                "title": "Components",
+                "accordion": "Accordion",
+                "alertDialog": "Alert Dialog",
+                "aspectRatio": "Aspect Ratio",
+                "avatar": "Avatar",
+                "badge": "Badge",
+                "breadcrumb": "Breadcrumb",
+                "buttonGroup": "Button Group",
+                "button": "Button",
+                "calendar": "Calendar",
+                "card": "Card",
+                "carousel": "Carousel",
+                "command": "Command",
+                "checkbox": "Checkbox",
+                "collapsible": "Collapsible",
+                "contextMenu": "Context Menu",
+                "datePicker": "Date Picker",
+                "diagrams": "Diagrams",
+                "dialog": "Dialog",
+                "drawer": "Drawer",
+                "dropdownMenu": "Dropdown Menu",
+                "empty": "Empty State",
+                "field": "Field",
+                "folderStructure": "Folder Structure",
+                "hoverCard": "Hover Card",
+                "inputGroup": "Input Group",
+                "inputOtp": "Input OTP",
+                "input": "Input",
+                "listItem": "List Item",
+                "kdb": "Kbd",
+                "label": "Label",
+                "loading": "Loading",
+                "menubar": "Menubar",
+                "navigationMenu": "Navigation Menu",
+                "notes": "Notes",
+                "pagination": "Pagination",
+                "popover": "Popover",
+                "preCodeBlock": "Pre (Code Block)",
+                "progress": "Progress",
+                "productCard": "Product Card",
+                "radioGroup": "Radio Group",
+                "resizable": "Resizable",
+                "scrollArea": "Scroll Area",
+                "select": "Select",
+                "separator": "Separator",
+                "sheet": "Sheet",
+                "skeleton": "Skeleton",
+                "slider": "Slider",
+                "sonner": "Sonner",
+                "step": "Step",
+                "switch": "Switch",
+                "table": "Table",
+                "tabs": "Tabs",
+                "textarea": "Textarea",
+                "toggleGroup": "Toggle Group",
+                "toggle": "Toggle",
+                "tooltip": "Tooltip",
+                "smart-select": "Smart Select"
+            }
+        }
+    },
+    "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "footer": {
+        "builtBy": "Built by the team behind",
+        "sourceCode": "The source code is available on",
+        "alpha": "Alpha-UI",
+        "github": "Github"
+    },
+    "logo": {
+        "alpha": "ALPHA-UI",
+        "beta": "beta"
+    },
+    "new": {
+        "text": "New"
+    },
+    "loading": {
+        "loading": "Loading..."
+    },
+    "docs-navigation-on-mobile": {
+        "menu": "Menu"
+    },
+    "component-preview": {
+        "preview": "Preview",
+        "code": "Code",
+        "loading-component": "Loading component...",
+        "loading-code": "Loading code...",
+        "not-found-component": "Component not found",
+        "not-found-code": "Code not found"
+    },
+    "docs-copy-button": {
+        "copy": "Copy Page",
+        "copied": "Copied",
+        "dropdown-menu": {
+            "view-markdown": "View Markdown",
+            "open-in-chatgpt": "Open in ChatGPT",
+            "open-in-v0": "Open in V0",
+            "open-in-claude": "Open in Claude"
+        }
+    },
+    "components": {
+        "accordion": {
+            "accordionDemo": {
+                "title-1": "MacOS",
+                "content-1": "macOS is Apple's desktop operating system that powers Mac computers. It features a sleek user interface, robust security features, and seamless integration with other Apple devices and services.",
+                "title-2": "iOS",
+                "content-2": "iOS is Apple's mobile operating system for iPhone. It's known for its intuitive interface, app ecosystem, security, and consistent performance across devices.",
+                "title-3": "iPadOS",
+                "content-3": "iPadOS is a variant of iOS designed specifically for iPad, with features optimized for the larger display, including improved multitasking, Apple Pencil support, and desktop-class browsing."
+            }
+        },
+        "alertDialog": {
+            "alertDialogDemo": {
+                "triggerButton": "Open Dialog",
+                "title": "Are you sure?",
+                "description": "This action cannot be undone. The data will be permanently deleted from the servers.",
+                "cancelButton": "Cancel",
+                "actionButton": "Continue"
+            }
+        },
+        "badge": {
+            "default": "Badge",
+            "destructive": "Destructive",
+            "secure": "Secure",
+            "info": "Info",
+            "outline": "Outline",
+            "removable": "Apple",
+            "secondary": "Secondary",
+            "success": "Success",
+            "warning": "Warning"
+        },
+        "button": {
+            "gettingStarted": "Getting Started",
+            "generic": "Button",
+            "destructive": "Delete",
+            "ghost": "Ghost",
+            "next": "Next",
+            "link": "Link",
+            "loading": "Loading",
+            "outline": "Outline",
+            "primary": "Primary",
+            "pulseAnimation": "Pulse Animation",
+            "secondary": "Secondary",
+            "bounceAnimation": "Bounce Animation"
+        },
+        "card": {
+            "title": "Login",
+            "description": "Enter your email below to login to your account",
+            "emailLabel": "Email",
+            "emailPlaceholder": "m@example.com",
+            "passwordLabel": "Password",
+            "forgotPassword": "Forgot your password?",
+            "loginButton": "Login",
+            "loginWithGoogle": "Login with Google",
+            "noAccount": "Don't have an account?",
+            "signUpLink": "Sign up",
+            "showPassword": "Show password",
+            "hidePassword": "Hide password"
+        },
+        "checkbox": {
+            "termsLabel": "Accept terms and conditions",
+            "termsDescription": "By clicking this checkbox, you agree to the terms and conditions.",
+            "notificationsLabel": "Enable notifications",
+            "notificationsDescription": "You can enable or disable notifications at any time."
+        },
+        "collapsible": {
+            "securityTitle": "Advanced Security Settings",
+            "viewOptionsAria": "View Options",
+            "option1": "Two-Factor Authentication (2FA)",
+            "option2": "Session Management",
+            "option3": "Trusted Devices"
+        },
+        "command": {
+            "searchPlaceholder": "Type a command or search...",
+            "noResults": "No results found. Try a different search.",
+            "recent": "Recent",
+            "quickActions": "Quick Actions",
+            "workspaces": "Workspaces",
+            "apps": "Apps",
+            "settings": "Settings",
+            "lightMode": "Switch to Light Mode",
+            "darkMode": "Switch to Dark Mode",
+            "snooze": "Snooze Notifications",
+            "search": "Global Search",
+            "productStrategy": "Product Strategy",
+            "launchChecklist": "Launch Checklist",
+            "designSystems": "Design Systems",
+            "documentation": "Documentation",
+            "calendar": "Calendar",
+            "mail": "Mail",
+            "messages": "Messages",
+            "calculator": "Calculator",
+            "quarterlyReport": "Q4 Report.pdf",
+            "projectFiles": "Project Files",
+            "screenshots": "Screenshots",
+            "minutes": "{count} min ago",
+            "hours": "{count} hr ago",
+            "yesterday": "Yesterday",
+            "profile": "Profile",
+            "billing": "Billing",
+            "settingsMenu": "Settings",
+            "lastAction": "Last action:",
+            "trySearching": "Try searching for something",
+            "pressK": "Press ⌘K to open command menu",
+            "proTip": "Pro Tip",
+            "proTipText": "Use keyboard shortcuts to navigate faster. Press ? to see all shortcuts."
+        },
+        "commandDialog": {
+            "searchPlaceholder": "Search...",
+            "inputPlaceholder": "Search people, tools, and settings...",
+            "noResults": "No results found.",
+            "lastActionPrefix": "Last executed action:",
+            "groups": {
+                "suggestions": "Suggestions",
+                "settings": "Settings"
+            },
+            "actions": {
+                "catchUp": "Catch up with Daniel",
+                "calendar": "Review Studio Calendar",
+                "marketing": "Go to Marketing Site",
+                "profile": "Profile",
+                "billing": "Billing & Subscription",
+                "settings": "System Preferences"
+            }
+        },
+        "contextMenu": {
+            "trigger": "Right click here",
+            "back": "Back",
+            "forward": "Forward",
+            "reload": "Reload",
+            "moreTools": "More Tools",
+            "savePage": "Save Page...",
+            "createShortcut": "Create Shortcut...",
+            "nameWindow": "Name Window...",
+            "developerTools": "Developer Tools",
+            "delete": "Delete",
+            "showBookmarks": "Show Bookmarks",
+            "showFullUrls": "Show Full URLs",
+            "peopleLabel": "People",
+            "namePedro": "Pedro Duarte",
+            "nameColm": "Colm Tuite"
+        },
+        "datePicker": {
+            "placeholder": "Pick a date",
+            "rangePlaceholder": "Pick a date range"
+        },
+        "dialog": {
+            "triggerButton": "Open Dialog",
+            "title": "Account Settings",
+            "description": "Manage your account preferences and settings.",
+            "emailNotifTitle": "Email Notifications",
+            "emailNotifDesc": "Receive email updates",
+            "profileVisibilityTitle": "Profile Visibility",
+            "visibilityPlaceholder": "Public",
+            "visibilityPublic": "Public",
+            "visibilityPrivate": "Private",
+            "visibilityFriends": "Friends Only",
+            "saveChangesButton": "Save Changes",
+            "deleteProjectBtn": "Delete Project",
+            "deleteSuccessMsg": "Item successfully deleted",
+            "deleteTitle": "Delete Permanent Project",
+            "deleteDescription": "This will permanently delete the project \"Marketing Campaign 2024\" and all associated data. This action cannot be undone.",
+            "deleteWarningText": "Warning: Deleting this project will remove all tasks, documents, and analytics permanently.",
+            "deleteActionBtn": "Permanently Delete Project",
+            "deleteLoadingBtn": "Deleting...",
+            "bottomDialogTrigger": "Bottom Dialog",
+            "bottomDialogTitle": "Bottom Dialog",
+            "bottomDialogDescription": "This is an example of a dialog positioned at the bottom.",
+            "topDialogTrigger": "Top Dialog",
+            "topDialogTitle": "Top Dialog",
+            "topDialogDescription": "This is an example of a dialog positioned at the top."
+        },
+        "drawer": {
+            "triggerButton": "Open Drawer",
+            "title": "Edit Profile",
+            "description": "Make changes to your profile here.",
+            "nameLabel": "Name",
+            "namePlaceholder": "Enter your name",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Enter your email",
+            "cancelButton": "Cancel",
+            "saveButton": "Save Changes",
+            "triggerNestedBtn": "Open Nested Drawer",
+            "level1Title": "First Level Drawer",
+            "level1Description": "You can open another drawer from here.",
+            "triggerLevel2Btn": "Open Second Drawer",
+            "level2Title": "Second Level Drawer",
+            "level2Description": "This is a nested drawer.",
+            "level2BodyText": "You can have multiple levels of drawers for complex UIs.",
+            "closeButton": "Close"
+        },
+        "dropdown": {
+            "triggerButton": "Open Menu",
+            "accountLabel": "My Account",
+            "editProfile": "Edit Profile",
+            "download": "Download",
+            "shareDisabled": "Share (Disabled)",
+            "triggerViewOptions": "View Options",
+            "preferencesLabel": "Preferences",
+            "showIconsItem": "Show Icons",
+            "triggerActions": "Actions",
+            "cameraItem": "Camera",
+            "deleteSubTrigger": "Delete",
+            "deleteItem": "Delete Item",
+            "deleteAll": "Delete All",
+            "triggerSelectPlan": "Select Plan",
+            "subscriptionPlanLabel": "Subscription Plan",
+            "planBasic": "Basic",
+            "planPro": "Pro",
+            "planEnterprise": "Enterprise",
+            "actions": "Actions",
+            "viewPhoto": "View Photo",
+            "assignTo": "Assign to...",
+            "tags": "Tags",
+            "addTag": "Add Tag",
+            "removeTag": "Remove Tag",
+            "customTags": "Custom tags...",
+            "archive": "Archive",
+            "deleteConfirmLabel": "Are you sure?"
+        },
+        "empty": {
+            "search": {
+                "title": "No Products Found",
+                "description": "No products match your search criteria. Try searching for what you need below.",
+                "inputPlaceholder": "Search for products, brands, or categories...",
+                "helpText": "Need help?",
+                "contactSupport": "Contact Support"
+            },
+            "team": {
+                "title": "Development Team",
+                "description": "Connect with your development team to start building amazing projects together.",
+                "buttonText": "Add Team Member",
+                "addingLoading": "Adding..."
+            }
+        },
+        "hoverCard": {
+            "triggerText": "@nextjs",
+            "username": "@nextjs",
+            "description": "The React Framework – created and maintained by @vercel.",
+            "joinedDate": "Joined December 2021"
+        },
+        "input": {
+            "emailPlaceholder": "Email",
+            "emailLabel": "Email",
+            "subscribeButton": "Subscribe",
+            "pictureLabel": "Picture"
+        },
+        "inputGroup": {
+            "emailPlaceholder": "Email",
+            "emailLabel": "Email",
+            "subscribeButton": "Subscribe",
+            "pictureLabel": "Picture",
+            "chat": {
+                "placeholder": "Type your message here...",
+                "attachFile": "Attach file",
+                "addEmoji": "Add emoji",
+                "sending": "Sending...",
+                "send": "Send",
+                "toSend": "to send",
+                "press": "Press",
+                "enterKey": "Enter"
+            },
+            "iconGroup": {
+                "searchPlaceholder": "Search...",
+                "emailPlaceholder": "Enter your email",
+                "cardNumberPlaceholder": "Card number"
+            },
+            "textGroup": {
+                "amountPlaceholder": "0.00",
+                "currencySuffix": "ُEGP",
+                "urlPlaceholder": "example.com",
+                "usernamePlaceholder": "Enter your username",
+                "messagePlaceholder": "Enter your message",
+                "charsLeft": "{count} characters left"
+            },
+            "tooltipGroup": {
+                "passwordPlaceholder": "Enter password",
+                "emailPlaceholder": "Your email address",
+                "apiKeyPlaceholder": "Enter API key",
+                "infoLabel": "Info",
+                "helpLabel": "Help",
+                "passwordTip": "Password must be at least 8 characters",
+                "emailTip": "We'll use this to send you notifications",
+                "apiKeyTip": "Click for help with API keys"
+            },
+            "multiAddon": {
+                "searchAmountPlaceholder": "Search amount",
+                "currencySuffix": "ُEGP",
+                "repoPlaceholder": "Enter repository name",
+                "urlPlaceholder": "example.com",
+                "usernamePlaceholder": "username",
+                "productSearchPlaceholder": "Search products...",
+                "clearLabel": "Clear",
+                "searchLabel": "Search",
+                "infoLabel": "Info",
+                "clearFiltersLabel": "Clear filters",
+                "resultCount": "{count} results",
+                "filterText": "Filter:",
+                "itemCount": "{count} items"
+            },
+            "loadingGroup": {
+                "searchingPlaceholder": "Searching...",
+                "processingPlaceholder": "Processing...",
+                "savingPlaceholder": "Saving changes...",
+                "refreshingPlaceholder": "Refreshing data...",
+                "savingText": "Saving...",
+                "waitText": "Please wait..."
+            },
+            "labelGroup": {
+                "usernamePlaceholder": "shadcn",
+                "emailPlaceholder": "shadcn@vercel.com",
+                "emailLabel": "Email",
+                "helpLabel": "Help",
+                "emailTip": "We'll use this to send you notifications"
+            },
+            "dropdownGroup": {
+                "fileNamePlaceholder": "Enter file name",
+                "searchQueryPlaceholder": "Enter search query",
+                "moreLabel": "More",
+                "searchInButton": "Search In...",
+                "settingsItem": "Settings",
+                "copyPathItem": "Copy path",
+                "openLocationItem": "Open location",
+                "documentationItem": "Documentation",
+                "blogPostsItem": "Blog Posts",
+                "changelogItem": "Changelog"
+            }
+        },
+        "inputOTP": {
+            "otpForm": {
+                "validationError": "Your one-time password must be 6 characters.",
+                "label": "One-Time Password",
+                "description": "Please enter the one-time password sent to your phone.",
+                "submitButton": "Submit",
+                "toastTitle": "You submitted the following values"
+            },
+            "otpControl": {
+                "emptyMessage": "Enter your one-time password.",
+                "enteredMessage": "You entered: {value}"
+            }
+        },
+        "kdb": {
+            "kbdButton": {
+                "acceptLabel": "Accept",
+                "cancelLabel": "Cancel"
+            },
+            "kbdTooltip": {
+                "saveButton": "Save",
+                "saveTooltipContent": "Save Changes",
+                "printButton": "Print",
+                "printTooltipContent": "Print Document"
+            },
+            "kdbSearch": {
+                "searchPlaceholder": "Search..."
+            },
+            "kbdGroup": {
+                "instructionTextStart": "Use",
+                "instructionTextOr": "or",
+                "instructionTextEnd": "to open the command palette"
+            }
+        },
+        "label": {
+            "termsText": "Accept terms and conditions"
+        },
+        "listItems": {
+            "listItemDemo": {
+                "aiAssistantTitle": "AI Code Assistant",
+                "aiAssistantDescription": "Get intelligent code suggestions and auto-completion powered by advanced AI.",
+                "activateButton": "Activate",
+                "devReadyTitle": "Development Environment Ready",
+                "devReadyDescription": "Your workspace is configured and ready for development.",
+                "newFeaturesTitle": "New Features Available",
+                "newFeaturesDescription": "Discover the latest updates and enhancements."
+            },
+            "listItemGroup": {
+                "profileTitle": "Profile Settings",
+                "profileDescription": "Manage your account and personal information",
+                "notificationsTitle": "Notifications",
+                "notificationsDescription": "Configure your notification preferences",
+                "securityTitle": "Security & Privacy",
+                "securityDescription": "Control your security settings and privacy options",
+                "generalTitle": "General Settings",
+                "generalDescription": "App preferences and customization options"
+            },
+            "listItemSizes": {
+                "smallSizeHeader": "Small Size",
+                "smallSizeTitle": "Compact Item",
+                "smallSizeDescription": "Perfect for dense lists and navigation menus",
+                "defaultSizeHeader": "Default Size",
+                "defaultSizeTitle": "Standard Item",
+                "defaultSizeDescription": "Balanced spacing for most use cases and comfortable reading",
+                "largeSizeHeader": "Large Size",
+                "largeSizeTitle": "Spacious Item",
+                "largeSizeDescription": "Extra padding for emphasis and improved touch targets on mobile devices"
+            },
+            "listItemVariants": {
+                "defaultHeader": "Default Variant",
+                "defaultTitle": "Default Style",
+                "defaultDescription": "Clean and minimal with subtle hover effects",
+                "outlineHeader": "Outline Variant",
+                "outlineTitle": "Outline Style",
+                "outlineDescription": "Features a visible border with soft shadow",
+                "elevatedHeader": "Elevated Variant",
+                "elevatedTitle": "Elevated Style",
+                "elevatedDescription": "Enhanced shadow for a floating effect",
+                "filledHeader": "Filled Variant",
+                "filledTitle": "Filled Style",
+                "filledDescription": "Subtle background color for emphasis"
+            },
+            "listItemAvatar": {
+                "badgePro": "Pro",
+                "badgeFree": "Free",
+                "user1Name": "Sarah Chen",
+                "user1Details": "Senior Product Designer · Active now",
+                "user2Name": "Ahmed Rodriguez",
+                "user2Details": "Frontend Developer · 2 min ago",
+                "user3Name": "Emma Wilson",
+                "user3Details": "UX Researcher · 1 hour ago"
+            }
+        },
+        "loading": {
+            "loadingDemo": {
+                "title": "Processing payment...",
+                "currencySuffix": "EGP"
+            },
+            "LoadingBadge": {
+                "loading": "Loading..."
+            }
+        },
+        "menubarDemo": {
+            "fileTrigger": "File",
+            "newTab": "New Tab",
+            "newWindow": "New Window",
+            "newIncognitoWindow": "New Incognito Window",
+            "shareSubTrigger": "Share",
+            "emailLink": "Email link",
+            "messages": "Messages",
+            "notes": "Notes",
+            "print": "Print...",
+            "editTrigger": "Edit",
+            "undo": "Undo",
+            "redo": "Redo",
+            "findSubTrigger": "Find",
+            "searchWeb": "Search the web",
+            "findEllipsis": "Find...",
+            "findNext": "Find Next",
+            "findPrevious": "Find Previous",
+            "cut": "Cut",
+            "copy": "Copy",
+            "paste": "Paste",
+            "viewTrigger": "View",
+            "showBookmarksBar": "Always Show Bookmarks Bar",
+            "showFullURLs": "Always Show Full URLs",
+            "reload": "Reload",
+            "forceReload": "Force Reload",
+            "toggleFullscreen": "Toggle Fullscreen",
+            "hideSidebar": "Hide Sidebar",
+            "profilesTrigger": "Profiles",
+            "editProfileEllipsis": "Edit...",
+            "addProfileEllipsis": "Add Profile..."
+        },
+        "navigationMenuDemo": {
+            "menu": {
+                "home": "Home",
+                "components": "Components",
+                "docs": "Docs",
+                "list": "List",
+                "simple": "Simple",
+                "withIcon": "With Icon"
+            },
+            "home": {
+                "brandTitle": "shadcn/ui",
+                "brandDescription": "Beautifully designed components built with Tailwind CSS.",
+                "introduction": {
+                    "title": "Introduction",
+                    "description": "Re-usable components built using Radix UI and Tailwind CSS."
+                },
+                "installation": {
+                    "title": "Installation",
+                    "description": "How to install dependencies and structure your app."
+                },
+                "typography": {
+                    "title": "Typography",
+                    "description": "Styles for headings, paragraphs, lists...etc"
+                }
+            },
+            "components": {
+                "alertDialog": {
+                    "title": "Alert Dialog",
+                    "description": "A modal dialog that interrupts the user with important content and expects a response."
+                },
+                "hoverCard": {
+                    "title": "Hover Card",
+                    "description": "For sighted users to preview content available behind a link."
+                },
+                "progress": {
+                    "title": "Progress",
+                    "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+                },
+                "scrollArea": {
+                    "title": "Scroll-area",
+                    "description": "Visually or semantically separates content."
+                },
+                "tabs": {
+                    "title": "Tabs",
+                    "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time."
+                },
+                "tooltip": {
+                    "title": "Tooltip",
+                    "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+                }
+            },
+            "list": {
+                "components": {
+                    "title": "Components",
+                    "description": "Browse all components in the library."
+                },
+                "documentation": {
+                    "title": "Documentation",
+                    "description": "Learn how to use the library."
+                },
+                "blog": {
+                    "title": "Blog",
+                    "description": "Read our latest blog posts."
+                }
+            },
+            "simple": {
+                "components": "Components",
+                "documentation": "Documentation",
+                "blocks": "Blocks"
+            },
+            "withIcon": {
+                "backlog": "Backlog",
+                "todo": "To Do",
+                "done": "Done"
+            }
+        },
+        "notes": {
+            "demo": {
+                "info": "This is an informational note.",
+                "success": "Your action was successful! Everything is working as expected.",
+                "warning": "This is a warning note. Please be cautious with your actions.",
+                "error": "An error occurred. Please check your input and try again.",
+                "closable": "Turbopack is a high-performance bundler and dev server for Next.js. Enabling this option ensures faster builds and an improved development experience.",
+                "withTitle": {
+                    "title": "Important Information",
+                    "content": "This note contains important information that you should read carefully before proceeding."
+                }
+            }
+        },
+        "pagination": {
+            "previous": "Previous",
+            "next": "Next",
+            "previousLabel": "Go to previous page",
+            "nextLabel": "Go to next page",
+            "morePages": "More pages"
+        },
+        "popover": {
+            "trigger": "Click for Information",
+            "title": "What is a Popover?",
+            "description": "A popover is a floating card that appears when a user interacts with a trigger element. It is commonly used to display additional information or actions."
+        },
+        "radioGroup": {
+            "radioDemo": {
+                "optionOne": "Option One",
+                "optionTwo": "Option Two"
+            },
+            "radioDemoLabels": {
+                "options": {
+                    "default": {
+                        "label": "Default",
+                        "description": "The default spacing for components."
+                    },
+                    "comfortable": {
+                        "label": "Comfortable",
+                        "description": "More spacious layout with better readability."
+                    },
+                    "compact": {
+                        "label": "Compact",
+                        "description": "Minimal spacing to fit more content."
+                    }
+                }
+            },
+            "radioForm": {
+                "title": "Select a payment method",
+                "methods": {
+                    "card": "Credit Card",
+                    "paypal": "PayPal",
+                    "apple": "Apple Pay"
+                },
+                "submit": "Continue"
+            }
+        },
+        "resizableDemo": {
+            "panelOne": "One",
+            "panelTwo": "Two",
+            "panelThree": "Three"
+        },
+        "resizableHandleDemo": {
+            "sidebar": "Sidebar",
+            "content": "Content"
+        },
+        "resizableVerticalDemo": {
+            "header": "Header",
+            "content": "Content"
+        },
+        "scrollAreaDemo": {
+            "chat": {
+                "title": "UI Library Discussion",
+                "activeNow": "Active now",
+                "placeholder": "Type your message...",
+                "send": "Send",
+                "pressEnter": "Press",
+                "toSend": "to send",
+                "you": "You",
+                "messages": {
+                    "0": {
+                        "user": "Ahmed",
+                        "message": "Has anyone used the new ScrollArea component?"
+                    },
+                    "1": {
+                        "user": "Sara",
+                        "message": "Yes, I've been using it for a dashboard project. It works great with complex layouts."
+                    },
+                    "2": {
+                        "user": "You",
+                        "message": "I just integrated it into our design system. The auto-hiding scrollbar is a nice touch!"
+                    },
+                    "3": {
+                        "user": "Ahmed",
+                        "message": "Can it handle horizontal scrolling as well?"
+                    },
+                    "4": {
+                        "user": "You",
+                        "message": "Yes, it supports both vertical and horizontal scrolling out of the box. You can also customize the scrollbar's appearance and behavior."
+                    },
+                    "5": {
+                        "user": "Sara",
+                        "message": "I found the alwaysShowScrollbar prop useful for touch devices where users might not know content is scrollable otherwise."
+                    },
+                    "6": {
+                        "user": "Ahmed",
+                        "message": "Does it handle window resize events properly?"
+                    },
+                    "7": {
+                        "user": "You",
+                        "message": "Yes, it updates appropriately on window resize. The component also manages scroll position effectively when content changes."
+                    },
+                    "8": {
+                        "user": "Sara",
+                        "message": "The fade-in/fade-out animations are smooth. I like how it doesn't distract from the content."
+                    },
+                    "9": {
+                        "user": "Ahmed",
+                        "message": "Any performance issues with larger content?"
+                    },
+                    "10": {
+                        "user": "You",
+                        "message": "It performs well even with very long content. It's built on Radix UI primitives, which are optimized for performance."
+                    }
+                }
+            }
+        },
+        "selectDemo": {
+            "label": "Select Your Access Tier",
+            "placeholder": "Choose your plan...",
+            "group1": {
+                "label": "Open Source & Free",
+                "basic": "Basic Developer Access (Free)",
+                "contributor": "Community Contributor"
+            },
+            "group2": {
+                "label": "Pro & Enterprise Access",
+                "pro": "Pro Developer - EGP 1900/mo",
+                "team": "Enterprise Team - EGP 9900/mo"
+            }
+        },
+        "selectScrollableDemo": {
+            "label": "Timezone",
+            "placeholder": "Select a timezone",
+            "scrollTip": "Scroll through the list to see all available timezones",
+            "groups": {
+                "na": {
+                    "label": "North America",
+                    "est": "Eastern Standard Time (EST)",
+                    "cst": "Central Standard Time (CST)",
+                    "mst": "Mountain Standard Time (MST)",
+                    "pst": "Pacific Standard Time (PST)",
+                    "akst": "Alaska Standard Time (AKST)",
+                    "hst": "Hawaii Standard Time (HST)"
+                },
+                "eu_af": {
+                    "label": "Europe & Africa",
+                    "gmt": "Greenwich Mean Time (GMT)",
+                    "cet": "Central European Time (CET)",
+                    "eet": "Eastern European Time (EET)",
+                    "west": "Western European Summer Time (WEST)",
+                    "cat": "Central Africa Time (CAT)",
+                    "eat": "East Africa Time (EAT)"
+                },
+                "asia": {
+                    "label": "Asia",
+                    "msk": "Moscow Time (MSK)",
+                    "ist": "India Standard Time (IST)",
+                    "cst_china": "China Standard Time (CST)",
+                    "jst": "Japan Standard Time (JST)",
+                    "kst": "Korea Standard Time (KST)",
+                    "ist_indonesia": "Indonesia Central Standard Time (WITA)"
+                },
+                "au_pac": {
+                    "label": "Australia & Pacific",
+                    "awst": "Australian Western Standard Time (AWST)",
+                    "acst": "Australian Central Standard Time (ACST)",
+                    "aest": "Australian Eastern Standard Time (AEST)",
+                    "nzst": "New Zealand Standard Time (NZST)",
+                    "fjt": "Fiji Time (FJT)"
+                },
+                "sa": {
+                    "label": "South America",
+                    "art": "Argentina Time (ART)",
+                    "bot": "Bolivia Time (BOT)",
+                    "brt": "Brasilia Time (BRT)",
+                    "clt": "Chile Standard Time (CLT)"
+                }
+            }
+        },
+        "separatorDemos": {
+            "titleHorizontal": "Content Separation (Horizontal)",
+            "descriptionHorizontal": "Used to visually distinguish or group sections of content.",
+            "contentAbove": "User Settings Profile",
+            "contentBelow": "Subscription and Billing",
+            "titleVertical": "Action Separation (Vertical)",
+            "descriptionVertical": "Used in toolbars or navigation elements for distinct actions.",
+            "menuItem1": "Dashboard",
+            "menuItem2": "Settings",
+            "menuItem3": "Log Out"
+        },
+        "sheet": {
+            "sheetDemo": {
+                "triggerButton": "Open Settings",
+                "sheetTitle": "Application Settings",
+                "sheetDescription": "Configure your user and application preferences here.",
+                "optionDarkMode": "Dark Mode",
+                "optionNotification": "General Notifications",
+                "optionEmailUpdates": "Email Product Updates",
+                "saveChangesButton": "Save Changes",
+                "labelDarkMode": "Activate the dark theme interface for reduced eye strain.",
+                "labelNotification": "Receive important alerts and updates from the application.",
+                "labelEmailUpdates": "Get occasional emails about new features and major releases."
+            },
+            "sheetLeftDemo": {
+                "triggerButton": "Open Navigation",
+                "sheetTitle": "Main Menu",
+                "navItems": {
+                    "profile": "Profile",
+                    "orders": "Orders",
+                    "wishlist": "Wishlist",
+                    "settings": "Settings"
+                }
+            },
+            "sheetTopDemo": {
+                "triggerButton": "Open Notifications",
+                "sheetTitle": "Recent Notifications",
+                "sheetDescription": "View your most recent system and user updates.",
+                "notification1Title": "New message from Alice",
+                "notification1Time": "2 minutes ago",
+                "notification2Title": "Order #1234 has shipped",
+                "notification2Time": "1 hour ago"
+            },
+            "sheetBottomDemo": {
+                "triggerButton": "Show Quick Actions",
+                "sheetTitle": "Quick Actions Menu",
+                "sheetDescription": "Select an action to navigate or execute.",
+                "actionProfile": "Profile",
+                "actionCart": "Cart",
+                "actionFavorites": "Favorites"
+            }
+        },
+        "smartSelect": {
+            "smartSelectDemo": {
+                "selectPlaceholder": "Choose a country...",
+                "searchPlaceholder": "Search...",
+                "empty": "No country found."
+            },
+            "smartSelectDropdownMenuDemo": {
+                "productTitle": "New Product Draft",
+                "productStatus": "Ready for Publication",
+                "menuLabel": "Actions",
+                "menuItemAddImage": "Add Image",
+                "menuItemUpdatePrice": "Update Price",
+                "menuSubTrigger": "Change Category",
+                "commandPlaceholder": "Search for category...",
+                "commandEmpty": "No category found.",
+                "menuItemDelete": "Delete Product",
+                "menuShortcutDelete": "⌘⌫",
+                "categories": {
+                    "electronics": "Electronics",
+                    "apparel": "Apparel",
+                    "homeAppliances": "Home Appliances",
+                    "books": "Books",
+                    "toys": "Toys",
+                    "furniture": "Furniture",
+                    "sports": "Sports",
+                    "groceries": "Groceries"
+                }
+            },
+            "smartSelectPopoverDemo": {
+                "label": "Priority",
+                "triggerPlaceholder": "+ Set Priority",
+                "commandPlaceholder": "Search priority...",
+                "commandEmpty": "No results.",
+                "priorities": {
+                    "low": "Low",
+                    "medium": "Medium",
+                    "high": "High",
+                    "urgent": "Urgent"
+                }
+            }
+        }
+    }
+}

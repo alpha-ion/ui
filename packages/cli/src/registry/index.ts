@@ -22,7 +22,7 @@ export async function getRegistryPath() {
   // Fallback: search up for monorepo path (dev usage)
   let currentDir = process.cwd()
   while (currentDir !== path.dirname(currentDir)) {
-    const registryPath = path.join(currentDir, "apps/web/registry")
+    const registryPath = path.join(currentDir, "apps/v1/registry")
     try {
       await fs.access(registryPath)
       return registryPath
@@ -31,5 +31,5 @@ export async function getRegistryPath() {
   }
 
   // Final fallback: current working directory
-  return path.join(process.cwd(), "apps/web/registry")
+  return path.join(process.cwd(), "apps/v1/registry")
 }

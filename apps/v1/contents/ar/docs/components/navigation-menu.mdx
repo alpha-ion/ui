@@ -1,0 +1,83 @@
+---
+title: Navigation Menu
+slug: /docs/components/navigation-menu
+description: مكون معقد للغاية للتنقل متعدد المستويات. يتميز بتحولات حركية ديناميكية، ومعالجة ذكية لمنطقة عرض المحتوى، وتنميط متقدم للروابط.
+keywords: [تنقل متعدد المستويات, قائمة حركية ديناميكية, قائمة واعية بمنطقة العرض, نظام روابط معقد]
+---
+
+<ComponentPreview name="navigation-menu-demo" containerClassName="items-start" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="navigation-menu"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose md:px-0 px-4">
+<Step>
+<StepItem title="تثبيت المتطلبات">
+قم أولاً بتثبيت الحزم المطلوبة:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-navigation-menu`}
+      </Pre>
+    </StepItem>
+  <StepItem title="إنشاء ملف utils.ts"> 
+    <ComponentUtilsText/>
+    <ComponentUtils/>
+  </StepItem>
+  <StepItem title="إنشاء مكوّن navigation-menu">
+      <ComponentSource name="navigation-menu-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+        <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+        <NavigationMenuContent>
+            <NavigationMenuLink>Link</NavigationMenuLink>
+        </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>`}
+</Pre>
+</div>
+## Link 
+<Pre>
+{`import Link from "next/link"
+
+export function NavigationMenuDemo() {
+  return (
+    <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+            <Link href="/docs">Documentation</Link>
+        </NavigationMenuLink>
+    </NavigationMenuItem>
+  )}`}
+</Pre>

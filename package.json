@@ -21,12 +21,13 @@
     "turbo": "^2.6.1",
     "typescript": "5.9.3"
   },
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.26.2",
   "engines": {
     "node": ">=18"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@swc/core",
       "@tailwindcss/oxi",
       "@tailwindcss/oxide",
       "core-js-pure",

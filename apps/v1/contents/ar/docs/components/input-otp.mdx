@@ -1,0 +1,101 @@
+---
+title: Input OTP
+slug: /docs/components/input-otp
+description: حقل آمن ومُحسَّن بالرسوم المتحركة للمصادقة متعددة العوامل (MFA). يتميز بتحكم ديناميكي في المؤشر لتجربة إدخال تحاكي التطبيقات الأصلية.
+keywords: [إدخال OTP آمن, مكون MFA, مؤشر ديناميكي للواجهة, حقل مصادقة مُحسَّن]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/input-otp
+  api: https://www.radix-ui.com/docs/primitives/components/input-otp#api-reference
+---
+
+<ComponentPreview name="input-otp-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="input-otp"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4">
+  <Step>
+    <StepItem title="تثبيت الحزم المطلوبة">
+        أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-hover-card`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="Create Input Group Component">
+      <ComponentSource name="input-otp-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import {
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+} from "@/registry/ui/input-otp"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<div className="flex flex-col items-center gap-6">
+            <InputOTP maxLength={6}>
+                <InputOTPGroup>
+                    <InputOTPSlot index={0} />
+                    <InputOTPSlot index={1} />
+                    <InputOTPSlot index={2} />
+                </InputOTPGroup>
+                <InputOTPSeparator />
+                <InputOTPGroup>
+                    <InputOTPSlot index={3} />
+                    <InputOTPSlot index={4} />
+                    <InputOTPSlot index={5} />
+                </InputOTPGroup>
+            </InputOTP>
+        </div>`}
+  </Pre>
+</div>
+
+## الأمثلة
+
+### OTP بأربعة أرقام
+
+<ComponentPreview name="input-otp-4-digit-demo" />
+
+### OTP بثمانية أرقام
+
+<ComponentPreview name="input-otp-8-digit-demo" />
+
+### تحكم برمجي (Controlled)
+
+<ComponentPreview name="input-otp-controlled-demo" />
+
+### نموذج متكامل (Form)
+
+<ComponentPreview name="input-otp-form-demo" />
+
+### إدخال كلمة مرور
+
+<ComponentPreview name="input-otp-password-demo" />
+
+
+### أرقام عربية / من اليمين إلى اليسار (RTL)
+
+<ComponentPreview name="input-otp-arabic-demo" />

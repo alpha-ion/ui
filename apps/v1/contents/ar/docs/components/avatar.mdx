@@ -1,0 +1,58 @@
+---
+title: أفاتار (Avatar)
+description: مكون هوية مستخدم فائق الموثوقية، ومُصمم بهندسة معمارية تضمن أقصى أداء واستقرار. يدير بذكاء حالات تحميل الصورة، مما يضمن عرضًا احتياطيًا مرئيًا (أحرف أولية أو أيقونة) لسلامة واجهة احترافية لا تتأثر.
+keywords: [أفاتار, صورة رمزية, ملف المستخدم, هوية المستخدم, Radix]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/avatar
+  api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
+---
+
+<ComponentPreview name="avatar-demo" />
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="avatar"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت الاعتمادات">
+       أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-avatar`}
+      </Pre>
+    </StepItem>
+    <StepItem title="انشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="انشاء ملف avatar">
+      <ComponentSource name="avatar" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>`}
+  </Pre>
+</div>

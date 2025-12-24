@@ -49,8 +49,8 @@ pnpm cli lint --fix
 ## Adding New Components or Blocks
 
 1. Add your component/block to the appropriate registry directory:
-   - Components: `apps/web/registry/ui/`
-   - Blocks: `apps/web/registry/view/`
+   - Components: `apps/v1/registry/ui/`
+   - Blocks: `apps/v1/registry/view/`
 
 2. The CLI will automatically detect new components and blocks
 

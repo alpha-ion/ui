@@ -2,8 +2,8 @@ const fs = require("fs-extra")
 const path = require("path")
 
 // __dirname = packages/stage-cli/scripts
-// We need monorepo root/apps/web/registry → go up three levels to packages/, then up one to repo root
-const src = path.resolve(__dirname, "..", "..", "..", "apps", "web", "registry")
+// We need monorepo root/apps/v1/registry → go up three levels to packages/, then up one to repo root
+const src = path.resolve(__dirname, "..", "..", "..", "apps", "v1", "registry")
 const dest = path.join(__dirname, "..", "dist", "registry")
 
 ;(async () => {

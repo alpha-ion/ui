@@ -1,0 +1,53 @@
+---
+title: Smart Select
+description: Advanced Combobox component combining Popover and Command for accessibility, real-time searching, and dynamic selection of items from large lists.
+keywords: [combobox, searchable select, popover command, accessible form input]
+---
+
+<ComponentPreview name="smart-select-demo" />
+
+## About
+`Calendar` it is build on top of `button` `command` `popover`
+
+## Installation
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="smart-select"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="Install Dependencies">
+      First , you need to install dependencies:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-select`}
+      </Pre>
+    </StepItem>
+    <StepItem title="Create utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## Usage
+  <ComponentSource name="select" />
+
+## Examples
+
+### Popover
+<ComponentPreview name="smart-select-popover-demo" />
+
+### Dropdown Menu
+
+<ComponentPreview name="smart-select-dropdown-menu-demo" />

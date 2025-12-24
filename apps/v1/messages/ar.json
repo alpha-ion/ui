@@ -1,0 +1,1044 @@
+{
+    "home": {
+        "title": "بناء بجمال.",
+        "highlight": "مختبرات ألفابايت:",
+        "subtitle": "مكتبتك مفتوحة المصدر للمكوّنات.",
+        "description": "أنشئ واجهات مبهرة باستخدام مكوناتنا القابلة للتخصيص وسهلة الاستخدام — مصممة من المطورين وللمطورين.",
+        "getStarted": "ابدأ الآن",
+        "browseBlocks": "تصفح البلوكات"
+    },
+    "errors": {
+        "title": "عذراً!",
+        "description": "حدث خطأ ما!",
+        "tryAgain": "حاول مرة أخرى"
+    },
+    "notFound": {
+        "description": "الصفحة غير موجودة",
+        "returnHome": "العودة للصفحة الرئيسية"
+    },
+    "nav": {
+        "docs": "التوثيق",
+        "components": "المكونات",
+        "blocks": "البلوكات",
+        "themes": "الثيمات",
+        "colors": "الألوان",
+        "community": "المجتمع"
+    },
+    "contributors": {
+        "core": "أساسي",
+        "contributor": "مساهم",
+        "guest": "ضيف"
+    },
+    "search": {
+        "placeholder": "البحث في التوثيق...",
+        "search": "البحث..",
+        "searching": "جاري البحث...",
+        "noResults": "لا يوجد نتائج للبحث",
+        "noResultsDescription": "يرجى التأكد من كتابة البحث بشكل صحيح",
+        "noResultsTryDifferentKeywords": "يرجى التأكد من كتابة البحث بشكل صحيح",
+        "quickAccess": "الوصول السريع",
+        "navigate": "التنقل",
+        "select": "التحديد",
+        "close": "أغلاق",
+        "typeAtLeast": "يرجى كتابة {minLength} أحرف على الأقل للبحث",
+        "noResultsFor": "لا يوجد نتائج للبحث لـ {query}",
+        "tryUsingDifferentKeywords": "يرجى التأكد من كتابة البحث بشكل صحيح",
+        "esc": "أغلاق",
+        "components": "المكونات"
+    },
+    "scroll-to-top": {
+        "description": "الي الأعلي"
+    },
+    "toc": {
+        "this-page": "في هذه الصفحة"
+    },
+    "tocCtaCard": {
+        "companyName": "ألفا",
+        "title": "ابني منصتك الرقمية القادمة بثقة.",
+        "descriptionStart": "مبني من قبل الفريق وراء",
+        "siteName": " نظام واجهات ألفا",
+        "descriptionMiddle": "— متخصصون في حلول",
+        "descriptionEnd": "عالية الأداء.",
+        "technology": "مواقع",
+        "ctaButton": "احجز استشارة مجانية."
+    },
+    "feedback": {
+        "title": "هذا المحتوي",
+        "header-1": "تعليق",
+        "header-2": "قم بتعديل هذه الصفحه علي Github"
+    },
+    "component-page": {
+        "docs-links": {
+            "docs": "توثيق",
+            "api-reference": "توثيق API"
+        }
+    },
+    "componentUtils": {
+        "text": {
+            "description": "ثانياً، تحتاج إلى إنشاء مجلد جديد يُسمى",
+            "libFolder": "lib",
+            "inRootDirectory": "في المجلد الجذر الخاص بك وإنشاء ملف جديد يُسمى",
+            "utilsFile": "utils.ts",
+            "pasteCode": "ولصق الكود التالي فيه:",
+            "folderPath": "lib/utils.ts"
+        }
+    },
+    "componentSource": {
+        "text": {
+            "description": "ثالثاً، تحتاج إلى إنشاء مجلد جديد يُسمى",
+            "componentFolder": "component",
+            "inRootDirectory": "في المجلد الجذر الخاص بك وإنشاء ملف جديد يُسمى",
+            "componentFile": "{componentName}"
+        },
+        "loading": {
+            "loadingCode": "جاري تحميل الكود...",
+            "noCodeAvailable": "لا يوجد كود متاح"
+        },
+        "errors": {
+            "sourceNotFound": "لم يتم العثور على الكود لـ",
+            "loadingError": "خطأ في تحميل خريطة الكود"
+        }
+    },
+    "docs-sidebar": {
+        "main": {
+            "docs": "التوثيق",
+            "components": "المكونات",
+            "blocks": "الكتل الجاهزة",
+            "themes": "السمات البصرية",
+            "colors": "لوحة الألوان",
+            "community": "مجتمع المطورين",
+            "changelog": "سجل التحديثات"
+        },
+        "sidebar": {
+            "gettingStarted": {
+                "title": "الشروع في العمل",
+                "introduction": "نظرة عامة",
+                "installation": "دليل التثبيت",
+                "rtlDirection": "دعم RTL (من اليمين لليسار)",
+                "themes": "السمات والتخصيص",
+                "changelog": "سجل الإصدارات"
+            },
+            "components": {
+                "title": "المكونات",
+                "accordion": "أكورديون",
+                "alertDialog": "نافذة التأكيد",
+                "aspectRatio": "نسبة الأبعاد",
+                "avatar": "أفاتار",
+                "badge": "شارة",
+                "breadcrumb": "شريط التنقل",
+                "buttonGroup": "مجموعة الأزرار",
+                "button": "زر",
+                "calendar": "تقويم",
+                "card": "بطاقة",
+                "carousel": "عارض الصور",
+                "command": "لوحة الأوامر",
+                "checkbox": "خانة اختيار",
+                "collapsible": "قابل للتوسيع/الطي",
+                "contextMenu": "قائمة النقر بالزر الايمن",
+                "datePicker": "أداة اختيار التاريخ",
+                "diagrams": "المخططات التوضيحية",
+                "dialog": "نافذة حوار (Modal)",
+                "drawer": "الدرج الجانبي",
+                "dropdownMenu": "قائمة الخيارات",
+                "empty": "صفحة فارغة",
+                "field": "الحقل (Field)",
+                "folderStructure": "هيكلة الملفات والمجلدات",
+                "hoverCard": "بطاقة عند التمرير",
+                "inputGroup": "مجموعة حقول إدخال",
+                "inputOtp": "حقل كلمة المرور لمرة واحدة (OTP)",
+                "input": "حقل إدخال",
+                "listItem": "قائمة العناصر",
+                "kdb": "مؤشر اختصار لوحة المفاتيح (KBD)",
+                "label": "عنوان الحقل",
+                "loading": "مؤشر التحميل",
+                "menubar": "شريط القوائم الرئيسي",
+                "navigationMenu": "قائمة التنقل",
+                "notes": "ملاحظات",
+                "pagination": "ترقيم الصفحات",
+                "popover": "النافذة العائمة",
+                "preCodeBlock": "كتلة عرض الأكواد",
+                "progress": "مقياس التقدم",
+                "productCard": "بطاقة المنتج",
+                "radioGroup": "مجموعة الاختيارات",
+                "resizable": "عناصر قابلة للتحجيم",
+                "scrollArea": "منطقة تمرير",
+                "select": "قائمة الاختيارات",
+                "separator": "خط فاصل",
+                "sheet": "اللوحة الجانبية",
+                "skeleton": "هيكل التحميل الوهمي",
+                "slider": "شريط تمرير",
+                "sonner": "نظام الإشعارات (Toasts)",
+                "step": "مؤشر الخطوات",
+                "switch": "زر التبديل",
+                "table": "الجداول",
+                "tabs": "علامات التبويب",
+                "textarea": "حقل النص المتمدد",
+                "toggleGroup": "مجموعة أزرار التبديل",
+                "toggle": "زر التفعيل/التعطيل",
+                "tooltip": "تلميح",
+                "smart-select": "قائمة الاختيار الذكية"
+            }
+        }
+    },
+    "pagination": {
+        "previous": "السابق",
+        "next": "التالي"
+    },
+    "footer": {
+        "builtBy": "تم البناء بواسطة الفريق خلف",
+        "sourceCode": "الكود مفتوح المصدر على",
+        "alpha": "مختبرات الفابايت",
+        "github": "Github"
+    },
+    "logo": {
+        "alpha": "مختبرات الفابايت",
+        "beta": "بيتا"
+    },
+    "new": {
+        "text": "جديد"
+    },
+    "loading": {
+        "loading": "جاري التحميل..."
+    },
+    "docs-navigation-on-mobile": {
+        "menu": "القائمة"
+    },
+    "component-preview": {
+        "preview": "المعاينة",
+        "code": "الكود",
+        "loading-component": "جاري تحميل المكون...",
+        "loading-code": "جاري تحميل الكود...",
+        "not-found-component": "المكون غير موجود",
+        "not-found-code": "الكود غير موجود"
+    },
+    "docs-copy-button": {
+        "copy": "نسخ الصفحة",
+        "copied": "تم النسخ",
+        "dropdown-menu": {
+            "view-markdown": "عرض الصفحة الاصلية",
+            "open-in-chatgpt": "افتح في ChatGPT",
+            "open-in-v0": "افتح في V0",
+            "open-in-claude": "افتح في Claude"
+        }
+    },
+    "components": {
+        "accordion": {
+            "accordionDemo": {
+                "title-1": "نظام ماك أو إس (MacOS)",
+                "content-1": "نظام ماك أو إس هو نظام التشغيل المكتبي لشركة Apple والذي يشغّل أجهزة حواسيب ماك. يتميز بواجهة مستخدم أنيقة، وميزات أمان قوية، وتكامل سلس مع أجهزة وخدمات Apple الأخرى.",
+                "title-2": "نظام آي أو إس (iOS)",
+                "content-2": "نظام آي أو إس هو نظام التشغيل المحمول من Apple لهواتف آيفون. يشتهر بواجهته البديهية، ونظام التطبيقات البيئي الغني، والأمان، والأداء المتسق عبر الأجهزة.",
+                "title-3": "نظام آيباد أو إس (iPadOS)",
+                "content-3": "نظام آيباد أو إس هو نسخة مطورة من نظام آي أو إس صُممت خصيصًا لجهاز آيباد، مع ميزات محسّنة للشاشات الأكبر حجمًا، بما في ذلك تعدد المهام المُحسّن، ودعم قلم Apple Pencil، وتصفح على مستوى أجهزة سطح المكتب."
+            }
+        },
+        "alertDialog": {
+            "alertDialogDemo": {
+                "triggerButton": "فتح نافذة تنبيه",
+                "title": "هل أنت متأكد؟",
+                "description": "لا يمكن التراجع عن هذا الإجراء. سيتم حذف البيانات نهائيًا من الخوادم.",
+                "cancelButton": "إلغاء",
+                "actionButton": "متابعة"
+            }
+        },
+        "badge": {
+            "default": "شارة",
+            "destructive": "حرج / مدمر",
+            "secure": "آمن",
+            "info": "معلومات",
+            "outline": "إطار",
+            "removable": "أبل",
+            "secondary": "ثانوي",
+            "success": "نجاح",
+            "warning": "تحذير"
+        },
+        "button": {
+            "gettingStarted": "البدء الآن",
+            "generic": "زر",
+            "destructive": "حذف",
+            "ghost": "شفاف",
+            "next": "التالي",
+            "link": "رابط",
+            "loading": "جار التحميل...",
+            "outline": "إطار",
+            "primary": "رئيسي",
+            "pulseAnimation": "زر متحرك (نبض)",
+            "secondary": "ثانوي",
+            "bounceAnimation": "زر متحرك (ارتداد)"
+        },
+        "card": {
+            "title": "تسجيل الدخول",
+            "description": "أدخل بريدك الإلكتروني أدناه لتسجيل الدخول إلى حسابك",
+            "emailLabel": "البريد الإلكتروني",
+            "emailPlaceholder": "m@example.com",
+            "passwordLabel": "كلمة المرور",
+            "forgotPassword": "هل نسيت كلمة المرور؟",
+            "loginButton": "تسجيل الدخول",
+            "loginWithGoogle": "تسجيل الدخول باستخدام جوجل",
+            "noAccount": "ليس لديك حساب؟",
+            "signUpLink": "سجل الآن",
+            "showPassword": "إظهار كلمة المرور",
+            "hidePassword": "إخفاء كلمة المرور"
+        },
+        "checkbox": {
+            "termsLabel": "الموافقة على الشروط والأحكام",
+            "termsDescription": "بالنقر على هذا المربع، فإنك توافق على الشروط والأحكام.",
+            "notificationsLabel": "تفعيل الإشعارات",
+            "notificationsDescription": "يمكنك تفعيل أو تعطيل الإشعارات في أي وقت."
+        },
+        "collapsible": {
+            "securityTitle": "إعدادات الأمان المتقدمة",
+            "viewOptionsAria": "عرض الخيارات",
+            "option1": "المصادقة الثنائية (2FA)",
+            "option2": "إدارة الجلسات",
+            "option3": "الأجهزة الموثوقة"
+        },
+        "command": {
+            "searchPlaceholder": "اكتب أمراً أو ابحث...",
+            "noResults": "لم يتم العثور على نتائج. جرب بحثاً مختلفاً.",
+            "recent": "الأخيرة",
+            "quickActions": "إجراءات سريعة",
+            "workspaces": "مساحات العمل",
+            "apps": "التطبيقات",
+            "settings": "الإعدادات",
+            "lightMode": "التبديل إلى الوضع الفاتح",
+            "darkMode": "التبديل إلى الوضع الداكن",
+            "snooze": "تأجيل الإشعارات",
+            "search": "البحث الشامل",
+            "productStrategy": "استراتيجية المنتج",
+            "launchChecklist": "قائمة الإطلاق",
+            "designSystems": "أنظمة التصميم",
+            "documentation": "التوثيق",
+            "calendar": "التقويم",
+            "mail": "البريد",
+            "messages": "الرسائل",
+            "calculator": "الآلة الحاسبة",
+            "quarterlyReport": "تقرير Q4.pdf",
+            "projectFiles": "ملفات المشروع",
+            "screenshots": "لقطات الشاشة",
+            "minutes": "منذ {count} دقيقة",
+            "hours": "منذ {count} ساعة",
+            "yesterday": "أمس",
+            "profile": "الملف الشخصي",
+            "billing": "الفواتير",
+            "settingsMenu": "الإعدادات",
+            "lastAction": "آخر إجراء:",
+            "trySearching": "جرب البحث عن شيء",
+            "pressK": "اضغط ⌘K لفتح قائمة الأوامر",
+            "proTip": "نصيحة احترافية",
+            "proTipText": "استخدم اختصارات لوحة المفاتيح للتنقل بشكل أسرع. اضغط ? لرؤية جميع الاختصارات."
+        },
+        "commandDialog": {
+            "searchPlaceholder": "ابحث بسرعة...",
+            "inputPlaceholder": "ابحث عن الموظفين، الأدوات، أو الإعدادات...",
+            "noResults": "لا توجد نتائج.",
+            "lastActionPrefix": "آخر إجراء تم تنفيذه:",
+            "groups": {
+                "suggestions": "مقترحات",
+                "settings": "الإعدادات"
+            },
+            "actions": {
+                "catchUp": "اجتماع مع دانيال",
+                "calendar": "مراجعة الجدول الزمني",
+                "marketing": "الذهاب للموقع التسويقي",
+                "profile": "الملف الشخصي",
+                "billing": "الفواتير والاشتراكات",
+                "settings": "تفضيلات النظام"
+            }
+        },
+        "contextMenu": {
+            "trigger": "انقر بالزر الأيمن هنا",
+            "back": "رجوع",
+            "forward": "تقديم",
+            "reload": "إعادة تحميل",
+            "moreTools": "أدوات إضافية",
+            "savePage": "حفظ الصفحة...",
+            "createShortcut": "إنشاء اختصار...",
+            "nameWindow": "تسمية النافذة...",
+            "developerTools": "أدوات المطورين",
+            "delete": "حذف",
+            "showBookmarks": "إظهار الإشارات المرجعية",
+            "showFullUrls": "إظهار عناوين URL الكاملة",
+            "peopleLabel": "الأشخاص",
+            "namePedro": "بيدرو دوارتي",
+            "nameColm": "كولم تويت"
+        },
+        "datePicker": {
+            "placeholder": "اختر تاريخاً",
+            "rangePlaceholder": "اختر نطاقاً زمنياً"
+        },
+        "dialog": {
+            "triggerButton": "فتح نافذة الحوار",
+            "title": "إعدادات الحساب",
+            "description": "إدارة تفضيلات وإعدادات حسابك.",
+            "emailNotifTitle": "إشعارات البريد الإلكتروني",
+            "emailNotifDesc": "تلقي تحديثات البريد الإلكتروني",
+            "profileVisibilityTitle": "خصوصية الملف الشخصي",
+            "visibilityPlaceholder": "عام",
+            "visibilityPublic": "عام",
+            "visibilityPrivate": "خاص",
+            "visibilityFriends": "للأصدقاء فقط",
+            "saveChangesButton": "حفظ التغييرات",
+            "deleteProjectBtn": "حذف المشروع",
+            "deleteSuccessMsg": "تم حذف العنصر بنجاح",
+            "deleteTitle": "حذف المشروع بشكل دائم",
+            "deleteDescription": "سيؤدي هذا الإجراء إلى حذف مشروع \"الحملة التسويقية 2024\" وجميع البيانات المرتبطة به بشكل دائم. لا يمكن التراجع عن هذا الإجراء.",
+            "deleteWarningText": "تحذير: حذف هذا المشروع سيزيل بشكل دائم جميع المهام والمستندات والتحليلات.",
+            "deleteActionBtn": "حذف المشروع نهائياً",
+            "deleteLoadingBtn": "جارٍ الحذف...",
+            "bottomDialogTrigger": "نافذة حوار سفلية",
+            "bottomDialogTitle": "نافذة حوار سفلية",
+            "bottomDialogDescription": "هذا مثال لنافذة حوار موضوعة في الجزء السفلي من الشاشة.",
+            "topDialogTrigger": "نافذة حوار علوية",
+            "topDialogTitle": "نافذة حوار علوية",
+            "topDialogDescription": "هذا مثال لنافذة حوار موضوعة في الجزء العلوي من الشاشة."
+        },
+        "drawer": {
+            "triggerButton": "فتح الدرج الجانبي",
+            "title": "تعديل الملف الشخصي",
+            "description": "قم بإجراء التغييرات على ملفك الشخصي هنا.",
+            "nameLabel": "الاسم",
+            "namePlaceholder": "أدخل اسمك",
+            "emailLabel": "البريد الإلكتروني",
+            "emailPlaceholder": "أدخل بريدك الإلكتروني",
+            "cancelButton": "إلغاء",
+            "saveButton": "حفظ التغييرات",
+            "triggerNestedBtn": "فتح درج متداخل",
+            "level1Title": "الدرج من المستوى الأول",
+            "level1Description": "يمكنك فتح درج آخر من هنا.",
+            "triggerLevel2Btn": "فتح الدرج الثاني",
+            "level2Title": "الدرج من المستوى الثاني",
+            "level2Description": "هذا درج متداخل (Nested Drawer).",
+            "level2BodyText": "يمكنك استخدام مستويات متعددة من الأدراج لواجهات المستخدم المعقدة.",
+            "closeButton": "إغلاق"
+        },
+        "dropdown": {
+            "triggerButton": "فتح القائمة",
+            "accountLabel": "حسابي",
+            "editProfile": "تعديل الملف الشخصي",
+            "download": "تنزيل",
+            "shareDisabled": "مشاركة (معطلة)",
+            "triggerViewOptions": "عرض الخيارات",
+            "preferencesLabel": "التفضيلات",
+            "showIconsItem": "إظهار الأيقونات",
+            "triggerActions": "إجراءات",
+            "cameraItem": "الكاميرا",
+            "deleteSubTrigger": "حذف",
+            "deleteItem": "حذف العنصر",
+            "deleteAll": "حذف الكل",
+            "triggerSelectPlan": "اختر الخطة",
+            "subscriptionPlanLabel": "خطة الاشتراك",
+            "planBasic": "أساسية",
+            "planPro": "احترافية (Pro)",
+            "planEnterprise": "مؤسسات (Enterprise)",
+            "actions": "الإجراءات",
+            "viewPhoto": "عرض الصورة",
+            "assignTo": "تعيين إلى...",
+            "tags": "العلامات",
+            "addTag": "إضافة علامة",
+            "removeTag": "إزالة علامة",
+            "customTags": "علامات مخصصة...",
+            "archive": "أرشفة",
+            "deleteConfirmLabel": "هل أنت متأكد؟"
+        },
+        "empty": {
+            "search": {
+                "title": "لم يتم العثور على منتجات",
+                "description": "لا توجد منتجات مطابقة لمعايير بحثك. حاول البحث عما تحتاجه أدناه.",
+                "inputPlaceholder": "البحث عن منتجات، علامات تجارية، أو فئات...",
+                "helpText": "هل تحتاج مساعدة؟",
+                "contactSupport": "اتصل بالدعم"
+            },
+            "team": {
+                "title": "فريق التطوير",
+                "description": "تواصل مع فريق التطوير الخاص بك لبدء بناء مشاريع مذهلة معًا.",
+                "buttonText": "إضافة عضو فريق",
+                "addingLoading": "جاري الإضافة..."
+            }
+        },
+        "hoverCard": {
+            "triggerText": "@nextjs",
+            "username": "@nextjs",
+            "description": "إطار عمل React – تم إنشاؤه وصيانته بواسطة @vercel.",
+            "joinedDate": "انضم في ديسمبر 2021"
+        },
+        "input": {
+            "emailPlaceholder": "البريد الإلكتروني",
+            "emailLabel": "البريد الإلكتروني",
+            "subscribeButton": "اشترك",
+            "pictureLabel": "صورة"
+        },
+        "inputGroup": {
+            "emailPlaceholder": "البريد الإلكتروني",
+            "emailLabel": "البريد الإلكتروني",
+            "subscribeButton": "اشترك",
+            "pictureLabel": "صورة",
+            "chat": {
+                "placeholder": "اكتب رسالتك هنا...",
+                "attachFile": "إرفاق ملف",
+                "addEmoji": "إضافة رمز تعبيري",
+                "sending": "جاري الإرسال...",
+                "send": "إرسال",
+                "toSend": "للإرسال",
+                "press": "اضغط على",
+                "enterKey": "Enter"
+            },
+            "iconGroup": {
+                "searchPlaceholder": "بحث...",
+                "emailPlaceholder": "أدخل بريدك الإلكتروني",
+                "cardNumberPlaceholder": "رقم البطاقة"
+            },
+            "textGroup": {
+                "amountPlaceholder": "0.00",
+                "currencySuffix": "جنية مصري",
+                "urlPlaceholder": "مثال.كوم",
+                "usernamePlaceholder": "أدخل اسم المستخدم الخاص بك",
+                "messagePlaceholder": "أدخل رسالتك",
+                "charsLeft": "متبقي {count} حرف"
+            },
+            "tooltipGroup": {
+                "passwordPlaceholder": "أدخل كلمة المرور",
+                "emailPlaceholder": "عنوان بريدك الإلكتروني",
+                "apiKeyPlaceholder": "أدخل مفتاح API",
+                "infoLabel": "معلومات",
+                "helpLabel": "مساعدة",
+                "passwordTip": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+                "emailTip": "سنستخدم هذا لإرسال الإشعارات إليك",
+                "apiKeyTip": "اضغط للمساعدة بخصوص مفاتيح API"
+            },
+            "multiAddon": {
+                "searchAmountPlaceholder": "البحث عن المبلغ",
+                "currencySuffix": "جنية مصري",
+                "repoPlaceholder": "أدخل اسم المستودع",
+                "urlPlaceholder": "مثال.كوم",
+                "usernamePlaceholder": "اسم المستخدم",
+                "productSearchPlaceholder": "البحث عن المنتجات...",
+                "clearLabel": "مسح",
+                "searchLabel": "بحث",
+                "infoLabel": "معلومات",
+                "clearFiltersLabel": "مسح المرشحات",
+                "resultCount": "{count} نتائج",
+                "filterText": "تصفية:",
+                "itemCount": "{count} عناصر"
+            },
+            "loadingGroup": {
+                "searchingPlaceholder": "جاري البحث...",
+                "processingPlaceholder": "جاري المعالجة...",
+                "savingPlaceholder": "جاري حفظ التغييرات...",
+                "refreshingPlaceholder": "جاري تحديث البيانات...",
+                "savingText": "جاري الحفظ...",
+                "waitText": "الرجاء الانتظار..."
+            },
+            "labelGroup": {
+                "usernamePlaceholder": "shadcn",
+                "emailPlaceholder": "shadcn@vercel.com",
+                "emailLabel": "البريد الإلكتروني",
+                "helpLabel": "مساعدة",
+                "emailTip": "سنستخدم هذا لإرسال الإشعارات إليك"
+            },
+            "dropdownGroup": {
+                "fileNamePlaceholder": "أدخل اسم الملف",
+                "searchQueryPlaceholder": "أدخل عبارة البحث",
+                "moreLabel": "المزيد",
+                "searchInButton": "البحث في...",
+                "settingsItem": "الإعدادات",
+                "copyPathItem": "نسخ المسار",
+                "openLocationItem": "فتح الموقع",
+                "documentationItem": "التوثيق",
+                "blogPostsItem": "مقالات المدونة",
+                "changelogItem": "سجل التغييرات"
+            }
+        },
+        "inputOTP": {
+            "otpForm": {
+                "validationError": "يجب أن تتكون كلمة المرور لمرة واحدة من 6 أحرف.",
+                "label": "كلمة المرور لمرة واحدة",
+                "description": "الرجاء إدخال كلمة المرور لمرة واحدة المرسلة إلى هاتفك.",
+                "submitButton": "إرسال",
+                "toastTitle": "تم إرسال القيم التالية"
+            },
+            "otpControl": {
+                "emptyMessage": "الرجاء إدخال كلمة المرور لمرة واحدة.",
+                "enteredMessage": "لقد أدخلت: {value}"
+            }
+        },
+        "kdb": {
+            "kbdButton": {
+                "acceptLabel": "قبول",
+                "cancelLabel": "إلغاء"
+            },
+            "kbdTooltip": {
+                "saveButton": "حفظ",
+                "saveTooltipContent": "حفظ التغييرات",
+                "printButton": "طباعة",
+                "printTooltipContent": "طباعة المستند"
+            },
+            "kdbSearch": {
+                "searchPlaceholder": "بحث..."
+            },
+            "kbdGroup": {
+                "instructionTextStart": "استخدم",
+                "instructionTextOr": "أو",
+                "instructionTextEnd": "لفتح لوحة الأوامر"
+            }
+        },
+        "label": {
+            "termsText": "أوافق على الشروط والأحكام"
+        },
+        "listItems": {
+            "listItemDemo": {
+                "aiAssistantTitle": "مساعد الذكاء الاصطناعي للكود",
+                "aiAssistantDescription": "احصل على اقتراحات ذكية واستكمال تلقائي للكود مدعوم بالذكاء الاصطناعي المتقدم.",
+                "activateButton": "تفعيل",
+                "devReadyTitle": "بيئة التطوير جاهزة",
+                "devReadyDescription": "مساحة عملك مُهيأة وجاهزة بالكامل للبدء في التطوير.",
+                "newFeaturesTitle": "ميزات جديدة متاحة",
+                "newFeaturesDescription": "اكتشف أحدث التحديثات والتحسينات المضافة."
+            },
+            "listItemGroup": {
+                "profileTitle": "إعدادات الملف الشخصي",
+                "profileDescription": "إدارة حسابك ومعلوماتك الشخصية",
+                "notificationsTitle": "الإشعارات",
+                "notificationsDescription": "تهيئة تفضيلات الإشعارات الخاصة بك",
+                "securityTitle": "الأمن والخصوصية",
+                "securityDescription": "التحكم في إعدادات الأمن وخيارات الخصوصية",
+                "generalTitle": "الإعدادات العامة",
+                "generalDescription": "تفضيلات التطبيق وخيارات التخصيص"
+            },
+            "listItemSizes": {
+                "smallSizeHeader": "حجم صغير",
+                "smallSizeTitle": "بند مُدمج",
+                "smallSizeDescription": "مثالي للقوائم ذات الكثافة العالية وقوائم التنقل",
+                "defaultSizeHeader": "الحجم الافتراضي",
+                "defaultSizeTitle": "بند قياسي",
+                "defaultSizeDescription": "مسافات متوازنة لمعظم حالات الاستخدام وقراءة مريحة",
+                "largeSizeHeader": "حجم كبير",
+                "largeSizeTitle": "بند واسع",
+                "largeSizeDescription": "مساحة إضافية للتأكيد وتحسين استجابة اللمس على الأجهزة المحمولة"
+            },
+            "listItemVariants": {
+                "defaultHeader": "الشكل الافتراضي",
+                "defaultTitle": "النمط الافتراضي",
+                "defaultDescription": "نظيف وبسيط مع تأثيرات تحويم (Hover) خفيفة",
+                "outlineHeader": "شكل الإطار الخارجي",
+                "outlineTitle": "نمط الإطار",
+                "outlineDescription": "يتميز بحد مرئي مع ظل ناعم",
+                "elevatedHeader": "الشكل المرتفع",
+                "elevatedTitle": "النمط المرتفع",
+                "elevatedDescription": "ظل مُعزَّز لإعطاء تأثير عائم (Floating effect)",
+                "filledHeader": "الشكل المُعبأ",
+                "filledTitle": "النمط المُعبأ",
+                "filledDescription": "لون خلفية خفيف للتأكيد والتمييز"
+            },
+            "listItemAvatar": {
+                "badgePro": "احترافي",
+                "badgeFree": "مجاني",
+                "user1Name": "سارة تشن",
+                "user1Details": "مصممة منتجات أولى · نشطة الآن",
+                "user2Name": "أليكس رودريغيز",
+                "user2Details": "مطور واجهة أمامية · قبل دقيقتين",
+                "user3Name": "إيما ويلسون",
+                "user3Details": "باحثة تجربة المستخدم · قبل ساعة"
+            }
+        },
+        "loading": {
+            "loadingDemo": {
+                "title": "جاري تحميل عملية الدفع",
+                "currencySuffix": "جنية مصري"
+            },
+            "LoadingBadge": {
+                "loading": "جارٍ التحميل..."
+            }
+        },
+        "menubarDemo": {
+            "fileTrigger": "ملف",
+            "newTab": "علامة تبويب جديدة",
+            "newWindow": "نافذة جديدة",
+            "newIncognitoWindow": "نافذة تصفح خفي جديدة",
+            "shareSubTrigger": "مشاركة",
+            "emailLink": "إرسال رابط بالبريد",
+            "messages": "الرسائل",
+            "notes": "الملاحظات",
+            "print": "طباعة...",
+            "editTrigger": "تحرير",
+            "undo": "تراجع",
+            "redo": "إعادة",
+            "findSubTrigger": "بحث",
+            "searchWeb": "البحث في الويب",
+            "findEllipsis": "بحث...",
+            "findNext": "البحث التالي",
+            "findPrevious": "البحث السابق",
+            "cut": "قص",
+            "copy": "نسخ",
+            "paste": "لصق",
+            "viewTrigger": "عرض",
+            "showBookmarksBar": "إظهار شريط الإشارات المرجعية دائماً",
+            "showFullURLs": "إظهار عناوين URL الكاملة دائماً",
+            "reload": "إعادة تحميل",
+            "forceReload": "إعادة تحميل إجباري",
+            "toggleFullscreen": "تبديل وضع ملء الشاشة",
+            "hideSidebar": "إخفاء الشريط الجانبي",
+            "profilesTrigger": "الملفات الشخصية",
+            "editProfileEllipsis": "تعديل...",
+            "addProfileEllipsis": "إضافة ملف شخصي..."
+        },
+        "navigationMenuDemo": {
+            "menu": {
+                "home": "الرئيسية",
+                "components": "المكونات",
+                "docs": "التوثيق",
+                "list": "القائمة",
+                "simple": "بسيط",
+                "withIcon": "مع أيقونة"
+            },
+            "home": {
+                "brandTitle": "shadcn/ui",
+                "brandDescription": "مكونات مصممة بشكل جميل باستخدام Tailwind CSS.",
+                "introduction": {
+                    "title": "مقدمة",
+                    "description": "مكونات قابلة لإعادة الاستخدام مبنية باستخدام Radix UI و Tailwind CSS."
+                },
+                "installation": {
+                    "title": "التثبيت",
+                    "description": "كيفية تثبيت التبعيات وهيكلة تطبيقك."
+                },
+                "typography": {
+                    "title": "الطباعة",
+                    "description": "أنماط العناوين والفقرات والقوائم...إلخ"
+                }
+            },
+            "components": {
+                "alertDialog": {
+                    "title": "مربع حوار التنبيه",
+                    "description": "مربع حوار مشروط يقاطع المستخدم بمحتوى مهم ويتوقع استجابة."
+                },
+                "hoverCard": {
+                    "title": "بطاقة التمرير",
+                    "description": "للمستخدمين المبصرين لمعاينة المحتوى المتاح خلف رابط."
+                },
+                "progress": {
+                    "title": "التقدم",
+                    "description": "يعرض مؤشرًا يوضح تقدم إنجاز المهمة، عادةً ما يُعرض كشريط تقدم."
+                },
+                "scrollArea": {
+                    "title": "منطقة التمرير",
+                    "description": "يفصل المحتوى بصريًا أو دلاليًا."
+                },
+                "tabs": {
+                    "title": "التبويبات",
+                    "description": "مجموعة من أقسام المحتوى الطبقية - تُعرف باسم لوحات التبويب - التي تُعرض واحدة تلو الأخرى."
+                },
+                "tooltip": {
+                    "title": "تلميح الأداة",
+                    "description": "نافذة منبثقة تعرض معلومات متعلقة بعنصر عندما يتلقى العنصر تركيز لوحة المفاتيح أو يمرر الماوس فوقه."
+                }
+            },
+            "list": {
+                "components": {
+                    "title": "المكونات",
+                    "description": "تصفح جميع المكونات في المكتبة."
+                },
+                "documentation": {
+                    "title": "التوثيق",
+                    "description": "تعلم كيفية استخدام المكتبة."
+                },
+                "blog": {
+                    "title": "المدونة",
+                    "description": "اقرأ أحدث منشورات مدونتنا."
+                }
+            },
+            "simple": {
+                "components": "المكونات",
+                "documentation": "التوثيق",
+                "blocks": "الكتل"
+            },
+            "withIcon": {
+                "backlog": "الأعمال المتأخرة",
+                "todo": "قيد التنفيذ",
+                "done": "مكتمل"
+            }
+        },
+        "notes": {
+            "demo": {
+                "info": "هذه ملاحظة معلوماتية.",
+                "success": "تمت العملية بنجاح! كل شيء يعمل كما هو متوقع.",
+                "warning": "هذه ملاحظة تحذيرية. يرجى توخي الحذر في إجراءاتك.",
+                "error": "حدث خطأ. يرجى التحقق من المدخلات والمحاولة مرة أخرى.",
+                "closable": "تيربوباك هو أداة تجميع وخادم تطوير عالي الأداء لـ Next.js. تمكين هذا الخيار يضمن بناء أسرع وتجربة تطوير محسّنة.",
+                "withTitle": {
+                    "title": "معلومات مهمة",
+                    "content": "تحتوي هذه الملاحظة على معلومات مهمة يجب عليك قراءتها بعناية قبل المتابعة."
+                }
+            }
+        },
+        "pagination": {
+            "previous": "السابق",
+            "next": "التالي",
+            "previousLabel": "اذهب إلى الصفحة السابقة",
+            "nextLabel": "اذهب إلى الصفحة التالية",
+            "morePages": "المزيد من الصفحات"
+        },
+        "popover": {
+            "trigger": "اضغط للمزيد من المعلومات",
+            "title": "ما هو الـ Popover؟",
+            "description": "الـ Popover هو بطاقة عائمة تظهر عندما يتفاعل المستخدم مع عنصر معيّن. يُستخدم عادة لعرض معلومات إضافية أو عناصر تحكم."
+        },
+        "radioGroup": {
+            "radioDemo": {
+                "optionOne": "الخيار الأول",
+                "optionTwo": "الخيار الثاني"
+            },
+            "radioDemoLabels": {
+                "options": {
+                    "default": {
+                        "label": "افتراضي",
+                        "description": "المسافة الافتراضية للمكونات."
+                    },
+                    "comfortable": {
+                        "label": "مريح",
+                        "description": "تخطيط أكثر اتساعاً مع قابلية قراءة أفضل."
+                    },
+                    "compact": {
+                        "label": "مضغوط",
+                        "description": "الحد الأدنى من المسافات لاحتواء المزيد من المحتوى."
+                    }
+                }
+            },
+            "radioForm": {
+                "title": "اختر طريقة الدفع",
+                "methods": {
+                    "card": "بطاقة ائتمان",
+                    "paypal": "باي بال",
+                    "apple": "آبل باي"
+                },
+                "submit": "متابعة"
+            }
+        },
+        "resizableDemo": {
+            "panelOne": "الاول",
+            "panelTwo": "الثاني",
+            "panelThree": "الثالث"
+        },
+        "resizableHandleDemo": {
+            "sidebar": "الشريط الجانبي",
+            "content": "المحتوى الرئيسي"
+        },
+        "resizableVerticalDemo": {
+            "header": "الرأس",
+            "content": "المحتوى"
+        },
+        "scrollAreaDemo": {
+            "chat": {
+                "title": "نقاش مكتبة واجهة المستخدم",
+                "activeNow": "نشط الآن",
+                "placeholder": "اكتب رسالتك...",
+                "send": "إرسال",
+                "pressEnter": "اضغط",
+                "toSend": "للإرسال",
+                "you": "أنت",
+                "messages": {
+                    "0": {
+                        "user": "أحمد",
+                        "message": "هل استخدم أحد مكون ScrollArea الجديد؟"
+                    },
+                    "1": {
+                        "user": "سارة",
+                        "message": "نعم، أنا أستخدمه في مشروع لوحة التحكم. يعمل بشكل رائع مع التخطيطات المعقدة."
+                    },
+                    "2": {
+                        "user": "أنت",
+                        "message": "لقد دمجته للتو في نظام التصميم الخاص بنا. شريط التمرير الذي يختفي تلقائيًا ميزة رائعة!"
+                    },
+                    "3": {
+                        "user": "أحمد",
+                        "message": "هل يمكنه التعامل مع التمرير الأفقي أيضًا؟"
+                    },
+                    "4": {
+                        "user": "أنت",
+                        "message": "نعم، يدعم التمرير العمودي والأفقي بشكل افتراضي. يمكنك أيضًا تخصيص مظهر وسلوك شريط التمرير."
+                    },
+                    "5": {
+                        "user": "سارة",
+                        "message": "وجدت خاصية alwaysShowScrollbar مفيدة للأجهزة اللمسية حيث قد لا يعرف المستخدمون أن المحتوى قابل للتمرير."
+                    },
+                    "6": {
+                        "user": "أحمد",
+                        "message": "هل يتعامل بشكل صحيح مع أحداث تغيير حجم النافذة؟"
+                    },
+                    "7": {
+                        "user": "أنت",
+                        "message": "نعم، يتم التحديث بشكل مناسب عند تغيير حجم النافذة. كما يدير المكون موضع التمرير بفعالية عند تغيير المحتوى."
+                    },
+                    "8": {
+                        "user": "سارة",
+                        "message": "الرسوم المتحركة للظهور والاختفاء سلسة. أحب كيف أنها لا تشتت الانتباه عن المحتوى."
+                    },
+                    "9": {
+                        "user": "أحمد",
+                        "message": "هل هناك أي مشاكل في الأداء مع المحتوى الأكبر؟"
+                    },
+                    "10": {
+                        "user": "أنت",
+                        "message": "الأداء جيد حتى مع المحتوى الطويل جدًا. إنه مبني على عناصر Radix UI الأساسية، والتي تم تحسينها للأداء."
+                    }
+                }
+            }
+        },
+        "selectDemo": {
+            "label": "اختر مستوى الوصول الخاص بك",
+            "placeholder": "اختر خطة الاشتراك...",
+            "group1": {
+                "label": "المفتوحة المصدر والمجانية",
+                "basic": "وصول المطور الأساسي (مجاني)",
+                "contributor": "مساهم المجتمع"
+            },
+            "group2": {
+                "label": "وصول المحترفين والشركات",
+                "pro": "المطور المحترف - 1900 جنيه مصري/شهرياً",
+                "team": "فريق الشركات - 9900 جنيه مصري/شهرياً"
+            }
+        },
+        "selectScrollableDemo": {
+            "label": "المنطقة الزمنية",
+            "placeholder": "اختر منطقة زمنية",
+            "scrollTip": "قم بالتمرير في القائمة لمشاهدة جميع المناطق الزمنية المتاحة",
+            "groups": {
+                "na": {
+                    "label": "أمريكا الشمالية",
+                    "est": "التوقيت الشرقي الرسمي (EST)",
+                    "cst": "التوقيت المركزي الرسمي (CST)",
+                    "mst": "التوقيت الجبلي الرسمي (MST)",
+                    "pst": "توقيت المحيط الهادئ الرسمي (PST)",
+                    "akst": "توقيت ألاسكا الرسمي (AKST)",
+                    "hst": "توقيت هاواي الرسمي (HST)"
+                },
+                "eu_af": {
+                    "label": "أوروبا وأفريقيا",
+                    "gmt": "توقيت غرينتش (GMT)",
+                    "cet": "توقيت وسط أوروبا (CET)",
+                    "eet": "توقيت شرق أوروبا (EET)",
+                    "west": "التوقيت الصيفي لغرب أوروبا (WEST)",
+                    "cat": "توقيت وسط أفريقيا (CAT)",
+                    "eat": "توقيت شرق أفريقيا (EAT)"
+                },
+                "asia": {
+                    "label": "آسيا",
+                    "msk": "توقيت موسكو (MSK)",
+                    "ist": "توقيت الهند الرسمي (IST)",
+                    "cst_china": "توقيت الصين الرسمي (CST)",
+                    "jst": "توقيت اليابان الرسمي (JST)",
+                    "kst": "توقيت كوريا الرسمي (KST)",
+                    "ist_indonesia": "توقيت إندونيسيا المركزي الرسمي (WITA)"
+                },
+                "au_pac": {
+                    "label": "أستراليا والمحيط الهادئ",
+                    "awst": "توقيت غرب أستراليا الرسمي (AWST)",
+                    "acst": "توقيت وسط أستراليا الرسمي (ACST)",
+                    "aest": "توقيت شرق أستراليا الرسمي (AEST)",
+                    "nzst": "توقيت نيوزيلندا الرسمي (NZST)",
+                    "fjt": "توقيت فيجي (FJT)"
+                },
+                "sa": {
+                    "label": "أمريكا الجنوبية",
+                    "art": "توقيت الأرجنتين (ART)",
+                    "bot": "توقيت بوليفيا (BOT)",
+                    "brt": "توقيت برازيليا (BRT)",
+                    "clt": "توقيت تشيلي الرسمي (CLT)"
+                }
+            }
+        },
+        "separatorDemos": {
+            "titleHorizontal": "فصل المحتوى (أفقي)",
+            "descriptionHorizontal": "يستخدم للتمييز البصري أو تجميع أقسام المحتوى.",
+            "contentAbove": "إعدادات ملف المستخدم الشخصي",
+            "contentBelow": "الاشتراك والفوترة",
+            "titleVertical": "فصل الإجراءات (عمودي)",
+            "descriptionVertical": "يستخدم في أشرطة الأدوات أو عناصر التنقل لفصل الإجراءات المتميزة.",
+            "menuItem1": "لوحة التحكم",
+            "menuItem2": "الإعدادات",
+            "menuItem3": "تسجيل الخروج"
+        },
+        "sheet": {
+            "sheetDemo": {
+                "triggerButton": "فتح الإعدادات",
+                "sheetTitle": "إعدادات التطبيق",
+                "sheetDescription": "قم بتكوين تفضيلاتك الخاصة بالمستخدم والتطبيق هنا.",
+                "optionDarkMode": "الوضع الداكن",
+                "optionNotification": "الإشعارات العامة",
+                "optionEmailUpdates": "تحديثات المنتج عبر البريد الإلكتروني",
+                "saveChangesButton": "حفظ التغييرات",
+                "labelDarkMode": "تفعيل واجهة المظهر الداكن لتقليل إجهاد العين.",
+                "labelNotification": "استقبال التنبيهات والتحديثات الهامة من التطبيق.",
+                "labelEmailUpdates": "تلقي رسائل بريد إلكتروني عرضية حول الميزات الجديدة والإصدارات الرئيسية."
+            },
+            "sheetLeftDemo": {
+                "triggerButton": "فتح القائمة",
+                "sheetTitle": "القائمة الرئيسية",
+                "navItems": {
+                    "profile": "الملف الشخصي",
+                    "orders": "الطلبات",
+                    "wishlist": "قائمة الأمنيات",
+                    "settings": "الإعدادات"
+                }
+            },
+            "sheetTopDemo": {
+                "triggerButton": "فتح الإشعارات",
+                "sheetTitle": "الإشعارات الحديثة",
+                "sheetDescription": "شاهد أحدث تحديثات النظام والمستخدمين الخاصة بك.",
+                "notification1Title": "رسالة جديدة من أليس",
+                "notification1Time": "منذ دقيقتين",
+                "notification2Title": "الطلب رقم 1234 تم شحنه",
+                "notification2Time": "منذ ساعة واحدة"
+            },
+            "sheetBottomDemo": {
+                "triggerButton": "عرض الإجراءات السريعة",
+                "sheetTitle": "قائمة الإجراءات السريعة",
+                "sheetDescription": "اختر إجراءً للتنقل أو التنفيذ.",
+                "actionProfile": "الملف الشخصي",
+                "actionCart": "سلة التسوق",
+                "actionFavorites": "المفضلة"
+            }
+        },
+        "smartSelect": {
+            "smartSelectDemo": {
+                "selectPlaceholder": "اختر لغة الدولة...",
+                "searchPlaceholder": "ابحث عن دولة...",
+                "empty": "لا توجد دولة بهذا الاسم."
+            },
+            "smartSelectDropdownMenuDemo": {
+                "productTitle": "مسودة منتج جديد",
+                "productStatus": "جاهز للنشر",
+                "menuLabel": "الإجراءات",
+                "menuItemAddImage": "إضافة صورة",
+                "menuItemUpdatePrice": "تحديث السعر",
+                "menuSubTrigger": "تغيير التصنيف",
+                "commandPlaceholder": "ابحث عن تصنيف...",
+                "commandEmpty": "لا يوجد تصنيف بهذا الاسم.",
+                "menuItemDelete": "حذف المنتج",
+                "menuShortcutDelete": "⌘⌫",
+                "categories": {
+                    "electronics": "إلكترونيات",
+                    "apparel": "ملابس",
+                    "homeAppliances": "أجهزة منزلية",
+                    "books": "كتب",
+                    "toys": "ألعاب",
+                    "furniture": "أثاث",
+                    "sports": "رياضة",
+                    "groceries": "مواد غذائية"
+                }
+            },
+            "smartSelectPopoverDemo": {
+                "label": "الأولوية",
+                "triggerPlaceholder": "+ تحديد الأولوية",
+                "commandPlaceholder": "ابحث عن الأولوية...",
+                "commandEmpty": "لا توجد نتائج.",
+                "priorities": {
+                    "low": "منخفضة",
+                    "medium": "متوسطة",
+                    "high": "عالية",
+                    "urgent": "عاجلة"
+                }
+            }
+        }
+    }
+}

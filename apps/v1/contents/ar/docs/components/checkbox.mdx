@@ -1,0 +1,56 @@
+---
+title: مربع اختيار
+slug: /docs/components/checkbox
+description: عنصر تحكم مُصمم بالكامل لاختيارات المنطق الثنائي، يضمن امتثالاً سلساً لسهولة في الاستخدام وتغذية راجعة بصرية دقيقة. يوفر موثوقية عالية لإدخال بيانات المستخدم.
+keywords: [خانة اختيار, نموذج تحكم, اختيار منطقي, إدخال]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/checkbox
+  api: https://www.radix-ui.com/docs/primitives/components/checkbox#api-reference
+---
+
+<ComponentPreview name="checkbox-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="checkbox"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت الاعتمادات (Dependencies)">
+      أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-checkbox`}
+      </Pre>
+    </StepItem>
+    <StepItem title="انشاء ملف utils.ts">
+        <ComponentUtilsText />
+        <ComponentUtils />
+    </StepItem>
+    <StepItem title="انشاء ملف carousel">
+        <ComponentSource name="checkbox-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { Checkbox } from "@/components/ui/checkbox"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Checkbox />`}
+  </Pre>
+</div>

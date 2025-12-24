@@ -37,7 +37,7 @@ const variantStyles: Record<
   },
   error: {
     border: "border-red-600 dark:border-red-800",
-    text: "text-red-600 dark:text-red-400",
+    text: "text-destructive",
     icon: <XCircle className="w-4 h-4" />,
   },
   neutral: {

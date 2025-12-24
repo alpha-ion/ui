@@ -1,0 +1,75 @@
+---
+title: Context Menu
+slug: /docs/components/context-menu
+description: واجهة قيادة نهائية ذات مستوى مكتبي للإجراءات السياقية المعقدة، مُهندسة لكفاءة استخدام قصوى. تتميز بـ **إدارة ذكية لفيض الشاشة** وتأثير ضبابي متميز، مما يضمن تفاعلاً سلساً وبدون أخطاء.
+keywords: [قائمة سياق, تجربة مكتبية, إدارة الفيض, تفاعل معقد, قائمة ديناميكية]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/context-menu
+  api: https://www.radix-ui.com/docs/primitives/components/context-menu#api-reference
+---
+
+<ComponentPreview name="context-menu-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="context-menu"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت الاعتمادات (Dependencies)">
+      أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-context-menu`}
+      </Pre>
+    </StepItem>
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="إنشاء مكوّن context-menu">
+      <ComponentSource name="context-menu-demo" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<Card>
+    <CardHeader>
+        <CardTitle>Card Title</CardTitle>
+        <CardDescription>Card Description</CardDescription>
+        <CardAction>Card Action</CardAction>
+    </CardHeader>
+    <CardContent>
+        <p>Card Content</p>
+    </CardContent>
+    <CardFooter>
+        <p>Card Footer</p>
+    </CardFooter>
+</Card>`}
+  </Pre>
+</div>

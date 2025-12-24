@@ -1,0 +1,59 @@
+---
+title:  (Aspect Ratio) نسبة العرض إلى الارتفاع
+slug: /docs/components/aspect-ratio
+description: ضمان تكامل التصميم المتجاوب والقضاء على انزياح التخطيط التراكمي (CLS) ليحافظ على نسب لعرض و الطول بدقة.
+keywords: [نسبة العرض, تصميم متجاوب, CLS, مكون ريأكت, قياس الصور]
+links:
+  doc: https://www.radix-ui.com/docs/primitives/components/aspect-ratio
+  api: https://www.radix-ui.com/docs/primitives/components/aspect-ratio#api-reference
+---
+
+<ComponentPreview name="aspect-ratio-demo" />
+
+## التثبيت
+
+<CliCodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">أمر الـ CLI</TabsTrigger>
+  <TabsTrigger value="manual">تثبيت يدويا</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+<CliCodeTabs>
+  <CodeCommands componentName="aspect-ratio"/>
+</CliCodeTabs>
+</TabsContent>
+<TabsContent value="manual">
+<div className="not-prose px-4 md:px-0">
+  <Step>
+    <StepItem title="تثبيت الاعتمادات">
+       أولاً، تحتاج إلى تثبيت الاعتمادات:
+      <Pre className="language-bash">
+        {`npm install clsx tailwind-merge @radix-ui/react-aspect-ratio`}
+      </Pre>
+    </StepItem>
+    <StepItem title="إنشاء ملف utils.ts">
+      <ComponentUtilsText />
+      <ComponentUtils />
+    </StepItem>
+    <StepItem title="إنشاء مكوّن aspect-ratio">
+      <ComponentSource name="aspect-ratio" />
+    </StepItem>
+  </Step>
+</div>
+</TabsContent>
+</CliCodeTabs>
+
+## الاستخدام
+
+<div className="not-prose space-y-6">
+  <Pre className="language-typescript">
+    {`import { AspectRatio } from "@/components/ui/aspect-ratio"`}
+  </Pre>
+  <Pre className="language-typescript">
+    {`<AspectRatio ratio={16 / 9}>
+  <Image src="..." alt="Image" className="rounded-md object-cover" />
+</AspectRatio>
+`}
+  </Pre>
+</div>
