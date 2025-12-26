@@ -1,25 +1,22 @@
-import kleur from "kleur"
+import { highlighter } from "./highlighter"
 
 export const logger = {
-  info: (message: string, ...args: any[]) => {
-    console.log(kleur.blue("ℹ"), message, ...args)
+  error(...args: unknown[]) {
+    console.log(highlighter.error(args.join(" ")))
   },
-  
-  success: (message: string, ...args: any[]) => {
-    console.log(kleur.green("✓"), message, ...args)
+  warn(...args: unknown[]) {
+    console.log(highlighter.warn(args.join(" ")))
   },
-  
-  warn: (message: string, ...args: any[]) => {
-    console.log(kleur.yellow("⚠"), message, ...args)
+  info(...args: unknown[]) {
+    console.log(highlighter.info(args.join(" ")))
   },
-  
-  error: (message: string, ...args: any[]) => {
-    console.log(kleur.red("✗"), message, ...args)
+  success(...args: unknown[]) {
+    console.log(highlighter.success(args.join(" ")))
   },
-  
-  debug: (message: string, ...args: any[]) => {
-    if (process.env.DEBUG) {
-      console.log(kleur.gray("🐛"), message, ...args)
-    }
+  log(...args: unknown[]) {
+    console.log(args.join(" "))
+  },
+  break() {
+    console.log("")
   },
 }

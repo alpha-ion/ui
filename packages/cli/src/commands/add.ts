@@ -13,8 +13,12 @@ import {
   RegistryItemFile
 } from "../schema/index.js"
 import { logger } from "../utils/logger.js"
+import { handleError } from "../utils/handle-error.js"
 import { installDependencies } from "../utils/package-manager.js"
 import { isNextAppPresent, scaffoldNextApp } from "../utils/scaffold.js"
+import { preFlightAdd } from "../preflights/preflight-add.js"
+import * as ERRORS from "../utils/errors.js"
+import { highlighter } from "../utils/highlighter.js"
 
 /**
  * Process file content to replace placeholders and apply config
@@ -619,40 +623,95 @@ export const add = new Command()
 
     try {
       // ========================================
-      // STEP 1: Ensure Next.js app exists
+      // STEP 1: Preflight checks
       // ========================================
-      let workingDir = cwd
-      const hasNext = await isNextAppPresent(cwd)
+      const preflightOptions = {
+        components: componentsArg,
+        yes: false,
+        overwrite,
+        cwd: path.resolve(cwd),
+        all,
+        path: targetPath,
+        silent,
+        cssVariables: true,
+      }
 
-      if (!hasNext) {
+      let { errors, config } = await preFlightAdd(preflightOptions)
+
+      // No components.json file. Prompt the user to run init.
+      let initHasRun = false
+      if (errors[ERRORS.MISSING_CONFIG]) {
         if (!silent) {
-          logger.info("\nNo Next.js app detected.")
-          logger.info("Launching create-next-app CLI...\n")
+          const { proceed } = await prompts({
+            type: "confirm",
+            name: "proceed",
+            message: `You need to create a ${highlighter.info(
+              "components.json"
+            )} file to add components. Proceed?`,
+            initial: true,
+          })
+
+          if (!proceed) {
+            logger.break()
+            process.exit(1)
+          }
         }
 
-        workingDir = await scaffoldNextApp(cwd)
+        // Run init automatically
+        const { runInit } = await import("./init.js")
+        config = await runInit({
+          cwd,
+          yes: true,
+          default: false,
+          baseColor: "slate",
+          css: "app/globals.css",
+          tailwindConfig: "tailwind.config.js",
+          tailwindCss: "app/globals.css",
+          components: "@/components",
+          utils: "@/lib/utils",
+          ui: "@/components/ui",
+          lib: "@/lib",
+          hooks: "@/hooks",
+          iconLibrary: "lucide",
+        })
+        initHasRun = true
+      }
 
-        if (workingDir !== cwd && !silent) {
-          logger.info(`\nProject: ${path.basename(workingDir)}`)
-          logger.info("Installing components...\n")
+      let workingDir = cwd
+      if (errors[ERRORS.MISSING_DIR_OR_EMPTY_PROJECT]) {
+        const hasNext = await isNextAppPresent(cwd)
+
+        if (!hasNext) {
+          if (!silent) {
+            logger.info("\nNo Next.js app detected.")
+            logger.info("Launching create-next-app CLI...\n")
+          }
+
+          workingDir = await scaffoldNextApp(cwd)
+
+          if (workingDir !== cwd && !silent) {
+            logger.info(`\nProject: ${path.basename(workingDir)}`)
+            logger.info("Installing components...\n")
+          }
+        }
+
+        if (!config) {
+          if (!silent) {
+            logger.info("Setting up Alpha...\n")
+          }
+
+          config = await setupDefaultConfig(workingDir)
+
+          if (!silent) {
+            logger.success("Core setup complete\n")
+          }
         }
       }
 
-      // ========================================
-      // STEP 2: Ensure configuration exists
-      // ========================================
-      let config = await getConfig(workingDir)
-
       if (!config) {
-        if (!silent) {
-          logger.info("Setting up Alpha...\n")
-        }
-
-        config = await setupDefaultConfig(workingDir)
-
-        if (!silent) {
-          logger.success("Core setup complete\n")
-        }
+        throw new Error(
+          `Failed to read config at ${highlighter.info(workingDir)}.`
+        )
       }
 
       // ========================================
@@ -801,11 +860,7 @@ export const add = new Command()
       }
 
     } catch (error) {
-      if (!silent) {
-        logger.error("\nError:")
-        logger.error(error instanceof Error ? error.message : String(error))
-        console.log()
-      }
-      process.exit(1)
+      logger.break()
+      handleError(error)
     }
   })

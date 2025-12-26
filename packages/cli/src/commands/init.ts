@@ -4,8 +4,10 @@ import ora from "ora"
 import path from "path"
 import prompts from "prompts"
 import { z } from "zod"
-import { configExists, createConfig } from "../utils/config.js"
+import { configExists, createConfig, resolveConfigPaths, getConfig } from "../utils/config.js"
+import type { Config } from "../schema/index.js"
 import { logger } from "../utils/logger.js"
+import { handleError } from "../utils/handle-error.js"
 import {
   getAvailablePackageManagers,
   getPackageManager,
@@ -55,12 +57,12 @@ export const init = new Command()
     try {
       await runInit(opts)
     } catch (error) {
-      logger.error("Failed to initialize project:", error)
-      process.exit(1)
+      logger.break()
+      handleError(error)
     }
   })
 
-async function runInit(options: z.infer<typeof initOptionsSchema>) {
+export async function runInit(options: z.infer<typeof initOptionsSchema>): Promise<Config> {
   const { cwd, yes, default: useDefaults } = options
   // If not a Next.js app, scaffold one first
   if (!(await isNextAppPresent(cwd))) {
@@ -80,7 +82,12 @@ async function runInit(options: z.infer<typeof initOptionsSchema>) {
 
       if (!overwrite) {
         logger.info("Initialization cancelled.")
-        return
+        // Return existing config if available
+        const existingConfig = await getConfig(cwd)
+        if (existingConfig) {
+          return existingConfig
+        }
+        throw new Error("Initialization cancelled by user")
       }
     }
   }
@@ -246,6 +253,9 @@ async function runInit(options: z.infer<typeof initOptionsSchema>) {
   logger.info("1. Add components: npx alpha-kit add [component-name]")
   logger.info("2. Browse registry: npx alpha-kit list")
   logger.info("3. Update components: npx alpha-kit update [component-name]")
+
+  // Return the resolved config
+  return await resolveConfigPaths(cwd, config)
 }
 
 async function createProjectFiles(cwd: string, config: any) {
